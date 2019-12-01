@@ -11,6 +11,7 @@ params:
   defaultTheme: dark
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems: 2
+  favicon: /favicon.png
 
 languages:
   en:
