@@ -8,10 +8,10 @@ params:
   # dir name of your blog content (default is `content/posts`)
   contentTypeName: posts
   # "dark" or "light"
-  defaultTheme: dark
+  defaultTheme: light
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems: 2
-  favicon: /favicon.png
+  favicon: favicon.png
 
 languages:
   en:
