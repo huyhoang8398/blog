@@ -29,7 +29,7 @@ languages:
     
     params:
       logo:
-        logoText: kn
+        logoText: "´$ cd /home/kn"
         logoHomeLink: /
     #   or
     #
