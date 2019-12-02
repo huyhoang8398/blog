@@ -10,8 +10,7 @@ params:
   # "dark" or "light"
   defaultTheme: light
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems: 2
-  favicon: favicon.png
+  showMenuItems: 3
 
 languages:
   en:
@@ -44,3 +43,6 @@ languages:
       - identifier: blog
         name: Blog
         url: /
+      - identifier: showcase
+        name: Showcase
+        url: /showcase
