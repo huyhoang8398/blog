@@ -19,7 +19,7 @@ So i will introduce you my traditional way and extremely accurate.
 
 First of all, after you did a `commit` and `merge` you should not delete commit with `git reset` (Undo) thus we want to repair it instead of delete it.
 
-Next, in general, between any two `commit` in you git repository is a different line of codes, which you can always see wit the git `diff` command. 
+Next, in general, between any two `commit` in you git repository is a different line of codes, which you can always see with the git `diff` command. 
 Revert an old commit is to delete these different.
 
 Suppose we are in `master` branch and we want to revert back to commit `8398e5b`. 
