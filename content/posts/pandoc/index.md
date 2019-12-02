@@ -101,7 +101,8 @@ brew install pandoc
 You can get the latest version on the *[dowload page](https://github.com/jgm/pandoc/releases/tag/2.7.3)*.
 
 ## Getting started 
-![Markdown everywhere](/posts/pandoc/images/markdown-markdown-everywhere.jpg) 
+
+{{< image src="/posts/pandoc/images/markdown-markdown-everywhere.jpg" alt="Markdown everywhere" position="center" style="border-radius: 12px;" >}}
 
 We are computer scientists 😍😍😍, as I mentioned before, making an academic presentation without having to write LaTeX ( with tons of syntax,... ) is our main goal.
 Pandoc provides us a way to convert between numerous markups and word processing formats, including, but not limited to, various flavors of Markdown, Latex, HTML.
