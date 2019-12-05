@@ -3,6 +3,7 @@ title: "Shortcode to Insert Raw HTML in Hugo"
 date: 2019-12-05T23:31:46+07:00
 tags: ["hugo", "markdown", "tricks", "shortcode","blog"]
 author: "kn"
+description: "Shortcode to Insert Raw HTML in Hugo"
 ---
 
 Hugo is very good framework of creating a website by using markdown. 
@@ -24,7 +25,7 @@ Add a shortcode template to your site, in layouts/shortcodes/rawhtml.html, with 
 This template tells Hugo to simply render the inner content passed to your shortcode directly into the HTML of your site.
 You can then use this shortcode in your markdown content, like so:
 
-```HTML
+```html
 {{< rawhtml >}}
   <iframe src="https://3dwarehouse.sketchup.com/embed/530678b3-058e-4d3c-a09d-a2a6294247da" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="580" height="326" allowfullscreen></iframe>
 {{< /rawhtml >}}
