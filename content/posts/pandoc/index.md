@@ -165,7 +165,7 @@ And Level 2 headings represented a new slide with the title name. ( line precede
   	Another list item
   }
   \item{
-  	etc,...
+    etc,...
   }
 \end{itemize}
 \begin{figure}
