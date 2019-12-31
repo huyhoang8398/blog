@@ -75,4 +75,4 @@ Ex 1:
 {{< image src="/posts/graph-theory/images/wheelG.png" alt="Wheel Graph" position="center" style="border-radius: 12px;" >}}
 
 * A wheel graph is a graph formed by connecting a single universal vertex to all vertices of a cycle
-* W4, W5, etc
+* W4, W5, etc...
