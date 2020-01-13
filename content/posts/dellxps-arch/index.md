@@ -53,7 +53,7 @@ Comparing to my old Macbook, the performance is much better. More cores haha \m/
 ## Dell XPS + Archlinux > MacOS
 
 So I decided to install Archlinux on this machine thus Im a fan of this Linux Distribution.
-I also have a PC running Arch powered by 🎉🎉🎉
+I also have a PC running Arch powered by Ryzen 🎉🎉🎉
 
 There was only a few issue on this machine, first of all is the `coil whine sound` :(, I still have no idea how to fix it, not that loud, but weird on a expensive laptop like this.
 The other thing is `screen flickering`.
