@@ -1,9 +1,8 @@
 baseUrl: /
 languageCode: en-us
 theme: hello-friend
-copyright: 'Do Hoang'
+copyright: '&copy; Do Hoang. All rights reserved.'
 paginate: 5
-disqusShortname: yourdiscussshortname
 
 params:
   # dir name of your blog content (default is `content/posts`)
