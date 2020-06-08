@@ -88,7 +88,7 @@ wg.Wait()
 ``` 
 Since we've created this function inline so that we have access to that `wg` variable which is convenient and `Done` literally just decrement the counter by one.
 
-So all we have so far is a counter of how many go routines are running, the useful now is to call `wait` at the end of the main function, this will block untile the counter is zero so any go routine haven't finished it will wait.
+So all we have so far is a counter of how many go routines are running, the useful now is to call `wait` at the end of the main function, this will block until the counter is zero so any go routine haven't finished it will wait.
 
 **Final example**
 ```Go
@@ -104,8 +104,8 @@ func main() {
     var wg sync.WaitGroup
     wg.Add(1)
     go func() {
-      count("sheep")
-      wg.Done()
+        count("sheep")
+        wg.Done()
     }()
     
     wg.Wait()
@@ -118,7 +118,7 @@ func count(thing string) {
     }
 }
 ```
-That is how to create a go routine ( really simple but now massively useful so far ), so what we need next are channels.
+That is how to create a go routine ( really simple but not massively useful so far ), so what we need next are channels.
 
 ## Channel
 
