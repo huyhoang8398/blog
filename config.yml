@@ -39,7 +39,7 @@ languages:
       main:
       - identifier: about
         name: About
-        url: /about
+        url: "https://dohoang.me" 
       - identifier: blog
         name: Blog
         url: /
