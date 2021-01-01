@@ -1,4 +1,4 @@
-baseUrl: https://blog.dohoang.me 
+baseUrl: https://huyhoang8398.github.io/blog
 languageCode: en-us
 theme: hello-friend
 copyright: '&copy; Do Hoang. All rights reserved.'
@@ -39,7 +39,7 @@ languages:
       main:
       - identifier: about
         name: About
-        url: "https://dohoang.me" 
+        url: "https://huyhoang8398.github.io" 
       - identifier: blog
         name: Blog
         url: /
