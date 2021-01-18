@@ -3,14 +3,14 @@ title: "How I escaped from Microsoft Office tools as a Computer Science student"
 date: 2019-10-09T00:35:20+07:00
 authors: ["kn"]
 tags: ["pandoc", "presentation", "blog"]
-cover: "posts/pandoc/images/the-powerpoint-was.jpg"
+cover: "posts/pandoc/the-powerpoint-was.jpg"
 keywords: ["pandoc"]
 description: "The Easiest Way to Make Presentations! (Pandoc + Markdown)"
 showFullContent: false
 ---
 
 ## Motivation
-![Pandoc Markdow presentation VS Microsoft Powerpoint](/posts/pandoc/images/mdVSw.png)
+![Pandoc Markdow presentation VS Microsoft Powerpoint](mdVSw.png)
 
 I have used beamer quite a lot to prepare slides for both research and class presentations.
 I have started to use LaTeX to content in beamer presentation for two years.
@@ -102,7 +102,7 @@ You can get the latest version on the *[dowload page](https://github.com/jgm/pan
 
 ## Getting started 
 
-{{< image src="/posts/pandoc/images/markdown-markdown-everywhere.jpg" alt="Markdown everywhere" position="center" style="border-radius: 12px;" >}}
+{{< image src="markdown-markdown-everywhere.jpg" alt="Markdown everywhere" position="center" style="border-radius: 12px;" >}}
 
 We are computer scientists 😍😍😍, as I mentioned before, making an academic presentation without having to write LaTeX ( with tons of syntax,... ) is our main goal.
 Pandoc provides us a way to convert between numerous markups and word processing formats, including, but not limited to, various flavors of Markdown, Latex, HTML.
@@ -131,7 +131,7 @@ Once you have pandoc and latex (with packages to run beamer) installed, you just
 pandoc main.md -t beamer -o output.pdf
 ```
 
-![Compile Flow](/posts/pandoc/images/compileFlow.png)
+![Compile Flow](compileFlow.png)
 
 Pandoc converted *main.md* into a beamer latex file main.tex and after that they use the default way (`pdflatex`) to transfer beamer ```*.tex``` to a Presentation file.
 By default, pandoc will use `slide-level=2`, it means that level 1 markdown headings represents section headings - as the picture below ( line preceded with a single hash `# Section heading 2`).
@@ -146,7 +146,7 @@ And Level 2 headings represented a new slide with the title name. ( line precede
 
 **Result** 
 
-![Result Example](/posts/pandoc/images/result1.png)
+![Result Example](result1.png)
 
 **Code comparation with LaTeX**
 
@@ -214,7 +214,7 @@ toc:
 **Result**
 
     🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
-![Result with YAML header 1](/posts/pandoc/images/yamlResult1.png) ![Result with YAML header 2](/posts/pandoc/images/yamlResult2.png)
+![Result with YAML header 1](yamlResult1.png) ![Result with YAML header 2](yamlResult2.png)
 
 #### Tips and Tricks
 
@@ -290,7 +290,7 @@ header-includes:
 
 And this is the result: 
 
-![caption](/posts/pandoc/images/column.png)
+![caption](column.png)
 
 #### Preamble
 
@@ -357,11 +357,9 @@ pandoc main.md -H preamble.tex -t beamer -o main.pdf
 Ilmenau theme with frame number and a new look.
 You can download my preamble example [here](https://github.com/huyhoang8398/pandoc-tutorial/blob/master/preamble.tex)
 
-![Custom Ilmenau theme](/posts/pandoc/images/preambleExample.png)
+![Custom Ilmenau theme](preambleExample.png)
 
 
 ## Source code
 
 You can download all the source code in this blog in this [site](https://github.com/huyhoang8398/pandoc-tutorial/)
-
-## Reference
