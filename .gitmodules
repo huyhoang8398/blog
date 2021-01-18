@@ -1,6 +1,6 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/huyhoang8398/huyhoang8398.github.io
-[submodule "themes/themes/terminal"]
-	path = themes/themes/terminal
+[submodule "themes/terminal"]
+	path = themes/terminal
 	url = https://github.com/huyhoang8398/hugo-theme-terminal
