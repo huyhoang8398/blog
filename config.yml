@@ -1,48 +1,67 @@
-baseUrl: https://huyhoang8398.github.io/blog
+baseUrl: /
 languageCode: en-us
-theme: hello-friend
-copyright: '&copy; Do Hoang. All rights reserved.'
+theme: terminal
 paginate: 5
+DefaultContentLanguage: en
 
 params:
   # dir name of your blog content (default is `content/posts`)
   contentTypeName: posts
-  # "dark" or "light"
-  defaultTheme: light
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor: green
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems: 3
-  showReadingTime: false
+  # show selector to switch language
+  showLanguageSelector: true
+  # set theme to full screen width
+  fullWidthTheme: false
+  # center theme with default width
+  centerTheme: false
+  # favicon: /favicon.ico
+
 languages:
   en:
-    title: Do Hoang
-    subtitle: Software developer
-    keywords: 'Software Dev, Blog'
-    menuMore: Show more
-    writtenBy: Written by
-    readMore: Read more
-    readOtherPosts: Read other posts
-    newerPosts: Newer posts
-    olderPosts: Older posts
-    dateFormatSingle: 2006-01-02
-    dateFormatList: 2006-01-02
-    
+    languageName: english
+    title: Kn
+    subtitle: Anything that's software
+    tagline: A software blog that runs in the true spirit of open-source
+    keywords: 'blog, software, software-engineering, technology, code'
+    menuMore: show more
+    readMore: read more
+    readOtherPosts: read other posts
+
     params:
       logo:
-        logoText: $ cd /home/kn
+        logoText: Kn
         logoHomeLink: /
-    #   or
-    #
-    #   path: /img/your-example-logo.svg
-    #   alt: Your example logo alt text
-    
+
     menu:
       main:
-      - identifier: about
-        name: About
-        url: "https://huyhoang8398.github.io" 
-      - identifier: blog
-        name: Blog
-        url: /
-      - identifier: showcase
-        name: Showcase
-        url: /showcase
+        - identifier: about
+          name: about
+          url: https://huyhoang8398.github.io
+  vi:
+    languageName: viet
+    title: Kn
+    subtitle: Miễn là phần mềm
+    tagline: Blog về phần mềm hoạt động trên tinh thần open-source
+    keywords: 'blog, software, phần-mềm, công-nghệ, code'
+    keywords: ''
+    menuMore: xem thêm
+    readMore: đọc thêm
+    readOtherPosts: đọc bài khác
+
+    params:
+      logo:
+        logoText: Kn
+        logoHomeLink: /vi
+
+    menu:
+      main:
+        - identifier: about
+          name: giới thiệu
+          url: https://huyhoang8398.github.io
+
+taxonomies:
+  author: authors
+  tag: tags
