@@ -6,7 +6,7 @@ tags: ["dns", "privacy", "terminal", "network"]
 keywords: ["dns", "privacy", "terminal", "bash", "network", "nameserver"]
 description: "A quick guide to switching DNS servers settings to tackle nameserver blocking & corporate proxy"
 showFullContent: false
-cover: "/posts/dns-command/img/cover.png"
+cover: "posts/dns-command/img/cover.png"
 ---
 
 This post was originally published on [thecodecousins](https://thecodecousins.com/posts/dns-command/) by StanleyNguyen. 

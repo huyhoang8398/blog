@@ -3,7 +3,7 @@ title: "How I escaped from Microsoft Office tools as a Computer Science student"
 date: 2019-10-09T00:35:20+07:00
 authors: ["kn"]
 tags: ["pandoc", "presentation", "blog"]
-cover: "/posts/pandoc/images/the-powerpoint-was.jpg"
+cover: "posts/pandoc/images/the-powerpoint-was.jpg"
 keywords: ["pandoc"]
 description: "The Easiest Way to Make Presentations! (Pandoc + Markdown)"
 showFullContent: false

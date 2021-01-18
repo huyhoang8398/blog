@@ -6,7 +6,7 @@ tags: ["linux", "dell", "xps", "archlinux"]
 keywords: ["linux", "dell", "xps", "archlinux"]
 description: "Why I made the switch from Mac to Linux"
 showFullContent: false
-cover: "/posts/dellxps-arch/images/cover.png"
+cover: "posts/dellxps-arch/images/cover.png"
 ---
 
 ## Introduction
