@@ -1,7 +1,7 @@
 ---
 title: "Why I made the switch from Mac to Linux"
 date: 2020-01-13T19:45:40+07:00
-author: "kn"
+authors: ["kn"]
 tags: ["linux", "dell", "xps", "archlinux"]
 keywords: ["linux", "dell", "xps", "archlinux"]
 description: "Why I made the switch from Mac to Linux"

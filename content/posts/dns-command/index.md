@@ -1,6 +1,7 @@
 ---
 title: "Quick terminal-based DNS switching"
 date: 2020-01-21T21:39:45+07:00
+authors: ["kn"]
 tags: ["dns", "privacy", "terminal", "network"]
 keywords: ["dns", "privacy", "terminal", "bash", "network", "nameserver"]
 description: "A quick guide to switching DNS servers settings to tackle nameserver blocking & corporate proxy"

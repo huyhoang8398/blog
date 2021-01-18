@@ -3,7 +3,7 @@ title: "Xf86 Video Intel"
 date: 2020-03-21T17:59:52+07:00
 tags: ["Linux", "Intel", "graphic", "blog"]
 cover: "/posts/xf86-video-intel/img/cover.jpg"
-keywords: ["Linux"]
+authors: ["kn"]
 description: "Linux and Video driver"
 showFullContent: false
 ---

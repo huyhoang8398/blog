@@ -1,7 +1,7 @@
 ---
 title: "Using Arduino With PharoThings/Smalltalk"
 date: 2019-12-02T19:57:14+07:00
-author: "kn"
+authors: ["kn"]
 tags: ["PharoThings", "smalltalk", "arduino", "iot","blog"]
 cover: "/posts/using-arduino-with-pharo/images/teaser50.png"
 keywords: ["PharoThings"]

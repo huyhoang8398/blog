@@ -2,7 +2,7 @@
 title: "Shortcode to Insert Raw HTML in Hugo"
 date: 2019-12-05T23:31:46+07:00
 tags: ["hugo", "markdown", "tricks", "shortcode","blog"]
-author: "kn"
+authors: ["kn"]
 description: "Shortcode to Insert Raw HTML in Hugo"
 cover: "posts/pandoc/images/gohugoio-card.png"
 ---
