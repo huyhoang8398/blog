@@ -39,7 +39,7 @@ languages:
       main:
         - identifier: about
           name: about
-          url: /
+          url: https://huyhoang8398.github.io
   vi:
     languageName: viet
     title: Kn
@@ -60,7 +60,7 @@ languages:
       main:
         - identifier: about
           name: giới thiệu
-          url: /
+          url: https://huyhoang8398.github.io
 
 taxonomies:
   author: authors
