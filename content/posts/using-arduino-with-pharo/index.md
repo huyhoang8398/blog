@@ -37,13 +37,13 @@ Once the software has downloaded, you can install the application using the meth
 - For `Windows`, you should download the .EXE containing a full Windows installer. Double clicking on the .EXE should start the installation.
 - For `Linux`, you will download a compressed TAR file. You can use the "tar" command to uncompress and unpack the application.
 Plug in Your Arduino Board as shown in Figure below.
-    {{< figure src="/posts/using-arduino-with-pharo/images/IMG_3231.JPG" alt="Arduino Connection" position="center" style="border-radius: 12px;" caption="Arduino Connection!" captionPosition="center" captionStyle="color: red;" >}}
+    {{< figure src="/posts/using-arduino-with-pharo/IMG_3231.JPG" alt="Arduino Connection" position="center" style="border-radius: 12px;" caption="Arduino Connection!" captionPosition="center" captionStyle="color: red;" >}}
 
 **Note:** Disconnect any wires that may be attached to your Arduino and plug the board into the computer.
 You'll need to select the entry in the `Tools > Board menu` that corresponds to your Arduino board. 
 - Here we are using Arduino UNO board and my port is `/dev/tty.usbmodem14201` ( You may have a different port name depend on your operating system ).
 - Upload the Standard Firmata Sketch.
-{{< figure src="/posts/using-arduino-with-pharo/images/firmataExample.JPG" alt="Standard Firmata Example" position="center" style="border-radius: 12px;" caption="Standard Firmata Example" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="/posts/using-arduino-with-pharo/firmataExample.JPG" alt="Standard Firmata Example" position="center" style="border-radius: 12px;" caption="Standard Firmata Example" captionPosition="center" captionStyle="color: red;" >}}
 - StandardFirmata is included with the Arduino IDE. To compile and upload StandardFirmata to your Arduino, open the IDE and select `File/Examples/Firmata/StandardFirmata`. 
 - Now at the top of the text editor window, click the `Upload` button on the IDE.
 - At the bottom of the text editor window, you should see a small status window. This will report the progress as the code is compiled  and then uploaded to the Arduino. 
@@ -113,7 +113,7 @@ And to turn it off:
 
 You can use this method to toggle the LED as shown in Figure bellow.
 
-{{< figure src="/posts/using-arduino-with-pharo/images/IMG_3227.JPG" alt="Controlling LED with Arduino via Digital pins" position="center" style="border-radius: 12px;" caption="Controlling LED with Arduino via Digital pins" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="/posts/using-arduino-with-pharo/IMG_3227.JPG" alt="Controlling LED with Arduino via Digital pins" position="center" style="border-radius: 12px;" caption="Controlling LED with Arduino via Digital pins" captionPosition="center" captionStyle="color: red;" >}}
 
 ## Reading from Digital Pins
 
@@ -125,7 +125,7 @@ In the following example, we first setup a push down button with a pull-down res
 We connect the button output to digital pin 2.
 When we push the button and Firmata should tell us that the value of pin 2 is 1. When we do not push it, its value should be 0.
 
-{{< figure src="/posts/using-arduino-with-pharo/images/digitalPinExample.jpg" alt="Pull-down Resistor Button Sketch" position="center" style="border-radius: 12px;" caption="Pull-down Resistor Button Sketch" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="/posts/using-arduino-with-pharo/digitalPinExample.jpg" alt="Pull-down Resistor Button Sketch" position="center" style="border-radius: 12px;" caption="Pull-down Resistor Button Sketch" captionPosition="center" captionStyle="color: red;" >}}
 
 First, we set the digital pin 2 in input mode, so we can read from it.
 
@@ -168,12 +168,12 @@ The electrical resistance is measured between the two electrodes of the sensor.
 A comparator activates a digital output when a adjutable threshold is exceeded.
 There are a lot of moisture sensors but in our example, we use the Capacitive Soil Moisture Sensor from DFTrobot as the figure *@Capacitive-Soil-Moisture Sensor*
 
-{{< figure src="/posts/using-arduino-with-pharo/images/SEN0193.jpg" alt="Capacitive-Soil-Moisture Sensor" position="center" style="border-radius: 12px;" caption="Capacitive-Soil-Moisture Sensor" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="/posts/using-arduino-with-pharo/SEN0193.jpg" alt="Capacitive-Soil-Moisture Sensor" position="center" style="border-radius: 12px;" caption="Capacitive-Soil-Moisture Sensor" captionPosition="center" captionStyle="color: red;" >}}
 
 
 The Figure *@Capacitive-Soil-Moisture Sensor Sketch* shows how the electric connection is made.
 
-{{< figure src="/posts/using-arduino-with-pharo/images/capacitiveSoilMoistureSensor.png" alt="Capacitive-Soil-Moisture Sensor Sketch" position="center" style="border-radius: 12px;" caption="Capacitive-Soil-Moisture Sensor Sketch" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="/posts/using-arduino-with-pharo/capacitiveSoilMoistureSensor.png" alt="Capacitive-Soil-Moisture Sensor Sketch" position="center" style="border-radius: 12px;" caption="Capacitive-Soil-Moisture Sensor Sketch" captionPosition="center" captionStyle="color: red;" >}}
 
 | Aduino Uno    | Capacitive Soil Moisture Sensor |
 |---------------|---------------------------------|
@@ -202,7 +202,7 @@ The Figure *@Capacitive-Soil-Moisture Sensor Sketch* shows how the electric conn
 
 This is very simple and you can get these values and stored in a variable, to use to different purposes, like send a message to an LCD display, send the values to a cloud server and simply do some action.
 
-{{< image src="/posts/using-arduino-with-pharo/images/result.png" alt="Capacitive-Soil-Moisture Sensor with Arduino via Firmata Result" position="center" style="border-radius: 8px;" >}}
+{{< image src="/posts/using-arduino-with-pharo/result.png" alt="Capacitive-Soil-Moisture Sensor with Arduino via Firmata Result" position="center" style="border-radius: 8px;" >}}
 
 
 

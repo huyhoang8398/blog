@@ -6,7 +6,7 @@ tags: ["linux", "dell", "xps", "archlinux"]
 keywords: ["linux", "dell", "xps", "archlinux"]
 description: "Why I made the switch from Mac to Linux"
 showFullContent: false
-cover: "posts/dellxps-arch/images/cover.png"
+cover: "posts/dellxps-arch/cover.png"
 ---
 
 ## Introduction
@@ -36,7 +36,7 @@ Apple swapped to a butterfly mechanism to make a thinner keyboard, which is poss
 The keyboard provides a satisfying amount of travel and stability when each key is pressed, but unfortunately, the thin butterfly mechanism can get jammed up with crumbs, dust, and other particulates, resulting in keys that don't press properly, keys that skip keystrokes, or keys that repeat letters.
 board
 
-![Traditional vs Butterfly keyboard](/posts/dellxps-arch/images/scissor-vs-butterfly.jpg)
+![Traditional vs Butterfly keyboard](/posts/dellxps-arch/scissor-vs-butterfly.jpg)
 
 Keyboard failure is an in Apple's notebooks because replacing the keyboard requires the entire top assembly of the computer to be replaced, which is not a cheap repair.
 
@@ -64,6 +64,6 @@ A temporary solution is to disable this feature using the kernel parameter i915.
 
 Im using Archlinux + KDE, used to be a fan of i3wm but I want to give a try on KDE.
 
-![Dell XPS Archlinux + KDE](/posts/dellxps-arch/images/cover.png)
+![Dell XPS Archlinux + KDE](/posts/dellxps-arch/cover.png)
 
 Thus this have only been used for 2 days so need more time for review. I will update in some future posts.
