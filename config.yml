@@ -54,7 +54,7 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: /vi
+        logoHomeLink: https://huyhoang8398.github.io/blog/vi
 
     menu:
       main:
