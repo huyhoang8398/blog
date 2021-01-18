@@ -33,13 +33,13 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: /
+        logoHomeLink: https://huyhoang8398.github.io/blog
 
     menu:
       main:
         - identifier: about
           name: about
-          url: https://huyhoang8398.github.io
+          url: /
   vi:
     languageName: viet
     title: Kn
@@ -60,7 +60,7 @@ languages:
       main:
         - identifier: about
           name: giới thiệu
-          url: https://huyhoang8398.github.io
+          url: /
 
 taxonomies:
   author: authors
