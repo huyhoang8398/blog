@@ -1,4 +1,4 @@
-baseUrl: https://huyhoang8398.github.io/blog
+baseUrl: /
 languageCode: en-us
 theme: terminal
 paginate: 5
@@ -33,13 +33,13 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: https://huyhoang8398.github.io/blog
+        logoHomeLink: /blog
 
     menu:
       main:
         - identifier: about
           name: about
-          url: https://huyhoang8398.github.io
+          url: /
   vi:
     languageName: viet
     title: Kn
@@ -54,13 +54,13 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: https://huyhoang8398.github.io/blog/vi
+        logoHomeLink: /blog/vi
 
     menu:
       main:
         - identifier: about
           name: giới thiệu
-          url: https://huyhoang8398.github.io
+          url: /
 
 taxonomies:
   author: authors
