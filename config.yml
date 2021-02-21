@@ -33,13 +33,13 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: /blog
+        logoHomeLink: /
 
     menu:
       main:
         - identifier: about
           name: about
-          url: /
+          url: https://dohoang.me
   vi:
     languageName: viet
     title: Kn
@@ -54,13 +54,13 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: /blog/vi
+        logoHomeLink: /vi
 
     menu:
       main:
         - identifier: about
           name: giới thiệu
-          url: /
+          url: https://dohoang.me
 
 taxonomies:
   author: authors
