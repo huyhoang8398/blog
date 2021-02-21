@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/vi/authors/</loc>
+    <loc>https://blog.dohoang.me/vi/authors/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/authors/"
+                href="https://blog.dohoang.me/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/authors/"
+                href="https://blog.dohoang.me/vi/authors/"
                 />
   </url>
   
   <url>
-    <loc>/vi/</loc>
+    <loc>https://blog.dohoang.me/vi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://blog.dohoang.me/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="https://blog.dohoang.me/vi/"
                 />
   </url>
   
   <url>
-    <loc>/vi/tags/</loc>
+    <loc>https://blog.dohoang.me/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://blog.dohoang.me/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/tags/"
+                href="https://blog.dohoang.me/vi/tags/"
                 />
   </url>
   
