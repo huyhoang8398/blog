@@ -3,6 +3,7 @@ title: "CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pen
 date : 2021-06-03T00:00:00+08:00
 tags: ["CTF", "France", "Box", "ESAIP"]
 authors: ["kn"]
+cover: "https://ctf.esaip.org/wp-content/uploads/2021/05/Bandeaux-partenaires-CTF-2021-2.jpg"
 description: "ESAPI 20/5/2021 writeup"
 showFullContent: false
 ---
