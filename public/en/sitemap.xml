@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://blog.dohoang.me/authors/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
@@ -15,24 +14,16 @@
                 hreflang="en"
                 href="https://blog.dohoang.me/authors/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/blog/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/graphic/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/intel/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
     <xhtml:link
@@ -45,24 +36,16 @@
                 hreflang="en"
                 href="https://blog.dohoang.me/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/authors/kn/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/linux/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
     <xhtml:link
@@ -75,136 +58,83 @@
                 hreflang="en"
                 href="https://blog.dohoang.me/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/xf86-video-intel/</loc>
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/dns/</loc>
     <lastmod>2020-01-21T21:39:45+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/network/</loc>
     <lastmod>2020-01-21T21:39:45+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/privacy/</loc>
     <lastmod>2020-01-21T21:39:45+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/dns-command/</loc>
     <lastmod>2020-01-21T21:39:45+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/terminal/</loc>
     <lastmod>2020-01-21T21:39:45+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/archlinux/</loc>
     <lastmod>2020-01-13T19:45:40+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/dell/</loc>
     <lastmod>2020-01-13T19:45:40+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/dellxps-arch/</loc>
     <lastmod>2020-01-13T19:45:40+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/xps/</loc>
     <lastmod>2020-01-13T19:45:40+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/hugo/</loc>
     <lastmod>2019-12-05T23:31:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/markdown/</loc>
     <lastmod>2019-12-05T23:31:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/shortcode/</loc>
     <lastmod>2019-12-05T23:31:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/shortcode-to-insert-raw-html-in-hugo/</loc>
     <lastmod>2019-12-05T23:31:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/tricks/</loc>
     <lastmod>2019-12-05T23:31:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/arduino/</loc>
     <lastmod>2019-12-02T19:57:14+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/iot/</loc>
     <lastmod>2019-12-02T19:57:14+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/pharothings/</loc>
     <lastmod>2019-12-02T19:57:14+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/smalltalk/</loc>
     <lastmod>2019-12-02T19:57:14+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/using-arduino-with-pharo/</loc>
     <lastmod>2019-12-02T19:57:14+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/git/</loc>
     <lastmod>2019-12-01T14:28:16+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/git-revert-to-a-good-commit/</loc>
     <lastmod>2019-12-01T14:28:16+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/trick/</loc>
     <lastmod>2019-12-01T14:28:16+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/posts/pandoc/</loc>
     <lastmod>2019-10-09T00:35:20+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/pandoc/</loc>
     <lastmod>2019-10-09T00:35:20+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.dohoang.me/tags/presentation/</loc>
     <lastmod>2019-10-09T00:35:20+07:00</lastmod>
   </url>
-  
 </urlset>
