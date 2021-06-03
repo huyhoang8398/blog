@@ -131,3 +131,4 @@ sudo /usr/bin/python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ![Flag](image-023.png)
 
+Mình có làm thêm được 2 bài Stegano nữa nhưng mà dễ quá nên không write up :v 
