@@ -1,6 +1,6 @@
 +++
 title = "Learning Sed Is Beneficial For Linux Users"
-date = "2021-08-31T12:44:26+0000"
+date = "2021-10-20T12:44:26+0000"
 authors = ["kn"]
 cover = "posts/sed/hesedshesed.jpg"
 tags = ["linux", "sed"]
