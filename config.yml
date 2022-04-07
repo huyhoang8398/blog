@@ -1,4 +1,4 @@
-baseUrl: https://blog.dohoang.me
+baseUrl: /
 languageCode: en-us
 theme: terminal
 paginate: 5
@@ -39,7 +39,7 @@ languages:
       main:
         - identifier: about
           name: about
-          url: https://dohoang.me
+          url: https://huyhoang8398.github.io
   vi:
     languageName: viet
     title: Kn
@@ -60,7 +60,7 @@ languages:
       main:
         - identifier: about
           name: giới thiệu
-          url: https://dohoang.me
+          url: https://huyhoang8398.github.io
 
 taxonomies:
   author: authors
