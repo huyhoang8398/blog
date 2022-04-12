@@ -1,4 +1,4 @@
-baseUrl: /
+baseUrl: https://huyhoang8398.github.io/blog
 languageCode: en-us
 theme: terminal
 paginate: 5
@@ -33,7 +33,7 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: /
+        logoHomeLink: https://huyhoang8398.github.io/blog
 
     menu:
       main:
@@ -54,7 +54,7 @@ languages:
     params:
       logo:
         logoText: Kn
-        logoHomeLink: /vi
+        logoHomeLink: https://huyhoang8398.github.io/blog/vi
 
     menu:
       main:
