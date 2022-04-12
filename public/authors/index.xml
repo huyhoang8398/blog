@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Kn</title>
-    <link>/authors/</link>
+    <link>https://huyhoang8398.github.io/blog/authors/</link>
     <description>Recent content in Authors on Kn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Oct 2021 12:44:26 +0000</lastBuildDate>
     
-	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huyhoang8398.github.io/blog/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>kn</title>
-      <link>/authors/kn/</link>
+      <link>https://huyhoang8398.github.io/blog/authors/kn/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
       
-      <guid>/authors/kn/</guid>
+      <guid>https://huyhoang8398.github.io/blog/authors/kn/</guid>
       <description></description>
     </item>
     

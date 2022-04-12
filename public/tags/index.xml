@@ -2,264 +2,264 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kn</title>
-    <link>/tags/</link>
+    <link>https://huyhoang8398.github.io/blog/tags/</link>
     <description>Recent content in Tags on Kn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Oct 2021 12:44:26 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huyhoang8398.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux</title>
-      <link>/tags/linux/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/linux/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sed</title>
-      <link>/tags/sed/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/sed/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
       
-      <guid>/tags/sed/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/sed/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Box</title>
-      <link>/tags/box/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/box/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
       
-      <guid>/tags/box/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/box/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CTF</title>
-      <link>/tags/ctf/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/ctf/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
       
-      <guid>/tags/ctf/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/ctf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ESAIP</title>
-      <link>/tags/esaip/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/esaip/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
       
-      <guid>/tags/esaip/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/esaip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>France</title>
-      <link>/tags/france/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/france/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
       
-      <guid>/tags/france/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/france/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blog</title>
-      <link>/tags/blog/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/blog/</link>
       <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>graphic</title>
-      <link>/tags/graphic/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/graphic/</link>
       <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
       
-      <guid>/tags/graphic/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/graphic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Intel</title>
-      <link>/tags/intel/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/intel/</link>
       <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
       
-      <guid>/tags/intel/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/intel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dns</title>
-      <link>/tags/dns/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/dns/</link>
       <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
       
-      <guid>/tags/dns/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/dns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>network</title>
-      <link>/tags/network/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/network/</link>
       <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
       
-      <guid>/tags/network/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/network/</guid>
       <description></description>
     </item>
     
     <item>
       <title>privacy</title>
-      <link>/tags/privacy/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/privacy/</link>
       <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
       
-      <guid>/tags/privacy/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/privacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>terminal</title>
-      <link>/tags/terminal/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/terminal/</link>
       <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
       
-      <guid>/tags/terminal/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/terminal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>archlinux</title>
-      <link>/tags/archlinux/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/archlinux/</link>
       <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
       
-      <guid>/tags/archlinux/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/archlinux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dell</title>
-      <link>/tags/dell/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/dell/</link>
       <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
       
-      <guid>/tags/dell/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/dell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>xps</title>
-      <link>/tags/xps/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/xps/</link>
       <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
       
-      <guid>/tags/xps/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/xps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/hugo/</link>
       <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>/tags/markdown/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/markdown/</link>
       <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
       
-      <guid>/tags/markdown/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shortcode</title>
-      <link>/tags/shortcode/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/shortcode/</link>
       <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
       
-      <guid>/tags/shortcode/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/shortcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>trick</title>
-      <link>/tags/trick/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/trick/</link>
       <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
       
-      <guid>/tags/trick/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/trick/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tricks</title>
-      <link>/tags/tricks/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/tricks/</link>
       <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
       
-      <guid>/tags/tricks/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/tricks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>arduino</title>
-      <link>/tags/arduino/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/arduino/</link>
       <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
       
-      <guid>/tags/arduino/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/arduino/</guid>
       <description></description>
     </item>
     
     <item>
       <title>iot</title>
-      <link>/tags/iot/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/iot/</link>
       <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
       
-      <guid>/tags/iot/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/iot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PharoThings</title>
-      <link>/tags/pharothings/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/pharothings/</link>
       <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
       
-      <guid>/tags/pharothings/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/pharothings/</guid>
       <description></description>
     </item>
     
     <item>
       <title>smalltalk</title>
-      <link>/tags/smalltalk/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/smalltalk/</link>
       <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
       
-      <guid>/tags/smalltalk/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/smalltalk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>/tags/git/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/git/</link>
       <pubDate>Sun, 01 Dec 2019 14:28:16 +0700</pubDate>
       
-      <guid>/tags/git/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pandoc</title>
-      <link>/tags/pandoc/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/pandoc/</link>
       <pubDate>Wed, 09 Oct 2019 00:35:20 +0700</pubDate>
       
-      <guid>/tags/pandoc/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/pandoc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>presentation</title>
-      <link>/tags/presentation/</link>
+      <link>https://huyhoang8398.github.io/blog/tags/presentation/</link>
       <pubDate>Wed, 09 Oct 2019 00:35:20 +0700</pubDate>
       
-      <guid>/tags/presentation/</guid>
+      <guid>https://huyhoang8398.github.io/blog/tags/presentation/</guid>
       <description></description>
     </item>
     
