@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://huyhoang8398.github.io/blog/authors/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -18,8 +18,18 @@
   </url>
   
   <url>
+    <loc>https://huyhoang8398.github.io/blog/posts/keychron/</loc>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://huyhoang8398.github.io/blog/tags/keychron/</loc>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://huyhoang8398.github.io/blog/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -34,32 +44,22 @@
   
   <url>
     <loc>https://huyhoang8398.github.io/blog/authors/kn/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://huyhoang8398.github.io/blog/posts/sed/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://huyhoang8398.github.io/blog/tags/linux/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://huyhoang8398.github.io/blog/posts/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://huyhoang8398.github.io/blog/tags/sed/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://huyhoang8398.github.io/blog/tags/</loc>
-    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -70,6 +70,21 @@
                 hreflang="en"
                 href="https://huyhoang8398.github.io/blog/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://huyhoang8398.github.io/blog/tags/ubuntu/</loc>
+    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://huyhoang8398.github.io/blog/posts/sed/</loc>
+    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://huyhoang8398.github.io/blog/tags/sed/</loc>
+    <lastmod>2021-10-20T12:44:26+00:00</lastmod>
   </url>
   
   <url>
