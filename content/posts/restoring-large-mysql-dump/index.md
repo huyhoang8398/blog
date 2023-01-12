@@ -1,5 +1,5 @@
 +++
-title = "Restoring Large MySQL Dump - 900 Million Rows"
+title = "Restoring Large MySQL Dump"
 date = "2023-01-12T19:15:59+0000"
 authors = ["kn"]
 cover = "posts/restoring-large-mysql-dump/mysql-logo2.png"
