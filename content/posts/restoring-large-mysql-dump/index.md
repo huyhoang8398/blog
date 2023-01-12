@@ -21,7 +21,8 @@ This time, I created the database, and from the mysql prompt I issued the follow
 . /path/to/backup/database_dump.sql
 ```
 
-It would run great until it got to about 10% of the way through the scores table. However, it would start to slow down. Because the rows were so small in our scores table, each INSERT statement had about 45,000-50,000 records. So each line had roughly 1MB of data.
+It would run great until it got to about 10% of the way through the scores table. However, it would start to slow down. Because the rows were so small in our scores table, each INSERT statement had about 45,000-50,000 records. So each line had roughly 1MB of data. Also I'm now having this issue:
+`ERROR 1153 (08S01) at line 96: Got a packet bigger than 'max_allowed_packet' bytes`
 
 At first it would insert a set of 50,000 in half a second or so. However, after a few million records, it would slow down to three second, and got to about 10 seconds per INSERT statement. This was a huge problem, given that I had roughly 18,000 INSERT statements, and at 10 seconds per INSERT, it would take **50 hours** to restore. Our website was down during this restore, since it was our primary database. So being down for over two days was **not** an option.
 
