@@ -2,7 +2,7 @@
 title = "SSL and Let's Encrypt For Jenkins"
 date = "2023-02-13T09:57:31+0000"
 authors = ["kn"]
-cover = ""
+cover = "posts/SSL-LetsEncrypt-jenkins/cover.png"
 tags = ["Jenkins", "ssl", "https", "certbot"]
 keywords = ["Jenkins", "ssl", "https", "certbot"]
 description = "Enabling HTTPS on a Jenkins server by configuring SSL"
