@@ -23,9 +23,9 @@ languages:
   en:
     languageName: english
     title: Kn
-    subtitle: Anything that's software
-    tagline: A software blog that runs in the true spirit of open-source
-    keywords: 'blog, software, software-engineering, technology, code'
+    subtitle: Anything that's system and software
+    tagline: A system/software blog that runs in the true spirit of open-source
+    keywords: 'blog, software, software-engineering, technology, code, devops'
     menuMore: show more
     readMore: read more
     readOtherPosts: read other posts
@@ -45,7 +45,7 @@ languages:
     title: Kn
     subtitle: Miễn là phần mềm
     tagline: Blog về phần mềm hoạt động trên tinh thần open-source
-    keywords: 'blog, software, phần-mềm, công-nghệ, code'
+    keywords: 'blog, software, phần-mềm, công-nghệ, code, devops'
     keywords: ''
     menuMore: xem thêm
     readMore: đọc thêm
