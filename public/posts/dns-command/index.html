@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>Quick terminal-based DNS switching :: Kn — Anything that&#39;s software</title>
+    <title>Quick terminal-based DNS switching :: Kn — Anything that&#39;s system and software</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Quick terminal-based DNS switching :: Kn — Anything that&#39;s software" />
+<meta name="twitter:title" content="Quick terminal-based DNS switching :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking &amp; corporate proxy" />
 <meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Quick terminal-based DNS switching :: Kn — Anything that&#39;s software">
+<meta property="og:title" content="Quick terminal-based DNS switching :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking &amp; corporate proxy" />
 <meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/dns-command/" />
 <meta property="og:site_name" content="Quick terminal-based DNS switching" />
@@ -182,7 +182,7 @@ I myself is also no exception as I have been using <a href="https://1.1.1.1/dns/
 Unfortunately, having custom DNS nameservers also comes with some setbacks for someone who uses their computer all the time in all the different places.
 With custom DNS servers, this is what you get on a network that tries to block them (together with VPN services etc.)</p>
 <p><img src="blocked.png" alt="blocked by network"></p>
-<p>Another problem that we would have with custom DNS servers is that networks&rsquo; login pages just don&rsquo;t show up as the default DNS is not being used to redirect us to local network login page.
+<p>Another problem that we would have with custom DNS servers is that networks' login pages just don&rsquo;t show up as the default DNS is not being used to redirect us to local network login page.
 Of course it would be easy to just remove the configurations as you (most likely) was the one who set them up, how hard would it be to remove?
 But what if we need these alternate DNS servers again?
 I personally find this way of manually removing and adding them back too much of a hassle.
@@ -201,25 +201,25 @@ You don&rsquo;t have to take my words for that, read more about it on <a href="h
 Naturally, I would try to figure out how to do it via my terminal.
 That&rsquo;s when I found out about this awesome tool that comes in-built with macOS - <code>networksetup</code>.
 With networksetup, changing my DNS config is as simple as</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Adding 1.1.1.1 to my nameservers</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Adding 1.1.1.1 to my nameservers</span>
 networksetup -setdnsservers Wi-Fi 1.1.1.1
 <span style="color:#75715e"># Clear all my alternate nameservers</span>
 networksetup -setdnsservers Wi-Fi empty
 </code></pre></div><p>Now I can easily configure my DNS resolvers to be the same as the instructions for 1.1.1.1 by</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 4 nameservers - 2 IPv4 &amp; 2 IPv6</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 4 nameservers - 2 IPv4 &amp; 2 IPv6</span>
 networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
 </code></pre></div><p>But this is quite lengthy to type as well, even though I would prefer this over Network Preferences UI any day. So I went another level of laziness by wrapping it inside a bash function</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> dns1111<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> dns1111<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
     networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
 <span style="color:#f92672">}</span>
 </code></pre></div><p>This seems to be pretty neat and does the job, but hold on a second. How about switching it back to empty?
 A flag/argument to this bash function would do the job fine but I want to use the least effort as possible and save myself the mental burden of remembering whether my alternate DNS config is empty.
 So I thought to myself: &ldquo;Why not detect the current state and switch the DNS config based on that? Like a literal switch button - you <strong>don&rsquo;t</strong> have to tell what state you want it to be, just the opposite of what comes before&rdquo;.
 With that in mind, I found this option for networksetup that would tell me the current state</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">networksetup -getdnsservers Wi-Fi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">networksetup -getdnsservers Wi-Fi
 </code></pre></div><p>It would list all of my alternate DNS servers, or print out this string <code>There aren't any DNS Servers set on Wi-Fi</code> if there isn&rsquo;t any.
 And now I can complete my function, with some cool emojis to signify whether the config has just been applied or removed</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> dns1111<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> dns1111<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#66d9ef">$(</span>networksetup -getdnsservers Wi-Fi<span style="color:#66d9ef">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;There aren&#39;t any DNS Servers set on Wi-Fi&#34;</span>* <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
     networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001 <span style="color:#f92672">&amp;&amp;</span> echo 🚀 🚀 🚀
   <span style="color:#66d9ef">else</span>
@@ -230,12 +230,12 @@ And now I can complete my function, with some cool emojis to signify whether the
 <h3 id="bonus-linux-based-machine">Bonus: Linux based machine</h3>
 <p>Since <code>networksetup</code> is not available not Linux based OSes, we would need to use a different package that helps handle DNS nameservers called <code>dnsmasq</code>.</p>
 <p>Install it using your distro&rsquo;s package manager</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># this is for Arch</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># this is for Arch</span>
 sudo pacman -S dnsmasq
 </code></pre></div><p>Installing the package will come with a config file <code>/etc/dnsmasq.conf</code> for us to update the nameservers.
 I have included my implementation below.
 If you have a better approach, don&rsquo;t hesitate to reach out to me at <a href="mailto:hung.ngn.the@gmail.com">hung.ngn.the@gmail.com</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> dns1111<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> dns1111<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   <span style="color:#75715e"># detect existence of the backup file to see whether the config is in place</span>
   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> -f /etc/dnsmasq.conf.bak <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
     sudo mv /etc/dnsmasq.conf.bak /etc/dnsmasq.conf <span style="color:#f92672">&amp;&amp;</span> echo 🚦 🚦 🚦
@@ -249,9 +249,9 @@ If you have a better approach, don&rsquo;t hesitate to reach out to me at <a hre
 <span style="color:#f92672">}</span>
 </code></pre></div><p><strong>Test</strong>
 To do a lookup speed test choose a website that has not been visited since dnsmasq has been started (<code>drill</code> is part of the <code>ldns</code> package):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ drill archlinux.org | grep <span style="color:#e6db74">&#34;Query time&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ drill archlinux.org | grep <span style="color:#e6db74">&#34;Query time&#34;</span>
 </code></pre></div><p>Running the command again will use the cached DNS IP and result in a faster lookup time if dnsmasq is setup correctly:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ drill archlinux.org | grep <span style="color:#e6db74">&#34;Query time&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ drill archlinux.org | grep <span style="color:#e6db74">&#34;Query time&#34;</span>
 
 ;; Query time: <span style="color:#ae81ff">18</span> msec
 
@@ -299,7 +299,7 @@ $ drill archlinux.org | grep <span style="color:#e6db74">&#34;Query time&#34;</s
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

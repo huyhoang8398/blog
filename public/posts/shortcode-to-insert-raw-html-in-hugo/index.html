@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   
-    <title>Shortcode to Insert Raw HTML in Hugo :: Kn — Anything that&#39;s software</title>
+    <title>Shortcode to Insert Raw HTML in Hugo :: Kn — Anything that&#39;s system and software</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Shortcode to Insert Raw HTML in Hugo"/>
-<meta name="keywords" content="blog, software, software-engineering, technology, code"/>
+<meta name="keywords" content="blog, software, software-engineering, technology, code, devops"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/shortcode-to-insert-raw-html-in-hugo/" />
 
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Shortcode to Insert Raw HTML in Hugo :: Kn — Anything that&#39;s software" />
+<meta name="twitter:title" content="Shortcode to Insert Raw HTML in Hugo :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="Shortcode to Insert Raw HTML in Hugo" />
 <meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Shortcode to Insert Raw HTML in Hugo :: Kn — Anything that&#39;s software">
+<meta property="og:title" content="Shortcode to Insert Raw HTML in Hugo :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="Shortcode to Insert Raw HTML in Hugo" />
 <meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/shortcode-to-insert-raw-html-in-hugo/" />
 <meta property="og:site_name" content="Shortcode to Insert Raw HTML in Hugo" />
@@ -182,11 +182,11 @@ They created shortcodes to circumvent these limitations.</p>
 <p>A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a partial template instead.</p>
 <p>Here is how to create your own one-line custom shortcode to make that possible.
 Add a shortcode template to your site, in <code>layouts/shortcodes/rawhtml.html</code>, with the content:</p>
-<pre><code>&lt;!-- raw html --&gt;
+<pre tabindex="0"><code>&lt;!-- raw html --&gt;
 {{.Inner}}
 </code></pre><p>This template tells Hugo to simply render the inner content passed to your shortcode directly into the HTML of your site.
 You can then use this shortcode in your markdown content, like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">rawhtml</span> &gt;}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">rawhtml</span> &gt;}}
   &lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://3dwarehouse.sketchup.com/embed/530678b3-058e-4d3c-a09d-a2a6294247da&#34;</span> <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">scrolling</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no&#34;</span> <span style="color:#a6e22e">marginheight</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">marginwidth</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;580&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;326&#34;</span> <span style="color:#a6e22e">allowfullscreen</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;
   &lt;<span style="color:#f92672">p</span>&gt; thanks to @kn &lt;/<span style="color:#f92672">p</span>&gt;
 {{&lt; /<span style="color:#f92672">rawhtml</span> &gt;}}
@@ -231,7 +231,7 @@ You can then use this shortcode in your markdown content, like so:</p>
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

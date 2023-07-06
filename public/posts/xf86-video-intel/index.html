@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   
-    <title>Xf86 Video Intel :: Kn — Anything that&#39;s software</title>
+    <title>Xf86 Video Intel :: Kn — Anything that&#39;s system and software</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Linux and Video driver"/>
-<meta name="keywords" content="blog, software, software-engineering, technology, code"/>
+<meta name="keywords" content="blog, software, software-engineering, technology, code, devops"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/xf86-video-intel/" />
 
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Xf86 Video Intel :: Kn — Anything that&#39;s software" />
+<meta name="twitter:title" content="Xf86 Video Intel :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="Linux and Video driver" />
 <meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Xf86 Video Intel :: Kn — Anything that&#39;s software">
+<meta property="og:title" content="Xf86 Video Intel :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="Linux and Video driver" />
 <meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/xf86-video-intel/" />
 <meta property="og:site_name" content="Xf86 Video Intel" />
@@ -181,8 +181,8 @@ And also the generic <code>xf86-video-modesetting</code> DDX driver included in 
 <h2 id="no-xbacklight">No xbacklight?</h2>
 <p>X86-video-intel provides the backlight property itself; such a property is not supplied by the kernel.
 But we can use <a href="https://www.archlinux.org/packages/?name=acpilight">acpilight</a> to set the display backlight with xbacklight. Add the following udev rule and your user to the video group:</p>
-<pre><code>/etc/udev/rules.d/90-backlight.rules
-</code></pre><pre><code>SUBSYSTEM==&quot;backlight&quot;, ACTION==&quot;add&quot;, \
+<pre tabindex="0"><code>/etc/udev/rules.d/90-backlight.rules
+</code></pre><pre tabindex="0"><code>SUBSYSTEM==&quot;backlight&quot;, ACTION==&quot;add&quot;, \
   RUN+=&quot;/bin/chgrp video /sys/class/backlight/%k/brightness&quot;, \
   RUN+=&quot;/bin/chmod g+w /sys/class/backlight/%k/brightness&quot;
 </code></pre><p>It might be necessary to supply the acpi_backlight=vendor kernel parameter, see <a href="https://wiki.archlinux.org/index.php/Backlight">backlight</a>.</p>
@@ -237,7 +237,7 @@ default. For smooth transitions, specify the number of fading steps (using
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

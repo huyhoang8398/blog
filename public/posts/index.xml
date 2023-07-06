@@ -6,10 +6,38 @@
     <description>Recent content in Posts on Kn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 May 2022 16:14:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Feb 2023 13:15:05 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Older and Newer PHP version on AWS EC2</title>
+      <link>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</link>
+      <pubDate>Fri, 17 Feb 2023 13:15:05 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</guid>
+      <description>To install older or newer version of PHP with AWS utility amazon-linux-extras enable php7.1 amazon-linux-extras install php7.1 Install PHP extension yum update yum install php-cli php-pdo php-fpm php-json php-mysqlnd </description>
+    </item>
     
-	<atom:link href="https://huyhoang8398.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSL and Let&#39;s Encrypt For Jenkins</title>
+      <link>https://huyhoang8398.github.io/blog/posts/ssl-letsencrypt-jenkins/</link>
+      <pubDate>Mon, 13 Feb 2023 09:57:31 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/ssl-letsencrypt-jenkins/</guid>
+      <description>Jenkins (standalone) SSL + Let&amp;rsquo;s Encrypt In this tutorial, I will show how to use Let&amp;rsquo;s Encrypt free SSL with a standalone Jenkins in CentOS 7 AWS
+Install Certbot on AWS EC2 CentOS amazon-linux-extras install epel yum install certbot python2-certbot-apache mod_ssl Generate Certificates Run the command to generate the certificate and key files.
+sudo certbot certonly --standalone --preferred-challenges http -d example.com Just in case you got this response:
+Saving debug log to /var/log/letsencrypt/letsencrypt.</description>
+    </item>
     
+    <item>
+      <title>Restoring Large MySQL Dump</title>
+      <link>https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/</link>
+      <pubDate>Thu, 12 Jan 2023 19:15:59 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/</guid>
+      <description>Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact).
+Problem Our current backup system uses mysqldump. It dumps a 25 GB sql dump file, which compresses to about 2.5GB using gzip. The last time we needed to restore a backup it was only about 9GB, and it took several hours.
+This time, I created the database, and from the mysql prompt I issued the following command:</description>
+    </item>
     
     <item>
       <title>Getting the Function keys of a Keychron working on Linux</title>

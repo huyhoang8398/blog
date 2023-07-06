@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s software</title>
+    <title>How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s system and software</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s software" />
+<meta name="twitter:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="The Easiest Way to Make Presentations! (Pandoc &#43; Markdown)" />
 <meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s software">
+<meta property="og:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="The Easiest Way to Make Presentations! (Pandoc &#43; Markdown)" />
 <meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/pandoc/" />
 <meta property="og:site_name" content="How I escaped from Microsoft Office tools as a Computer Science student" />
@@ -214,26 +214,26 @@ templates easily.</p>
 </ul>
 <h2 id="installation-guide">Installation Guide</h2>
 <p><strong>Integrated Software</strong></p>
-<p>Thus we want to make our slide looks like <em>LaTeX</em> typesets so a Basic LaTeX package is required.<br>
+<p>Thus we want to make our slide looks like <em>LaTeX</em> typesets so a Basic LaTeX package is required. <br>
 I strongly recommend not just installing the TeX compiler, but <em>all</em> TeX packages for your own convenience, so you have everything available offline.</p>
 <p><strong>On GNU/Linux:</strong></p>
 <p>On Debian-based distros (Ubuntu/Linux Mint):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install texlive-full
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install texlive-full
 </code></pre></div><p>For Arch-based distros (Manjaro, Parabola, Antergos):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S texlive-most texlive-lang
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S texlive-most texlive-lang
 </code></pre></div><p><strong>On Windows</strong></p>
 <p>Download and install the packages <em><a href="https://miktex.org/download/#collapse264">here</a></em>.</p>
 <p><strong>On MacOS</strong></p>
 <p>Download and install the packages <em><a href="https://tug.org/mactex/">here</a></em>. Or via Brew:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew cask install mactex
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew cask install mactex
 </code></pre></div><p>After installing LaTeX, the next step is to get Pandoc - a universal document converter.</p>
 <p><strong>On GNU/Linux</strong></p>
 <p>For each linux distribution, you might have a different pandoc package&rsquo;s name in your package manager.
 For example in ArchLinux, we can install pandoc with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc
 </code></pre></div><p>But if you want to get the latest version ( you might want to check whether the pandoc version in your package manager is not outdated ), we can get the binary package for amd64 architecture on the <em><a href="https://github.com/jgm/pandoc/releases/tag/2.7.3">download page</a></em>.</p>
 <p><strong>On MacOS</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install pandoc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install pandoc
 </code></pre></div><p><strong>On Windows</strong></p>
 <p>You can get the latest version on the <em><a href="https://github.com/jgm/pandoc/releases/tag/2.7.3">dowload page</a></em>.</p>
 <h2 id="getting-started">Getting started</h2>
@@ -246,7 +246,7 @@ Pandoc provides us a way to convert between numerous markups and word processing
 <p>To create a slide shows with Pandoc is quite simple because the basic syntax is Markdown which is a familiar language with all developers or computer scientist.</p>
 <p>Let&rsquo;s create some slide with Pandoc !!!  🎉🎉🎉</p>
 <p>Create a <code>main.md</code> file that contains:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># Section heading 1 slide
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># Section heading 1 slide
 <span style="color:#75715e">## Slide 1 of Section 1 
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">-</span> This is a list 
 <span style="color:#66d9ef">-</span> Another list item
@@ -257,7 +257,7 @@ Pandoc provides us a way to convert between numerous markups and word processing
 # Section heading 2
 ...
 </code></pre></div><p>Once you have pandoc and latex (with packages to run beamer) installed, you just have to use the following command to compile the presentation:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc main.md -t beamer -o output.pdf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc main.md -t beamer -o output.pdf
 </code></pre></div><p><img src="compileFlow.png" alt="Compile Flow"></p>
 <p>Pandoc converted <em>main.md</em> into a beamer latex file main.tex and after that they use the default way (<code>pdflatex</code>) to transfer beamer <code>*.tex</code> to a Presentation file.
 By default, pandoc will use <code>slide-level=2</code>, it means that level 1 markdown headings represents section headings - as the picture below ( line preceded with a single hash <code># Section heading 2</code>).
@@ -272,7 +272,7 @@ And Level 2 headings represented a new slide with the title name. ( line precede
 <p><strong>Result</strong></p>
 <p><img src="result1.png" alt="Result Example"></p>
 <p><strong>Code comparation with LaTeX</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[t]</span>{beamer}  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[t]</span>{beamer}  
 <span style="color:#66d9ef">\setbeamertemplate</span>{navigation symbols}{}
 <span style="color:#66d9ef">\begin</span>{document}
 <span style="color:#66d9ef">\section</span>{Section heading 1 slide}
@@ -312,18 +312,18 @@ Fill in all the necessary fields:</p>
 <li><code>toc</code>: table of content slide ( use <code>true</code> to enable this slide)</li>
 </ul>
 <p><strong>YAML example</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">---
-<span style="color:#66d9ef">title</span>: <span style="color:#e6db74">&#34;Pandoc Tutorial&#34;</span>
-<span style="color:#66d9ef">author</span>: Do Duy Huy Hoang 
-<span style="color:#66d9ef">date</span>: \today{}
-<span style="color:#66d9ef">institute</span>: 
-- The Code Cousins
-<span style="color:#66d9ef">theme</span>:
-- Ilmenau
-<span style="color:#66d9ef">colortheme</span>:
-- beaver 
-<span style="color:#66d9ef">mainfont</span>: <span style="color:#e6db74">&#34;SourceSansPro-Regular&#34;</span>
-<span style="color:#66d9ef">toc</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">---
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Pandoc Tutorial&#34;</span>
+<span style="color:#f92672">author</span>: <span style="color:#ae81ff">Do Duy Huy Hoang </span>
+<span style="color:#f92672">date</span>: <span style="color:#ae81ff">\today{}</span>
+<span style="color:#f92672">institute</span>: 
+- <span style="color:#ae81ff">The Code Cousins</span>
+<span style="color:#f92672">theme</span>:
+- <span style="color:#ae81ff">Ilmenau</span>
+<span style="color:#f92672">colortheme</span>:
+- <span style="color:#ae81ff">beaver </span>
+<span style="color:#f92672">mainfont</span>: <span style="color:#e6db74">&#34;SourceSansPro-Regular&#34;</span>
+<span style="color:#f92672">toc</span>:
 - <span style="color:#66d9ef">true</span>
 ---
 </code></pre></div><p><strong>Result</strong></p>
@@ -337,14 +337,14 @@ When used without a unit, the unit is assumed to be pixels.
 However, any of the following unit identifiers can be used: px, cm, mm, in, inch and %.
 There must not be any spaces between the number and the unit.</p>
 <p>For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">caption</span>](<span style="color:#a6e22e">file.jpg</span>){ width=50% }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">caption</span>](<span style="color:#a6e22e">file.jpg</span>){ width=50% }
 </code></pre></div><p>Equal to LaTeX</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[width=0.5\textwidth,height=\textheight]</span>{file.jpg}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\includegraphics</span><span style="color:#a6e22e">[width=0.5\textwidth,height=\textheight]</span>{file.jpg}
 </code></pre></div><p>When no width or height attributes are specified, the fallback is to look at the image resolution and the dpi metadata embedded in the image file.</p>
 <p><strong>Slides with Columns in Pandoc</strong>
 Current version of pandoc (i.e., pandoc 2.0 and later) supports <a href="https://pandoc.org/MANUAL.html#fenced-divs">fenced divs</a>.
 Specially named divs are transformed into columns when targeting a slides format:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># This slide has columns
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># This slide has columns
 
 ::: columns
 
@@ -360,7 +360,7 @@ right
 </code></pre></div><p>But I found that it is quite buggy and you hard to control the width of each column easily.
 Thus We can use both Markdown and LaTeX code inside our main file.
 To create a slide that has columns, I recommend to use raw LaTeX code as the following code below:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\Begin</span>{columns}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\Begin</span>{columns}
 
 <span style="color:#66d9ef">\Begin</span>{column}{0.5<span style="color:#66d9ef">\textwidth</span>}
 - Some content here
@@ -372,21 +372,21 @@ To create a slide that has columns, I recommend to use raw LaTeX code as the fol
 
 <span style="color:#66d9ef">\End</span>{columns}
 </code></pre></div><p>But you need to add this code to your YAML file ( I will explain what is this code in the next section)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#66d9ef">header-includes</span>:
-- \newcommand{\hideFromPandoc}[<span style="color:#ae81ff">1</span>]{<span style="color:#75715e">#1}</span>
-- \hideFromPandoc{
-    \let\Begin\begin
-    \let\End\end
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#f92672">header-includes</span>:
+- <span style="color:#ae81ff">\newcommand{\hideFromPandoc}[1]{#1}</span>
+- <span style="color:#ae81ff">\hideFromPandoc{</span>
+    <span style="color:#ae81ff">\let\Begin\begin</span>
+    <span style="color:#ae81ff">\let\End\end</span>
   }
 </code></pre></div><p><strong>Magical things</strong> is that you can also use Markdown inside a Raw LaTeX code \m/</p>
 <p>And this is the result:</p>
 <p><img src="column.png" alt="caption"></p>
 <h4 id="preamble">Preamble</h4>
 <p>Pandoc lets user include a custom preamble in the generated output.</p>
-<p>If you have to use some packages in LaTeX ( not so much ), you can include it in the YAML header inside the <code>header-includes:</code> tag.<br>
+<p>If you have to use some packages in LaTeX ( not so much ), you can include it in the YAML header inside the <code>header-includes:</code> tag. <br>
 For example I want to use package <code>multicol</code> in LaTeX, my header should look like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#66d9ef">header-includes</span>:
-- \usepackage{multicol}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#f92672">header-includes</span>:
+- <span style="color:#ae81ff">\usepackage{multicol}</span>
 </code></pre></div><p>These lines will be included before the document begin in LaTeX file.</p>
 <p>Preamble in Pandoc gives you more features than just to import some packages.
 We can also create our own PDF template. For presentation, we can re-config the Beamer theme.
@@ -399,7 +399,7 @@ Either does Pandoc, instead of using <code>header-includes</code> tag, we can cr
 I need to redefine the <code>footline</code> template used by the Ilmenau, and also modify the <code>sections/subsections</code> in toc allowing you to change the appearance of the sections and subsections in the ToC.
 At this point, you do need to know a little bit about LaTeX, but you will have your own Beamer Template.
 You can also change the color, subsection, section,&hellip;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%%%% Create framenumber in footer
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%%%% Create framenumber in footer
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\frameofframes</span>}{/}
 <span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\setframeofframes</span>}[1]{<span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\frameofframes</span>}{#1}}
 
@@ -425,7 +425,7 @@ You can also change the color, subsection, section,&hellip;</p>
     <span style="color:#66d9ef">\end</span>{beamercolorbox}
   }
 </code></pre></div><p><strong>Usage</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc main.md -H preamble.tex -t beamer -o main.pdf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc main.md -H preamble.tex -t beamer -o main.pdf
 </code></pre></div><p><strong>Result</strong><br>
 Ilmenau theme with frame number and a new look.
 You can download my preamble example <a href="https://github.com/huyhoang8398/pandoc-tutorial/blob/master/preamble.tex">here</a></p>
@@ -466,7 +466,7 @@ You can download my preamble example <a href="https://github.com/huyhoang8398/pa
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
