@@ -1,6 +1,6 @@
 +++
 title = "Setting a Static IP and Permanent DNS nameserver in Ubuntu Server"
-date = "2023-07-06T20:00:00+0000"
+date = "2023-07-06T14:18:55+0000"
 authors = ["kn"]
 cover = "posts/staticip-ubuntuserver/cover.png"
 tags = ["Linux", "SysAd", "Network"]
