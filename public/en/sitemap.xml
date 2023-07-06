@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://huyhoang8398.github.io/blog/authors/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -15,17 +15,8 @@
                 href="https://huyhoang8398.github.io/blog/authors/"
                 />
   </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/aws/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
-  </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/centos/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
-  </url><url>
-    <loc>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
-  </url><url>
     <loc>https://huyhoang8398.github.io/blog/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -38,16 +29,25 @@
                 />
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/authors/kn/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
   </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/php/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+    <loc>https://huyhoang8398.github.io/blog/tags/linux/</loc>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/network/</loc>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/posts/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</loc>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/sysad/</loc>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/</loc>
-    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -58,6 +58,18 @@
                 hreflang="en"
                 href="https://huyhoang8398.github.io/blog/tags/"
                 />
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/aws/</loc>
+    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/centos/</loc>
+    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</loc>
+    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/php/</loc>
+    <lastmod>2023-02-17T13:15:05+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/certbot/</loc>
     <lastmod>2023-02-13T09:57:31+00:00</lastmod>
@@ -90,9 +102,6 @@
     <lastmod>2022-05-03T16:14:17+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/keychron/</loc>
-    <lastmod>2022-05-03T16:14:17+00:00</lastmod>
-  </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/linux/</loc>
     <lastmod>2022-05-03T16:14:17+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/ubuntu/</loc>
@@ -132,9 +141,6 @@
     <lastmod>2020-03-21T17:59:52+07:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/dns/</loc>
-    <lastmod>2020-01-21T21:39:45+07:00</lastmod>
-  </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/network/</loc>
     <lastmod>2020-01-21T21:39:45+07:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/privacy/</loc>
