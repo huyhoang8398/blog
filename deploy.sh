@@ -1,9 +1,8 @@
 #!/bin/sh
 
-if [ "$(git status -s)" ]
-then
-    echo "The working directory is dirty. Please commit any pending changes."
-    exit 1;
+if [ "$(git status -s)" ]; then
+	echo "The working directory is dirty. Please commit any pending changes."
+	exit 1
 fi
 
 echo "Deleting old publication"
@@ -25,4 +24,3 @@ echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
 
 echo "Pushing to github"
-git push --all
