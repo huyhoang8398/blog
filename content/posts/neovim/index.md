@@ -86,37 +86,14 @@ pacman -S neovim # Archlinux
 Neovim conforms `XDG Base Directory structure`. Here is my config file structure:
 
 ```
-~/.config/nvim on  macos via 🌙 took 13s
-❯ tree
 .
-├── after
-│   └── plugin
-│       ├── autopairs.lua
-│       ├── colorscheme.lua
-│       ├── gitsigns.lua
-│       ├── indent_blankline.lua
-│       ├── lsp.lua
-│       ├── lualine.lua
-│       ├── mason-lspconfig.lua
-│       ├── mason-null-ls.lua
-│       ├── mason.lua
-│       ├── nvim-dap-python.lua
-│       ├── nvim-dap-ui.lua
-│       ├── nvim-tree.lua
-│       ├── telescope.lua
-│       └── treesitter.lua
-├── ftdetect
-│   └── groovy.lua
-├── init.lua
-├── lazy-lock.json
-└── lua
-    └── kn
-        ├── init.lua
-        ├── keymaps.lua
-        ├── lazy.lua
-        └── options.lua
-
-6 directories, 21 files
+├── init.lua    | Neovim initialization file
+├── after/      | Standard auto-loading 'after' base directory
+│   └── plugin/ | Auto-loading 'plugin' configs
+├── ftdetect/   | Detect filetype
+└── lua/        | Lua base directory
+    ├── config/ | Plugin configs that ARE lazy-loaded via explicit 'require'
+    └── custom/ | plugin-manager, mappings and options configs
 ```
 
 ## Install plugin manager: Lazy.nvim
@@ -142,7 +119,7 @@ Lazy.nvim comes with lots of features that I found useful sunch as:
 
 ### Setup 
 
-Firstly, create a `lazy.lua` file in `~/.config/nvim/lua/kn/` with this content
+Firstly, create a `lazy.lua` file in `~/.config/nvim/lua/custom/` with this content
 You then can add the following Lua code to your `lazy.lua` to bootstrap `lazy.nvim`:
 
 ```vim
@@ -160,7 +137,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 ```
-Next step is to add lazy.nvim below the code added in the prior step in `init.lua`:
+Next step is to add lazy.nvim below the code added in the prior step in `lazy.lua`:
 
 ```vim
 require("lazy").setup(plugins, opts)
@@ -176,13 +153,13 @@ require("lazy").setup(plugins, opts)
 
 ```vim
 local opts = {
-	defaults = { lazy = false },
 	install = {
 		missing = true,
 		colorscheme = { "moonfly", "habamax" },
 	},
 
 	ui = {
+		border = "single",
 		icons = {
 			ft = "",
 			lazy = "󰂠 ",
@@ -192,10 +169,17 @@ local opts = {
 	},
 
 	performance = {
-		cache = {
-			enabled = true,
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"netrwPlugin",
+				"rplugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
 		},
-		reset_packpath = true, -- reset the package path to improve startup time
 	},
 }
 ```
@@ -208,11 +192,17 @@ local plugins = {
 		name = "moonfly",
 		lazy = false,
 		priority = 1000,
+		config = function()
+			require("config.moonfly")
+		end,
 	},
-    -- lualine (status line) --
+	-- lualine (status line) --
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("config.lualine")
+		end,
 	},
 }
 ```
@@ -241,8 +231,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	end,
 	group = vim.api.nvim_create_augroup("CustomHighlight", {}),
 })
-
-vim.cmd([[colorscheme moonfly]])
 ```
 
 It supports treesitter and other plugins very well and Also the maintainer is really friendly (We talk alots in Discord)
@@ -300,39 +288,56 @@ For me I found that LSP zero is lifesaver but you could also consider [you might
 #### LSP setup
 
 ```vim
-	{
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v2.x",
-		dependencies = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
-			{
-				"jay-babu/mason-null-ls.nvim",
-				event = { "BufReadPre", "BufNewFile" },
-				dependencies = {
-					"williamboman/mason.nvim",
-					"jose-elias-alvarez/null-ls.nvim",
-				},
-			},
+{
+   "VonHeikemen/lsp-zero.nvim",
+   branch = "v2.x",
+   dependencies = {
+    -- LSP Support
+    { "neovim/nvim-lspconfig" },
+    { "williamboman/mason.nvim" },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        config = function()
+            require("config.mason-lspconfig")
+        end,
+    },
+    {
+        "jay-babu/mason-null-ls.nvim",
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = {
+            "williamboman/mason.nvim",
+            "jose-elias-alvarez/null-ls.nvim",
+        },
+        config = function()
+            require("config.mason-null-ls")
+        end,
+    },
 
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-			{
-				"L3MON4D3/LuaSnip",
-				build = "make install_jsregexp",
-				dependencies = {
-					"rafamadriz/friendly-snippets",
-				},
-			},
-		},
+    -- Autocompletion
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lua",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-nvim-lsp",
+            "saadparwaiz1/cmp_luasnip",
+            "hrsh7th/cmp-nvim-lsp-signature-help",
+        },
+        event = "InsertEnter",
+    },
+    {
+        "L3MON4D3/LuaSnip",
+        build = "make install_jsregexp",
+        dependencies = {
+            "rafamadriz/friendly-snippets",
+        },
+    },
+   },
+   config = function()
+        require("config.lsp")
+   end,
+},
 ```
 
 My above template will cover all requirement for LSP, Autocompletion and Snippet
@@ -500,73 +505,50 @@ The configuration would look like so:
 ```vim
 local opts = {
 	defaults = {
-		vimgrep_arguments = {
-			"rg",
-			"-L",
-			"--color=never",
-			"--no-heading",
-			"--with-filename",
-			"--line-number",
-			"--column",
-			"--smart-case",
-		},
-		entry_prefix = "  ",
-		initial_mode = "insert",
-		selection_strategy = "reset",
-		sorting_strategy = "ascending",
-		layout_strategy = "horizontal",
+		hl_result_eol = false,
 		layout_config = {
-			horizontal = {
-				prompt_position = "top",
-				preview_width = 0.55,
-				results_width = 0.8,
-			},
-			vertical = {
-				mirror = false,
-			},
-			width = 0.87,
-			height = 0.80,
-			preview_cutoff = 120,
+			height = 0.8,
+			prompt_position = "top",
+			preview_width = 0.5,
+			width = 0.9,
 		},
-		file_ignore_patterns = { "node_modules" },
-		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 		mappings = {
 			i = {
-				["<esc>"] = require("telescope.actions").close,
+				["<esc>"] = actions.close,
+				["<C-f>"] = actions.results_scrolling_down,
+				["<C-b>"] = actions.results_scrolling_up,
 			},
 		},
+		multi_icon = "✚",
+		prompt_prefix = "❯ ",
+		selection_caret = "▶ ",
+		sorting_strategy = "ascending",
 	},
-	extensions = {
-		fzf = {
-			fuzzy = true, -- false will only do exact matching
-			override_generic_sorter = true, -- override the generic sorter
-			override_file_sorter = true, -- override the file sorter
-			case_mode = "smart_case", -- or "ignore_case" or "respect_case"
-			-- the default case_mode is "smart_case"
+	pickers = {
+		buffers = {
+			show_all_buffers = true,
 		},
 	},
 }
-
-require("telescope").setup(opts)
+telescope.setup(opts)
+telescope.load_extension("fzf")
 ```
 
 **keymaps** 
 ```vim
--- Telescope --
-local keymap = vim.keymap
-keymap.set("n", "<leader>\\", "<cmd>Telescope find_files<CR>")
-keymap.set("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>")
-keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<CR>")
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
-keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>")
-keymap.set("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
-keymap.set("n", "<leader>cm", "<cmd>Telescope git_commits<CR>")
-keymap.set("n", "<leader>gt", "<cmd>Telescope git_status<CR>")
-keymap.set("n", "<leader>ma", "<cmd>Telescope marks<CR>")
-keymap.set("n", "<leader>dg", "<cmd>Telescope diagnostics<CR>")
+-- Mappings.
+local map = vim.keymap.set
+map("n", "<leader>\\", "<cmd>Telescope find_files<CR>")
+map("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>")
+map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>")
+map("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
+map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
+map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>")
+map("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
+map("n", "<leader>cm", "<cmd>Telescope git_commits<CR>")
+map("n", "<leader>gt", "<cmd>Telescope git_status<CR>")
+map("n", "<leader>ma", "<cmd>Telescope marks<CR>")
+map("n", "<leader>dg", "<cmd>Telescope diagnostics<CR>")
 ```
 
 ![Telescope Find Word](./find_word.png)
@@ -771,6 +753,23 @@ keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
 keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
 keymap.set("n", "<leader>db", ":lua require'dapui'.toggle()<CR>")
 api("n", "<leader>dpr", ":call v:lua.debug_python()<CR>", { noremap = true, silent = true })
+```
+
+Finally, to combime all of this, you could add in your root `init.lua` file:
+```vim
+local colorscheme = vim.cmd.colorscheme
+local fn = vim.fn
+
+-- Enable the Lua loader byte-compilation cache.
+if fn.has("nvim-0.9") == 1 then
+	vim.loader.enable()
+end
+
+require("custom.options")
+require("custom.keymaps")
+require("custom.lazy") -- Plugin Manager
+
+colorscheme("moonfly")
 ```
                                             ...
 That’s pretty much it! I hope it’s helpful for improving your Neovim environment.
