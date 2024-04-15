@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Kn</title>
+    <link>https://huyhoang8398.github.io/blog/tags/programming/</link>
+    <description>Recent content in programming on Kn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Dec 2023 11:45:50 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why do arrays start at 0?</title>
+      <link>https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/</link>
+      <pubDate>Sun, 17 Dec 2023 11:45:50 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/</guid>
+      <description>Do you guy know why arrays are indexed at zero? So what&amp;rsquo;s actually happening under the hood here, let takes this example:
+#include &amp;lt;stdio.h&amp;gt; int main() { int test[3] = {1,2,3}; } so if I want to get a second element here of test, I should write test[2]; right?
+What&amp;rsquo;s actually happening here is this test[2]; converts the the address of test plus size of an int times two
+test[2]; // &amp;amp;test + sizeof(int)*2 And because the first element lives at the zeroth location (its the zeroth offset), that why you could do like this:</description>
+    </item>
+    
+  </channel>
+</rss>

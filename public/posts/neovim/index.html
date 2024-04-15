@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Neovim: From simple texteditor to IDE like :: Kn — Anything that&#39;s system and software</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="My Neovim setup as DevOps day, Developer at night. IDE-like features based on LSP and Treesitter, fuzzy finder, and status line"/>
+<meta name="keywords" content="neovim, texteditor, lsp, mason"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/neovim/" />
+
+
+<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/style.css">
+
+  <link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/green.css">
+
+
+
+<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://huyhoang8398.github.io/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://huyhoang8398.github.io/blog/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Neovim: From simple texteditor to IDE like :: Kn — Anything that&#39;s system and software" />
+<meta name="twitter:description" content="My Neovim setup as DevOps day, Developer at night. IDE-like features based on LSP and Treesitter, fuzzy finder, and status line" />
+<meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="https://huyhoang8398.github.io/blog/posts/neovim/cover.png">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Neovim: From simple texteditor to IDE like :: Kn — Anything that&#39;s system and software">
+<meta property="og:description" content="My Neovim setup as DevOps day, Developer at night. IDE-like features based on LSP and Treesitter, fuzzy finder, and status line" />
+<meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/neovim/" />
+<meta property="og:site_name" content="Neovim: From simple texteditor to IDE like" />
+<meta property="og:image" content="https://huyhoang8398.github.io/blog/posts/neovim/cover.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2023-07-15 23:28:43 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+<link href="/blog/prism-onedark.css" rel="stylesheet" />
+
+</head>
+<body class="en">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://huyhoang8398.github.io/blog">
+  <div class="logo">
+    Kn
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://huyhoang8398.github.io">about</a></li>
+        
+      
+      
+    
+
+    
+    <div class="spacer"></div>
+    <ul class="language-selector">
+      <ul class="language-selector-current">
+          <li>english ▾</li>
+      </ul>
+      <ul class="language-selector__more hidden">
+        
+        <li><a href="https://huyhoang8398.github.io/blog/">english</a></li>
+        
+        <li><a href="https://huyhoang8398.github.io/blog/vi/">viet</a></li>
+        
+      </ul>
+    </ul>
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://huyhoang8398.github.io">about</a></li>
+      
+    
+    
+    <hr />
+        
+          <li>
+            <a href="https://huyhoang8398.github.io/blog/">english</a>
+          </li>
+        
+          <li>
+            <a href="https://huyhoang8398.github.io/blog/vi/">viet</a>
+          </li>
+        
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://huyhoang8398.github.io/blog/posts/neovim/">Neovim: From simple texteditor to IDE like</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2023-07-15
+    </span>
+    
+    
+    <span class="post-author">:: 
+      
+        
+        
+    
+    
+        <a href="https://huyhoang8398.github.io/blog/authors/kn/" />Do Hoang</a>
+    
+
+      
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    <a href="https://huyhoang8398.github.io/blog/tags/neovim/">#neovim</a>&nbsp;
+    
+    <a href="https://huyhoang8398.github.io/blog/tags/texteditor/">#texteditor</a>&nbsp;
+    
+    <a href="https://huyhoang8398.github.io/blog/tags/lsp/">#lsp</a>&nbsp;
+    
+    <a href="https://huyhoang8398.github.io/blog/tags/mason/">#mason</a>&nbsp;
+    
+    <a href="https://huyhoang8398.github.io/blog/tags/lazy/">#lazy</a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="https://huyhoang8398.github.io/blog/posts/neovim/cover.png" class="post-cover" />
+  
+
+  <div class="post-content">
+    <p>Hi, it&rsquo;s Kn.</p>
+<p>Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine
+I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them!
+Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &ldquo;hard&rdquo; for him to handle.</p>
+<p>I&rsquo;d like to introduce my latest setup with Neovim 0.9 and modern plugins. Here is a quick summary of my set up:</p>
+<ul>
+<li><a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> - is a modern plugin manager for Neovim</li>
+<li><a href="https://github.com/VonHeikemen/lsp-zero.nvim">LSP-zero</a> - A starting point to setup some lsp related features in neovim.</li>
+<li><a href="https://github.com/williamboman/mason.nvim">mason</a> - Easily install and manage LSP servers, DAP servers, linters, and formatters</li>
+<li><a href="https://github.com/williamboman/mason-lspconfig.nvim">mason-lspconfig</a> - Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim.</li>
+<li><a href="https://github.com/hrsh7th/nvim-cmp">nvim-cmp</a> - A completion plugin for neovim coded in Lua.</li>
+<li><a href="https://github.com/jay-babu/mason-null-ls.nvim">mason-null-Ls</a> - bridges mason.nvim with the null-ls plugin, making it easier to use both plugins together.</li>
+<li><a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a> - Treesitter configurations and abstraction layer for Neovim</li>
+<li><a href="https://github.com/nvim-telescope/telescope.nvim">telescope.nvim</a> - A highly extendable fuzzy finder over lists</li>
+<li><a href="https://github.com/nvim-lualine/lualine.nvim">lualine.nvim</a> - A blazing fast and easy to configure neovim statusline plugin written in pure lua</li>
+<li><a href="https://github.com/nvim-tree/nvim-tree.lua">nvim-tree.lua</a> - A file explorer tree for neovim written in lua</li>
+<li><a href="https://github.com/lukas-reineke/indent-blankline.nvim">Indent-blank-line</a> - Indent guides for Neovim</li>
+<li><a href="https://github.com/lewis6991/gitsigns.nvim">gitsigns</a> - Git integration for buffers</li>
+<li><a href="https://github.com/mfussenegger/nvim-dap">nvim-dap-ui, nvim-dap</a> - Debug Adapter Protocol client implementation for Neovim</li>
+<li><a href="https://github.com/windwp/nvim-autopairs">autopairs</a> - autopairs for neovim</li>
+<li><a href="https://github.com/mbbill/undotree">undotree</a> - The undo history visualizer for VIM</li>
+</ul>
+<p>And here is my dotfiles repository:</p>
+<p><a href="https://github.com/huyhoang8398/dotfiles">https://github.com/huyhoang8398/dotfiles</a></p>
+<h2 id="prerequisites--iterm2-and-patched-nerd-font">Prerequisites — iTerm2 and Patched Nerd Font</h2>
+<p>iTerm2 is a fast terminal emulator for macOS. Install one of Nerd Fonts for displaying fancy glyphs on your terminal. My current choice is JetBrainsMono Nerdfont. And use it on your terminal app. For example, on iTerm2:</p>
+<p><img src="font.png" alt="Font Iterm configuration"></p>
+<p>My color theme is <a href="https://github.com/bluz71/vim-moonfly-colors">Moonfly</a>, which is a true color Moonfly theme.
+The Moonfly theme for iTerm2 is in my dotfile repository <a href="https://github.com/huyhoang8398/dotfiles/blob/macos/iterm.theme/moonfly.itermcolors">here</a> with a bit color customization.</p>
+<p><img src="./moonfly.png" alt="Moonfly"></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Category</th>
+<th>Value</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background</td>
+<td>Background</td>
+<td><code>#080808</code></td>
+<td><img src="https://place-hold.it/32/080808?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Foreground</td>
+<td>Foreground</td>
+<td><code>#bdbdbd</code></td>
+<td><img src="https://place-hold.it/32/bdbdbd?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Bold</td>
+<td>Bold</td>
+<td><code>#eeeeee</code></td>
+<td><img src="https://place-hold.it/32/eeeeee?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>Cursor</td>
+<td><code>#9e9e9e</code></td>
+<td><img src="https://place-hold.it/32/9e9e9e?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Cursor Text</td>
+<td>Cursor Text</td>
+<td><code>#080808</code></td>
+<td><img src="https://place-hold.it/32/080808?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Selection</td>
+<td>Selection</td>
+<td><code>#b2ceee</code></td>
+<td><img src="https://place-hold.it/32/b2ceee?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Selection Text</td>
+<td>Selection Text</td>
+<td><code>#080808</code></td>
+<td><img src="https://place-hold.it/32/080808?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 1</td>
+<td>Black (normal)</td>
+<td><code>#323437</code></td>
+<td><img src="https://place-hold.it/32/323437?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 2</td>
+<td>Red (normal)</td>
+<td><code>#ff5454</code></td>
+<td><img src="https://place-hold.it/32/ff5454?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 3</td>
+<td>Green (normal)</td>
+<td><code>#8cc85f</code></td>
+<td><img src="https://place-hold.it/32/8cc85f?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 4</td>
+<td>Yellow (normal)</td>
+<td><code>#e3c78a</code></td>
+<td><img src="https://place-hold.it/32/e3c78a?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 5</td>
+<td>Blue (normal)</td>
+<td><code>#80a0ff</code></td>
+<td><img src="https://place-hold.it/32/80a0ff?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 6</td>
+<td>Purple (normal)</td>
+<td><code>#cf87e8</code></td>
+<td><img src="https://place-hold.it/32/cf87e8?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 7</td>
+<td>Cyan (normal)</td>
+<td><code>#79dac8</code></td>
+<td><img src="https://place-hold.it/32/79dac8?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 8</td>
+<td>White (normal)</td>
+<td><code>#c6c6c6</code></td>
+<td><img src="https://place-hold.it/32/c6c6c6?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 9</td>
+<td>Black (bright)</td>
+<td><code>#949494</code></td>
+<td><img src="https://place-hold.it/32/949494?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 10</td>
+<td>Red (bright)</td>
+<td><code>#ff5189</code></td>
+<td><img src="https://place-hold.it/32/ff5189?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 11</td>
+<td>Green (bright)</td>
+<td><code>#36c692</code></td>
+<td><img src="https://place-hold.it/32/36c692?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 12</td>
+<td>Yellow (bright)</td>
+<td><code>#c2c292</code></td>
+<td><img src="https://place-hold.it/32/c2c292?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 13</td>
+<td>Blue (bright)</td>
+<td><code>#74b2ff</code></td>
+<td><img src="https://place-hold.it/32/74b2ff?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 14</td>
+<td>Purple (bright)</td>
+<td><code>#ae81ff</code></td>
+<td><img src="https://place-hold.it/32/ae81ff?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 15</td>
+<td>Cyan (bright)</td>
+<td><code>#85dc85</code></td>
+<td><img src="https://place-hold.it/32/85dc85?text=+" alt="background"></td>
+</tr>
+<tr>
+<td>Color 16</td>
+<td>White (bright)</td>
+<td><code>#e4e4e4</code></td>
+<td><img src="https://place-hold.it/32/e4e4e4?text=+" alt="background"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="install-neovim">Install Neovim</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install neovim <span style="color:#75715e"># MacOS</span>
+apt install neovim <span style="color:#75715e"># Debian/Ubuntu</span>
+pacman -S neovim <span style="color:#75715e"># Archlinux</span>
+</code></pre></div><h2 id="directory-structure">Directory structure</h2>
+<p>Neovim conforms <code>XDG Base Directory structure</code>. Here is my config file structure:</p>
+<pre tabindex="0"><code>.
+├── init.lua    | Neovim initialization file
+├── after/      | Standard auto-loading 'after' base directory
+│   └── plugin/ | Auto-loading 'plugin' configs
+├── ftdetect/   | Detect filetype
+└── lua/        | Lua base directory
+    ├── config/ | Plugin configs that ARE lazy-loaded via explicit 'require'
+    └── custom/ | plugin-manager, mappings and options configs
+</code></pre><h2 id="install-plugin-manager-lazynvim">Install plugin manager: Lazy.nvim</h2>
+<p>Lazy.nvim comes with lots of features that I found useful sunch as:</p>
+<ul>
+<li>📦 Manage all your Neovim plugins with a powerful UI</li>
+<li>🚀 Fast startup times thanks to automatic caching and bytecode compilation of Lua modules</li>
+<li>💾 Partial clones instead of shallow clones</li>
+<li>🔌 Automatic lazy-loading of Lua modules and lazy-loading on events, commands, filetypes, and key mappings</li>
+<li>⏳ Automatically install missing plugins before starting up Neovim, allowing you to start using it right away</li>
+<li>💪 Async execution for improved performance</li>
+<li>🛠️ No need to manually compile plugins</li>
+<li>🧪 Correct sequencing of dependencies</li>
+<li>📁 Configurable in multiple files</li>
+<li>📚 Generates helptags of the headings in README.md files for plugins that don&rsquo;t have vimdocs</li>
+<li>💻 Dev options and patterns for using local plugins</li>
+<li>📊 Profiling tools to optimize performance</li>
+<li>🔒 Lockfile lazy-lock.json to keep track of installed plugins</li>
+<li>🔎 Automatically check for updates</li>
+<li>📋 Commit, branch, tag, version, and full Semver support</li>
+<li>📈 Statusline component to see the number of pending updates</li>
+<li>🎨 Automatically lazy-loads colorschemes</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<p>Firstly, create a <code>lazy.lua</code> file in <code>~/.config/nvim/lua/custom/</code> with this content
+You then can add the following Lua code to your <code>lazy.lua</code> to bootstrap <code>lazy.nvim</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">-- <span style="color:#a6e22e">Lazy</span>.<span style="color:#a6e22e">nvim</span> --<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">lazypath</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">stdpath</span>(<span style="color:#e6db74">&#34;data&#34;</span>) .. <span style="color:#e6db74">&#34;/lazy/lazy.nvim&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">loop</span>.<span style="color:#a6e22e">fs_stat</span>(<span style="color:#a6e22e">lazypath</span>) <span style="color:#a6e22e">then</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">system</span>({<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;git&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;clone&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;--filter=blob:none&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;https://github.com/folke/lazy.nvim.git&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;--branch=stable&#34;, -- latest stable release</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">lazypath</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	})<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">opt</span>.<span style="color:#a6e22e">rtp</span>:<span style="color:#a6e22e">prepend</span>(<span style="color:#a6e22e">lazypath</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Next step is to add lazy.nvim below the code added in the prior step in <code>lazy.lua</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;lazy&#34;</span>).<span style="color:#a6e22e">setup</span>(<span style="color:#a6e22e">plugins</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><code>plugins</code>: this is all the plugin that you want to install and should be a table or a string</p>
+<ul>
+<li><code>table</code>: a list with your Plugin Spec</li>
+<li><code>string</code>: a Lua module name that contains your Plugin Spec.</li>
+</ul>
+<p><code>opts</code>: this should be lazy nvim options itself and should be a table.</p>
+<p><strong>Example Options</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">opts</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">install</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">missing</span> = <span style="color:#a6e22e">true</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">colorscheme</span> = { <span style="color:#e6db74">&#34;moonfly&#34;</span>, <span style="color:#e6db74">&#34;habamax&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">ui</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">border</span> = <span style="color:#e6db74">&#34;single&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">icons</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">ft</span> = <span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">lazy</span> = <span style="color:#e6db74">&#34;󰂠 &#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">loaded</span> = <span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">not_loaded</span> = <span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">performance</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">rtp</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">disabled_plugins</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">				&#34;gzip&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">				&#34;netrwPlugin&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">				&#34;rplugin&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">				&#34;tarPlugin&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">				&#34;tohtml&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">				&#34;tutor&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">				&#34;zipPlugin&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><strong>Example Plugin Install</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">plugins</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	{<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;bluz71/vim-moonfly-colors&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;moonfly&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">lazy</span> = <span style="color:#a6e22e">false</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">priority</span> = <span style="color:#ae81ff">1000</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">config</span> = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;config.moonfly&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	-- <span style="color:#a6e22e">lualine</span> (<span style="color:#a6e22e">status</span> <span style="color:#a6e22e">line</span>) --<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	{<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;nvim-lualine/lualine.nvim&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">dependencies</span> = { <span style="color:#e6db74">&#34;nvim-tree/nvim-web-devicons&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">config</span> = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;config.lualine&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>In this Blog, I will cover only some essenstial plugins, the rest you could see in my <code>dotfiles</code> link above</p>
+<h3 id="colorscheme">Colorscheme</h3>
+<p>Im using <a href="https://github.com/bluz71/vim-moonfly-colors">Moonfly</a> - a dark charcoal theme with some options:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">g</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">g</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">moonflyWinSeparator</span> = <span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">moonflyVirtualTextColor</span> = <span style="color:#a6e22e">true</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">moonflyUnderlineMatchParen</span> = <span style="color:#a6e22e">true</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">moonflyCursorColor</span> = <span style="color:#a6e22e">true</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">moonflyTransparent</span> = <span style="color:#a6e22e">true</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">moonflyNormalFloat</span> = <span style="color:#a6e22e">true</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>-- <span style="color:#a6e22e">Overwrite</span> <span style="color:#a6e22e">folder</span> <span style="color:#a6e22e">color</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">nvimtree</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">nvim_create_autocmd</span>(<span style="color:#e6db74">&#34;ColorScheme&#34;</span>, {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">pattern</span> = <span style="color:#e6db74">&#34;moonfly&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">callback</span> = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">nvim_set_hl</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;NvimTreeFolderIcon&#34;</span>, { <span style="color:#a6e22e">link</span> = <span style="color:#e6db74">&#34;MoonflyBlue&#34;</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">group</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">nvim_create_augroup</span>(<span style="color:#e6db74">&#34;CustomHighlight&#34;</span>, {}),<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>})<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>It supports treesitter and other plugins very well and Also the maintainer is really friendly (We talk alots in Discord)</p>
+<p><img src="./colorscheme-example.png" alt="Colorscheme Example"></p>
+<h3 id="status-line-lualine">Status line: Lualine</h3>
+<p><img src="./lualine.png" alt="Lualine"></p>
+<p><a href="https://github.com/nvim-lualine/lualine.nvim">nvim-lualine/lualine</a> provides a flexible way to configure statusline</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">lualine_sections</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">lualine_a</span> = { <span style="color:#e6db74">&#34;mode&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">lualine_b</span> = { <span style="color:#e6db74">&#34;branch&#34;</span>, <span style="color:#e6db74">&#34;b:gitsigns_status&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">lualine_c</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;filename&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		{<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">			&#34;diagnostics&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">sources</span> = { <span style="color:#e6db74">&#34;nvim_diagnostic&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			--<span style="color:#a6e22e">symbols</span> = { <span style="color:#a6e22e">error</span> = <span style="color:#e6db74">&#34;E:&#34;</span>, <span style="color:#a6e22e">warn</span> = <span style="color:#e6db74">&#34;W:&#34;</span>, <span style="color:#a6e22e">info</span> = <span style="color:#e6db74">&#34;I:&#34;</span>, <span style="color:#a6e22e">hint</span> = <span style="color:#e6db74">&#34;H:&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;g:metals_status&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">lualine_x</span> = { <span style="color:#e6db74">&#34;filetype&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">lualine_y</span> = { { <span style="color:#e6db74">&#34;fileformat&#34;</span>, <span style="color:#a6e22e">icons_enabled</span> = <span style="color:#a6e22e">false</span> }, <span style="color:#e6db74">&#34;encoding&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">lualine_z</span> = { <span style="color:#e6db74">&#34;progress&#34;</span>, <span style="color:#e6db74">&#34;location&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">opts</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">options</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">icons_enabled</span> = <span style="color:#a6e22e">true</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">globalstatus</span> = <span style="color:#a6e22e">true</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;moonfly&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		--<span style="color:#a6e22e">component_separators</span> = <span style="color:#e6db74">&#34;|&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		--<span style="color:#a6e22e">section_separators</span> = <span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">disabled_filetypes</span> = {},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">sections</span> = <span style="color:#a6e22e">lualine_sections</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">inactive_sections</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">deepcopy</span>(<span style="color:#a6e22e">lualine_sections</span>),<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">tabline</span> = {},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">extensions</span> = { <span style="color:#e6db74">&#34;nvim-tree&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="lsp-zero---lsp-lifesaver">LSP Zero - LSP Lifesaver</h3>
+<p>The purpose of this plugin is to bundle all the &ldquo;boilerplate code&rdquo; necessary to have <code>nvim-cmp</code> (a popular autocompletion plugin) and <code>nvim-lspconfig</code> working together. And if you opt in, it can use <code>mason.nvim</code> to let you install language servers from inside neovim.</p>
+<p>It used to be very difficult to setup language server, autocompletion, etc with CoC or similar, but now Neovim has a built-in LSP support. You can easily configure it by using <code>neovim/nvim-lspconfig</code> and <code>Mason</code>.</p>
+<p>For me I found that LSP zero is lifesaver but you could also consider <a href="https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/lsp.md#you-might-not-need-lsp-zero">you might not need lsp-zero</a>.</p>
+<h4 id="lsp-setup">LSP setup</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">{<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">   &#34;VonHeikemen/lsp-zero.nvim&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>   <span style="color:#a6e22e">branch</span> = <span style="color:#e6db74">&#34;v2.x&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>   <span style="color:#a6e22e">dependencies</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    -- <span style="color:#a6e22e">LSP</span> <span style="color:#a6e22e">Support</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    { <span style="color:#e6db74">&#34;neovim/nvim-lspconfig&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    { <span style="color:#e6db74">&#34;williamboman/mason.nvim&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">        &#34;williamboman/mason-lspconfig.nvim&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">config</span> = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>            <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;config.mason-lspconfig&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">        &#34;jay-babu/mason-null-ls.nvim&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">event</span> = { <span style="color:#e6db74">&#34;BufReadPre&#34;</span>, <span style="color:#e6db74">&#34;BufNewFile&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">dependencies</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;williamboman/mason.nvim&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;jose-elias-alvarez/null-ls.nvim&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">config</span> = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>            <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;config.mason-null-ls&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    -- <span style="color:#a6e22e">Autocompletion</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">        &#34;hrsh7th/nvim-cmp&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">dependencies</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;hrsh7th/cmp-nvim-lua&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;hrsh7th/cmp-buffer&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;hrsh7th/cmp-path&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;hrsh7th/cmp-nvim-lsp&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;saadparwaiz1/cmp_luasnip&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;hrsh7th/cmp-nvim-lsp-signature-help&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">event</span> = <span style="color:#e6db74">&#34;InsertEnter&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">        &#34;L3MON4D3/LuaSnip&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">build</span> = <span style="color:#e6db74">&#34;make install_jsregexp&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">dependencies</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">            &#34;rafamadriz/friendly-snippets&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>   },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>   <span style="color:#a6e22e">config</span> = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;config.lsp&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>   <span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>},<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>My above template will cover all requirement for LSP, Autocompletion and Snippet</p>
+<p>Language servers are configured and initialized using <code>nvim-lspconfig</code>.</p>
+<p><strong>Example Config</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">lsp</span> = <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;lsp-zero&#34;</span>).<span style="color:#a6e22e">preset</span>({ <span style="color:#a6e22e">float_border</span> = <span style="color:#e6db74">&#34;rounded&#34;</span>, <span style="color:#a6e22e">configure_diagnostics</span> = <span style="color:#a6e22e">true</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">on_attach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">client</span>, <span style="color:#a6e22e">bufnr</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">default_keymaps</span>({ <span style="color:#a6e22e">buffer</span> = <span style="color:#a6e22e">bufnr</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">local</span> <span style="color:#a6e22e">opts</span> = { <span style="color:#a6e22e">buffer</span> = <span style="color:#a6e22e">bufnr</span> }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;gd&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope lsp_definitions&lt;cr&gt;&#34;</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;gr&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope lsp_references&lt;cr&gt;&#34;</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;gl&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;lua vim.diagnostic.open_float()&lt;cr&gt;&#34;</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;[d&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;lua vim.diagnostic.goto_prev()&lt;cr&gt;&#34;</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;]d&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;lua vim.diagnostic.goto_next()&lt;cr&gt;&#34;</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;wa&#34;</span>, <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">add_workspace_folder</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;wr&#34;</span>, <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">remove_workspace_folder</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;wl&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">print</span>(<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">inspect</span>(<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">list_workspace_folders</span>()))<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">end</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;ca&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">code_action</span>({ <span style="color:#a6e22e">apply</span> = <span style="color:#a6e22e">true</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">end</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;D&#34;</span>, <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">type_definition</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;rn&#34;</span>, <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">lsp</span>.<span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">rename</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="install-a-language-server">Install a language server</h3>
+<p>Let&rsquo;s try to use the language server for lua.</p>
+<p>Open your <code>init.lua</code> and execute the command <code>:LspInstall</code>. Now <code>mason.nvim</code> will suggest a language server. Neovim should show a message like this.</p>
+<pre tabindex="0"><code>Please select which server you want to install for filetype &quot;lua&quot;:
+1: lua_ls
+Type number and &lt;Enter&gt; or click with the mouse (q or empty cancels):
+</code></pre><p>Choose 1 for <code>lua_ls</code>, then press enter. A floating window will show up. When the server is done installing, a message should appear.</p>
+<p>At the moment the language server can&rsquo;t start automatically, restart Neovim so the language server can be configured properly. Once the server starts you&rsquo;ll notice warning signs in the global variable vim, that means everything is well and good.</p>
+<p>For automatically installing any language server, you could create a file in `after/plugin/mason-lspconfig.lua</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">mason_lspconfig</span> = <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;mason-lspconfig&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">mason_lspconfig</span>.<span style="color:#a6e22e">setup</span>({<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">ensure_installed</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;pyright&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;lua_ls&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;bashls&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;docker_compose_language_service&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;dockerls&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;marksman&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>})<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I mainly use Bash, Python and Go so it will will automtically install these languague server
+If you want to manully install this, try to run <code>:Mason</code>, a popup screen will show like this and you could chose whatever language server you want to install</p>
+<p><img src="./mason.png" alt="Mason"></p>
+<h3 id="auto-completion-cmp">Auto-completion: cmp</h3>
+<p><img src="./cmp.png" alt="CMP"></p>
+<p>To get LSP-aware auto-completion feature with fancy pictograms, I use the following plugins:</p>
+<ul>
+<li>L3MON4D3/LuaSnip - Snippet engine</li>
+<li>hrsh7th/cmp-nvim-lsp - nvim-cmp source for neovim&rsquo;s built-in LSP</li>
+<li>hrsh7th/cmp-buffer - nvim-cmp source for buffer words</li>
+<li>hrsh7th/nvim-cmp - A completion engine plugin for neovim</li>
+<li>hrsh7th/cmp-path - Path completion</li>
+<li>hrsh7th/cmp-nvim-lsp-signature-help - Signature help</li>
+</ul>
+<p>Configure it like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">-- <span style="color:#a6e22e">Make</span> <span style="color:#a6e22e">sure</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">setup</span> `<span style="color:#a6e22e">cmp</span>` <span style="color:#a6e22e">after</span> <span style="color:#a6e22e">lsp</span>-<span style="color:#a6e22e">zero</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">cmp</span> = <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;cmp&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">cmp_action</span> = <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;lsp-zero&#34;</span>).<span style="color:#a6e22e">cmp_action</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">tbl_map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">type</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;luasnip.loaders.from_&#34;</span> .. <span style="color:#a6e22e">type</span>).<span style="color:#a6e22e">lazy_load</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span>, { <span style="color:#e6db74">&#34;vscode&#34;</span>, <span style="color:#e6db74">&#34;snipmate&#34;</span>, <span style="color:#e6db74">&#34;lua&#34;</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;luasnip&#34;</span>).<span style="color:#a6e22e">filetype_extend</span>(<span style="color:#e6db74">&#34;python&#34;</span>, { <span style="color:#e6db74">&#34;pydoc&#34;</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;luasnip&#34;</span>).<span style="color:#a6e22e">filetype_extend</span>(<span style="color:#e6db74">&#34;sh&#34;</span>, { <span style="color:#e6db74">&#34;shelldoc&#34;</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">cmp</span>.<span style="color:#a6e22e">setup</span>({<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">snippet</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">expand</span> = <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">args</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;luasnip&#34;</span>).<span style="color:#a6e22e">lsp_expand</span>(<span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">body</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">window</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">completion</span> = <span style="color:#a6e22e">cmp</span>.<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">window</span>.<span style="color:#a6e22e">bordered</span>(),<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">documentation</span> = <span style="color:#a6e22e">cmp</span>.<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">window</span>.<span style="color:#a6e22e">bordered</span>(),<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">sources</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		{ <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;nvim_lsp&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		{ <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;luasnip&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		{ <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;buffer&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		{ <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;nvim_lua&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		{ <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;path&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		{ <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;nvim_lsp_signature_help&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">mapping</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		[<span style="color:#e6db74">&#34;&lt;CR&gt;&#34;</span>] = <span style="color:#a6e22e">cmp</span>.<span style="color:#a6e22e">mapping</span>.<span style="color:#a6e22e">confirm</span>({ <span style="color:#a6e22e">select</span> = <span style="color:#a6e22e">false</span> }),<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		[<span style="color:#e6db74">&#34;&lt;Tab&gt;&#34;</span>] = <span style="color:#a6e22e">cmp_action</span>.<span style="color:#a6e22e">luasnip_supertab</span>(),<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		[<span style="color:#e6db74">&#34;&lt;S-Tab&gt;&#34;</span>] = <span style="color:#a6e22e">cmp_action</span>.<span style="color:#a6e22e">luasnip_shift_supertab</span>(),<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>})<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="syntax-highlightings-treesitter">Syntax highlightings: Treesitter</h3>
+<p><img src="./treesitter.png" alt="Treesitter"></p>
+<p>Treesitter is a popular language parser for syntax highlightings. First, install it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install tree-sitter
+</code></pre></div><p>Install <code>nvim-treesitter/nvim-treesitter</code> with Lazy and configure it like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">opts</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">highlight</span> = { <span style="color:#a6e22e">enable</span> = <span style="color:#a6e22e">true</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">indent</span> = { <span style="color:#a6e22e">enable</span> = <span style="color:#a6e22e">true</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">autotag</span> = { <span style="color:#a6e22e">enable</span> = <span style="color:#a6e22e">true</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">ensure_installed</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;dockerfile&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;go&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;bash&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;json&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;lua&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;markdown&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;markdown_inline&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;python&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;yaml&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;nvim-treesitter.configs&#34;</span>).<span style="color:#a6e22e">setup</span>(<span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="fuzz-finder-telescope">Fuzz finder: Telescope</h3>
+<p><img src="./telescope.png" alt="Telescope"></p>
+<p><code>telescope.nvim</code> provides an interactive fuzzy finder over lists, built on top of the latest Neovim features. I also use telescope-file-browser.nvim as a filer.</p>
+<p>It’s so useful because you can search files while viewing the content of the files without actually opening them. It supports various sources like Vim, <a href="https://github.com/nvim-telescope/telescope.nvim#file-pickers">files</a>, <a href="https://github.com/nvim-telescope/telescope.nvim#git-pickers">Git</a>, <a href="https://github.com/nvim-telescope/telescope.nvim#lsp-pickers">LSP</a>, and <a href="https://github.com/nvim-telescope/telescope.nvim#treesitter-picker">Treesitter</a>. Check out the <a href="https://github.com/nvim-telescope/telescope.nvim/wiki/Showcase">showcase</a> of Telescope.</p>
+<p>Install <a href="https://github.com/nvim-tree/nvim-web-devicons">kyazdani42/nvim-web-devicons</a> to get file icons on Telescope, statusline, and other supported plugins.</p>
+<p>The configuration would look like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">opts</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">defaults</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">hl_result_eol</span> = <span style="color:#a6e22e">false</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">layout_config</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">height</span> = <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">prompt_position</span> = <span style="color:#e6db74">&#34;top&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">preview_width</span> = <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">5</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">width</span> = <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">9</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">mappings</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">i</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>				[<span style="color:#e6db74">&#34;&lt;esc&gt;&#34;</span>] = <span style="color:#a6e22e">actions</span>.<span style="color:#a6e22e">close</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>				[<span style="color:#e6db74">&#34;&lt;C-f&gt;&#34;</span>] = <span style="color:#a6e22e">actions</span>.<span style="color:#a6e22e">results_scrolling_down</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>				[<span style="color:#e6db74">&#34;&lt;C-b&gt;&#34;</span>] = <span style="color:#a6e22e">actions</span>.<span style="color:#a6e22e">results_scrolling_up</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">multi_icon</span> = <span style="color:#e6db74">&#34;✚&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">prompt_prefix</span> = <span style="color:#e6db74">&#34;❯ &#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">selection_caret</span> = <span style="color:#e6db74">&#34;▶ &#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">sorting_strategy</span> = <span style="color:#e6db74">&#34;ascending&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">pickers</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">buffers</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">show_all_buffers</span> = <span style="color:#a6e22e">true</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">telescope</span>.<span style="color:#a6e22e">setup</span>(<span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">telescope</span>.<span style="color:#a6e22e">load_extension</span>(<span style="color:#e6db74">&#34;fzf&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><strong>keymaps</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">-- <span style="color:#a6e22e">Mappings</span>.<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">map</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;\\&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope find_files&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;fa&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope find_files follow=true no_ignore=true hidden=true&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;fw&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope live_grep&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;fb&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope buffers&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;fh&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope help_tags&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;fo&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope oldfiles&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;fz&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope current_buffer_fuzzy_find&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;cm&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope git_commits&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;gt&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope git_status&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;ma&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope marks&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;dg&#34;</span>, <span style="color:#e6db74">&#34;&lt;cmd&gt;Telescope diagnostics&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p><img src="./find_word.png" alt="Telescope Find Word"></p>
+<h3 id="code-formatter-null-ls">Code formatter: null-ls</h3>
+<p>I use null-ls for code formatting and extra diagnostics
+The config example as following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;mason&#34;</span>).<span style="color:#a6e22e">setup</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">null_ls</span> = <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;null-ls&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">setup</span>({<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">sources</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		-- <span style="color:#a6e22e">Replace</span> <span style="color:#a6e22e">these</span> <span style="color:#a6e22e">with</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">tools</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">want</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">install</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		-- <span style="color:#a6e22e">make</span> <span style="color:#a6e22e">sure</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">source</span> <span style="color:#a6e22e">name</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">supported</span> <span style="color:#a6e22e">by</span> <span style="color:#a6e22e">null</span>-<span style="color:#a6e22e">ls</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		-- <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#e6db74">/jose-elias-alvarez/</span><span style="color:#a6e22e">null</span>-<span style="color:#a6e22e">ls</span>.<span style="color:#a6e22e">nvim</span><span style="color:#e6db74">/blob/</span><span style="color:#a6e22e">main</span><span style="color:#e6db74">/doc/</span><span style="color:#a6e22e">BUILTINS</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">formatting</span>.<span style="color:#a6e22e">black</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">formatting</span>.<span style="color:#a6e22e">stylua</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">formatting</span>.<span style="color:#a6e22e">shfmt</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">diagnostics</span>.<span style="color:#a6e22e">hadolint</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">diagnostics</span>.<span style="color:#a6e22e">selene</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">diagnostics</span>.<span style="color:#a6e22e">shellcheck</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">diagnostics</span>.<span style="color:#a6e22e">ruff</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">null_ls</span>.<span style="color:#a6e22e">builtins</span>.<span style="color:#a6e22e">diagnostics</span>.<span style="color:#a6e22e">mypy</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>})<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>-- <span style="color:#a6e22e">See</span> <span style="color:#a6e22e">mason</span>-<span style="color:#a6e22e">null</span>-<span style="color:#a6e22e">ls</span>.<span style="color:#a6e22e">nvim</span>&#39;<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">documentation</span> <span style="color:#a6e22e">for</span> <span style="color:#a6e22e">more</span> <span style="color:#a6e22e">details</span>:<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>-- <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#e6db74">/jay-babu/</span><span style="color:#a6e22e">mason</span>-<span style="color:#a6e22e">null</span>-<span style="color:#a6e22e">ls</span>.<span style="color:#a6e22e">nvim</span>#<span style="color:#a6e22e">setup</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;mason-null-ls&#34;</span>).<span style="color:#a6e22e">setup</span>({<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">ensure_installed</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;shellcheck&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;selene&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;hadolint&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;black&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;shfmt&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;stylua&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;ruff&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;mypy&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;debugpy&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">		&#34;bash-debug-adapter&#34;,</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">automatic_installation</span> = <span style="color:#a6e22e">true</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>})<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="git-markers-gitsigns">Git markers: gitsigns</h3>
+<p><img src="./gitsigns.png" alt="gitsign"></p>
+<p><code>lewis6991/gitsigns.nvim</code> provides git decorations for current buffers. It helps you know which lines are currently changed. It works out of the box.</p>
+<p>I made some configuration and hotkey to suite my usage</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">opts</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">signs</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">add</span> = { <span style="color:#a6e22e">text</span> = <span style="color:#e6db74">&#34;│&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">change</span> = { <span style="color:#a6e22e">text</span> = <span style="color:#e6db74">&#34;│&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">delete</span> = { <span style="color:#a6e22e">text</span> = <span style="color:#e6db74">&#34;󰍵&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">topdelete</span> = { <span style="color:#a6e22e">text</span> = <span style="color:#e6db74">&#34;‾&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">changedelete</span> = { <span style="color:#a6e22e">text</span> = <span style="color:#e6db74">&#34;~&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">untracked</span> = { <span style="color:#a6e22e">text</span> = <span style="color:#e6db74">&#34;│&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">on_attach</span> = <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">bufnr</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">local</span> <span style="color:#a6e22e">gs</span> = <span style="color:#a6e22e">package</span>.<span style="color:#a6e22e">loaded</span>.<span style="color:#a6e22e">gitsigns</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">mode</span>, <span style="color:#a6e22e">l</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">opts</span> = <span style="color:#a6e22e">opts</span> <span style="color:#a6e22e">or</span> {}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">buffer</span> = <span style="color:#a6e22e">bufnr</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">mode</span>, <span style="color:#a6e22e">l</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		-- <span style="color:#a6e22e">Navigation</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;]c&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">wo</span>.<span style="color:#a6e22e">diff</span> <span style="color:#a6e22e">then</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>				<span style="color:#a6e22e">return</span> <span style="color:#e6db74">&#34;]c&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">schedule</span>(<span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>				<span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">next_hunk</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">end</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">return</span> <span style="color:#e6db74">&#34;&lt;Ignore&gt;&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>, { <span style="color:#a6e22e">expr</span> = <span style="color:#a6e22e">true</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;[c&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">wo</span>.<span style="color:#a6e22e">diff</span> <span style="color:#a6e22e">then</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>				<span style="color:#a6e22e">return</span> <span style="color:#e6db74">&#34;[c&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">schedule</span>(<span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>				<span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">prev_hunk</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">end</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">return</span> <span style="color:#e6db74">&#34;&lt;Ignore&gt;&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>, { <span style="color:#a6e22e">expr</span> = <span style="color:#a6e22e">true</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		-- <span style="color:#a6e22e">Actions</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hs&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">stage_hunk</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hr&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">reset_hunk</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;v&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hs&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">stage_hunk</span>({ <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">line</span>(<span style="color:#e6db74">&#34;.&#34;</span>), <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">line</span>(<span style="color:#e6db74">&#34;v&#34;</span>) })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;v&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hr&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">reset_hunk</span>({ <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">line</span>(<span style="color:#e6db74">&#34;.&#34;</span>), <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">line</span>(<span style="color:#e6db74">&#34;v&#34;</span>) })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hS&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">stage_buffer</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hu&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">undo_stage_hunk</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hR&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">reset_buffer</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hp&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">preview_hunk</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hb&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">blame_line</span>({ <span style="color:#a6e22e">full</span> = <span style="color:#a6e22e">true</span> })<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;tb&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">toggle_current_line_blame</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hd&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">diffthis</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;hD&#34;</span>, <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>			<span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">diffthis</span>(<span style="color:#e6db74">&#34;~&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">end</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;td&#34;</span>, <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">toggle_deleted</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		-- <span style="color:#a6e22e">Text</span> <span style="color:#a6e22e">object</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">map</span>({ <span style="color:#e6db74">&#34;o&#34;</span>, <span style="color:#e6db74">&#34;x&#34;</span> }, <span style="color:#e6db74">&#34;ih&#34;</span>, <span style="color:#e6db74">&#34;:&lt;C-U&gt;Gitsigns select_hunk&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">end</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;gitsigns&#34;</span>).<span style="color:#a6e22e">setup</span>(<span style="color:#a6e22e">opts</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="undotree---my-favorite-extension">Undotree - my favorite extension</h3>
+<p><img src="./undotree.png" alt="Undotree"></p>
+<p>The undo history visualizer for VIM
+Install it with</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">{ <span style="color:#e6db74">&#34;mbbill/undotree&#34;</span> },<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>should work out of box</p>
+<h3 id="debugging">Debugging</h3>
+<p><img src="./dap.png" alt="DAP"></p>
+<p>Im currently using <code>mfussenegger/nvim-dap</code> for debugging, thanks to Microsoft Debug Adapter Protocol</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">dap</span> = <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;dap&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">dapui</span> = <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;dapui&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>-- <span style="color:#a6e22e">bash</span> <span style="color:#a6e22e">debug</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">dap</span>.<span style="color:#a6e22e">adapters</span>.<span style="color:#a6e22e">bashdb</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;executable&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">command</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">stdpath</span>(<span style="color:#e6db74">&#34;data&#34;</span>) .. <span style="color:#e6db74">&#34;/mason/packages/bash-debug-adapter/bash-debug-adapter&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;bashdb&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">dap</span>.<span style="color:#a6e22e">configurations</span>.<span style="color:#a6e22e">sh</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	{<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;bashdb&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">request</span> = <span style="color:#e6db74">&#34;launch&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Launch file&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">showDebugOutput</span> = <span style="color:#a6e22e">true</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">pathBashdb</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">stdpath</span>(<span style="color:#e6db74">&#34;data&#34;</span>) .. <span style="color:#e6db74">&#34;/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">pathBashdbLib</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">stdpath</span>(<span style="color:#e6db74">&#34;data&#34;</span>) .. <span style="color:#e6db74">&#34;/mason/packages/bash-debug-adapter/extension/bashdb_dir&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">trace</span> = <span style="color:#a6e22e">true</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">file</span> = <span style="color:#e6db74">&#34;${file}&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">program</span> = <span style="color:#e6db74">&#34;${file}&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">cwd</span> = <span style="color:#e6db74">&#34;${workspaceFolder}&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">pathCat</span> = <span style="color:#e6db74">&#34;cat&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">pathBash</span> = <span style="color:#e6db74">&#34;/bin/bash&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">pathMkfifo</span> = <span style="color:#e6db74">&#34;mkfifo&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">pathPkill</span> = <span style="color:#e6db74">&#34;pkill&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">args</span> = {},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">env</span> = {},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>		<span style="color:#a6e22e">terminalKind</span> = <span style="color:#e6db74">&#34;integrated&#34;</span>,<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	},<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">dapui</span>.<span style="color:#a6e22e">setup</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>-- <span style="color:#a6e22e">use</span> <span style="color:#a6e22e">nvim</span>-<span style="color:#a6e22e">dap</span> <span style="color:#a6e22e">events</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">open</span> <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">close</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">windows</span> <span style="color:#a6e22e">automatically</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">dap</span>.<span style="color:#a6e22e">listeners</span>.<span style="color:#a6e22e">after</span>.<span style="color:#a6e22e">event_initialized</span>[<span style="color:#e6db74">&#34;dapui_config&#34;</span>] = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">dapui</span>.<span style="color:#a6e22e">open</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">dap</span>.<span style="color:#a6e22e">listeners</span>.<span style="color:#a6e22e">before</span>.<span style="color:#a6e22e">event_terminated</span>[<span style="color:#e6db74">&#34;dapui_config&#34;</span>] = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">dapui</span>.<span style="color:#a6e22e">close</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">dap</span>.<span style="color:#a6e22e">listeners</span>.<span style="color:#a6e22e">before</span>.<span style="color:#a6e22e">event_exited</span>[<span style="color:#e6db74">&#34;dapui_config&#34;</span>] = <span style="color:#66d9ef">function</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">dapui</span>.<span style="color:#a6e22e">close</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>with some keybind:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">-- <span style="color:#a6e22e">nvim</span>-<span style="color:#a6e22e">dap</span> --<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">_G</span>.<span style="color:#a6e22e">debug_python</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;dap-python&#34;</span>).<span style="color:#a6e22e">test_method</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;b&#34;</span>, <span style="color:#e6db74">&#34;:lua require&#39;dap&#39;.toggle_breakpoint()&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;B&#34;</span>, <span style="color:#e6db74">&#34;:lua require&#39;dap&#39;.set_breakpoint(vim.fn.input(&#39;Breakpoint condition: &#39;))&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">keymap</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;db&#34;</span>, <span style="color:#e6db74">&#34;:lua require&#39;dapui&#39;.toggle()&lt;CR&gt;&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">api</span>(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;dpr&#34;</span>, <span style="color:#e6db74">&#34;:call v:lua.debug_python()&lt;CR&gt;&#34;</span>, { <span style="color:#a6e22e">noremap</span> = <span style="color:#a6e22e">true</span>, <span style="color:#a6e22e">silent</span> = <span style="color:#a6e22e">true</span> })<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Finally, to combime all of this, you could add in your root <code>init.lua</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">colorscheme</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">colorscheme</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">local</span> <span style="color:#a6e22e">fn</span> = <span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">fn</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>-- <span style="color:#a6e22e">Enable</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">Lua</span> <span style="color:#a6e22e">loader</span> <span style="color:#a6e22e">byte</span>-<span style="color:#a6e22e">compilation</span> <span style="color:#a6e22e">cache</span>.<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">has</span>(<span style="color:#e6db74">&#34;nvim-0.9&#34;</span>) == <span style="color:#ae81ff">1</span> <span style="color:#a6e22e">then</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	<span style="color:#a6e22e">vim</span>.<span style="color:#a6e22e">loader</span>.<span style="color:#a6e22e">enable</span>()<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">end</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;custom.options&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;custom.keymaps&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;custom.lazy&#34;</span>) -- <span style="color:#a6e22e">Plugin</span> <span style="color:#a6e22e">Manager</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">colorscheme</span>(<span style="color:#e6db74">&#34;moonfly&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><pre><code>                                        ...
+</code></pre>
+<p>That’s pretty much it! I hope it’s helpful for improving your Neovim environment.</p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Using Strace with Tmux</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/">
+          <span class="button__text">Setting a Static IP and Permanent DNS nameserver in Ubuntu Server</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://huyhoang8398.github.io/blog/assets/main.js"></script>
+<script src="https://huyhoang8398.github.io/blog/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

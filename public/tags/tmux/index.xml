@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tmux on Kn</title>
+    <link>https://huyhoang8398.github.io/blog/tags/tmux/</link>
+    <description>Recent content in tmux on Kn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2023 22:39:31 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/tmux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Strace with Tmux</title>
+      <link>https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/</link>
+      <pubDate>Wed, 16 Aug 2023 22:39:31 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/</guid>
+      <description>How to track the execution of a program using strace? By using tmux! We will have two panels:
+ one for the execution of the command;
+the second dedicated to displaying strace.
+ Don&amp;rsquo;t forget that you can search within everything displayed in a panel with tmux&amp;hellip;
+#!/bin/bash  TMPDIR=/tmp FIFODIR=$(mktemp -p &amp;#34;${TMPDIR:-.}&amp;#34; -d strace-XXXX) || exit 1 FIFOPATH=$FIFODIR/fifo mkfifo &amp;#34;$FIFOPATH&amp;#34; || { rmdir &amp;#34;$TMPDIR&amp;#34;; exit 1; } COMMAND=$1 shift ARGS=$@ PANE_ID=$(tmux if-shell &amp;#34;[ $(($(tmux display -p &amp;#39;8*#{pane_width}-20*#{pane_height}&amp;#39;)))-lt 0 ]&amp;#34; &amp;#34;splitw -v -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34; &amp;#34;splitw -h -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34;) tmux set-option -t $PANE_ID -p @mytitle &amp;#34;strace:$COMMAND&amp;#34; tmux set-option -t $PANE_ID -p remain-on-exit on strace $COMMAND $ARGS 2&amp;gt; $FIFOPATH Thus, the strace tool sends its output to the stderr channel, which is then redirected to a fifo that is subsequently displayed in a tmux panel&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

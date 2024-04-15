@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://huyhoang8398.github.io/blog/authors/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -29,25 +29,19 @@
                 />
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/authors/kn/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
   </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/linux/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
-  </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/network/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+    <loc>https://huyhoang8398.github.io/blog/tags/lowcode/</loc>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/posts/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
   </url><url>
-    <loc>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
-  </url><url>
-    <loc>https://huyhoang8398.github.io/blog/tags/sysad/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+    <loc>https://huyhoang8398.github.io/blog/tags/programming/</loc>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/</loc>
-    <lastmod>2023-07-06T13:58:50+00:00</lastmod>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -58,6 +52,54 @@
                 hreflang="en"
                 href="https://huyhoang8398.github.io/blog/tags/"
                 />
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/</loc>
+    <lastmod>2023-12-17T11:45:50+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/linux/</loc>
+    <lastmod>2023-10-31T20:58:36+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/virtualbox/</loc>
+    <lastmod>2023-10-31T20:58:36+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/posts/virtualbox_headless/</loc>
+    <lastmod>2023-10-31T20:58:36+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/system/</loc>
+    <lastmod>2023-08-16T22:39:31+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/tmux/</loc>
+    <lastmod>2023-08-16T22:39:31+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/</loc>
+    <lastmod>2023-08-16T22:39:31+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/lazy/</loc>
+    <lastmod>2023-07-15T23:28:43+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/lsp/</loc>
+    <lastmod>2023-07-15T23:28:43+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/mason/</loc>
+    <lastmod>2023-07-15T23:28:43+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/neovim/</loc>
+    <lastmod>2023-07-15T23:28:43+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/posts/neovim/</loc>
+    <lastmod>2023-07-15T23:28:43+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/texteditor/</loc>
+    <lastmod>2023-07-15T23:28:43+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/network/</loc>
+    <lastmod>2023-07-06T14:18:55+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</loc>
+    <lastmod>2023-07-06T14:18:55+00:00</lastmod>
+  </url><url>
+    <loc>https://huyhoang8398.github.io/blog/tags/sysad/</loc>
+    <lastmod>2023-07-06T14:18:55+00:00</lastmod>
   </url><url>
     <loc>https://huyhoang8398.github.io/blog/tags/aws/</loc>
     <lastmod>2023-02-17T13:15:05+00:00</lastmod>

@@ -6,11 +6,59 @@
     <description>Recent content in kn on Kn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jul 2023 13:58:50 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/authors/kn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 11:45:50 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/authors/kn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why do arrays start at 0?</title>
+      <link>https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/</link>
+      <pubDate>Sun, 17 Dec 2023 11:45:50 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/</guid>
+      <description>Do you guy know why arrays are indexed at zero? So what&amp;rsquo;s actually happening under the hood here, let takes this example:
+#include &amp;lt;stdio.h&amp;gt; int main() { int test[3] = {1,2,3}; } so if I want to get a second element here of test, I should write test[2]; right?
+What&amp;rsquo;s actually happening here is this test[2]; converts the the address of test plus size of an int times two
+test[2]; // &amp;amp;test + sizeof(int)*2 And because the first element lives at the zeroth location (its the zeroth offset), that why you could do like this:</description>
+    </item>
+    
+    <item>
+      <title>Virtualbox, oui mais sans (prise de) tête !</title>
+      <link>https://huyhoang8398.github.io/blog/posts/virtualbox_headless/</link>
+      <pubDate>Tue, 31 Oct 2023 20:58:36 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/virtualbox_headless/</guid>
+      <description>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .
+For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.
+The advantage is to run a VM in the background without using a lot of memory.
+There are two distinct parts to master:
+ start and stop the VM in command line mode;</description>
+    </item>
+    
+    <item>
+      <title>Using Strace with Tmux</title>
+      <link>https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/</link>
+      <pubDate>Wed, 16 Aug 2023 22:39:31 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/</guid>
+      <description>How to track the execution of a program using strace? By using tmux! We will have two panels:
+ one for the execution of the command;
+the second dedicated to displaying strace.
+ Don&amp;rsquo;t forget that you can search within everything displayed in a panel with tmux&amp;hellip;
+#!/bin/bash  TMPDIR=/tmp FIFODIR=$(mktemp -p &amp;#34;${TMPDIR:-.}&amp;#34; -d strace-XXXX) || exit 1 FIFOPATH=$FIFODIR/fifo mkfifo &amp;#34;$FIFOPATH&amp;#34; || { rmdir &amp;#34;$TMPDIR&amp;#34;; exit 1; } COMMAND=$1 shift ARGS=$@ PANE_ID=$(tmux if-shell &amp;#34;[ $(($(tmux display -p &amp;#39;8*#{pane_width}-20*#{pane_height}&amp;#39;)))-lt 0 ]&amp;#34; &amp;#34;splitw -v -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34; &amp;#34;splitw -h -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34;) tmux set-option -t $PANE_ID -p @mytitle &amp;#34;strace:$COMMAND&amp;#34; tmux set-option -t $PANE_ID -p remain-on-exit on strace $COMMAND $ARGS 2&amp;gt; $FIFOPATH Thus, the strace tool sends its output to the stderr channel, which is then redirected to a fifo that is subsequently displayed in a tmux panel&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Neovim: From simple texteditor to IDE like</title>
+      <link>https://huyhoang8398.github.io/blog/posts/neovim/</link>
+      <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
+      
+      <guid>https://huyhoang8398.github.io/blog/posts/neovim/</guid>
+      <description>Hi, it&amp;rsquo;s Kn.
+Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them! Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &amp;ldquo;hard&amp;rdquo; for him to handle.</description>
+    </item>
+    
     <item>
       <title>Setting a Static IP and Permanent DNS nameserver in Ubuntu Server</title>
       <link>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</link>
-      <pubDate>Thu, 06 Jul 2023 13:58:50 +0000</pubDate>
+      <pubDate>Thu, 06 Jul 2023 14:18:55 +0000</pubDate>
       
       <guid>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</guid>
       <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).

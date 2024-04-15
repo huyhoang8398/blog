@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Virtualbox, oui mais sans (prise de) tête ! :: Kn — Anything that&#39;s system and software</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="headless virtual machine"/>
+<meta name="keywords" content="virtualbox, headless"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/virtualbox_headless/" />
+
+
+<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/style.css">
+
+  <link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/green.css">
+
+
+
+<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://huyhoang8398.github.io/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://huyhoang8398.github.io/blog/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Virtualbox, oui mais sans (prise de) tête ! :: Kn — Anything that&#39;s system and software" />
+<meta name="twitter:description" content="headless virtual machine" />
+<meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Virtualbox, oui mais sans (prise de) tête ! :: Kn — Anything that&#39;s system and software">
+<meta property="og:description" content="headless virtual machine" />
+<meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/virtualbox_headless/" />
+<meta property="og:site_name" content="Virtualbox, oui mais sans (prise de) tête !" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2023-10-31 20:58:36 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+<link href="/blog/prism-onedark.css" rel="stylesheet" />
+
+</head>
+<body class="en">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://huyhoang8398.github.io/blog">
+  <div class="logo">
+    Kn
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://huyhoang8398.github.io">about</a></li>
+        
+      
+      
+    
+
+    
+    <div class="spacer"></div>
+    <ul class="language-selector">
+      <ul class="language-selector-current">
+          <li>english ▾</li>
+      </ul>
+      <ul class="language-selector__more hidden">
+        
+        <li><a href="https://huyhoang8398.github.io/blog/">english</a></li>
+        
+        <li><a href="https://huyhoang8398.github.io/blog/vi/">viet</a></li>
+        
+      </ul>
+    </ul>
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://huyhoang8398.github.io">about</a></li>
+      
+    
+    
+    <hr />
+        
+          <li>
+            <a href="https://huyhoang8398.github.io/blog/">english</a>
+          </li>
+        
+          <li>
+            <a href="https://huyhoang8398.github.io/blog/vi/">viet</a>
+          </li>
+        
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://huyhoang8398.github.io/blog/posts/virtualbox_headless/">Virtualbox, oui mais sans (prise de) tête !</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2023-10-31
+    </span>
+    
+    
+    <span class="post-author">:: 
+      
+        
+        
+    
+    
+        <a href="https://huyhoang8398.github.io/blog/authors/kn/" />Do Hoang</a>
+    
+
+      
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    <a href="https://huyhoang8398.github.io/blog/tags/linux/">#linux</a>&nbsp;
+    
+    <a href="https://huyhoang8398.github.io/blog/tags/virtualbox/">#virtualbox</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    <p>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .</p>
+<p>For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.</p>
+<p>The advantage is to run a VM in the background without using a lot of memory.</p>
+<p>There are two distinct parts to master:</p>
+<blockquote>
+<p>start and stop the VM in command line mode;</p>
+<p>allow connection by SSH from the host to this VM.
+To know the name of the VM:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage list vms
+</code></pre></div><p>To launch the vm, here called <em>myvm</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxHeadless --startvm <span style="color:#e6db74">&#34;myvm&#34;</span>
+</code></pre></div><p>Then, we can do <em>Port Forwarding</em> to reach the VM from the host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage controlvm myvm natpf1 vers_ssh,tcp,,2224,,22
+</code></pre></div><p>Finally, if you want to properly shut down the VM:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage controlvm <span style="color:#e6db74">&#34;myvm&#34;</span> acpipowerbutton
+</code></pre></div><p>If we want to ensure access to the VM is possible:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage showvminfo <span style="color:#e6db74">&#34;myvm&#34;</span>
+NIC <span style="color:#ae81ff">1</span> Rule<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>:   name <span style="color:#f92672">=</span> vers_ssh, protocol <span style="color:#f92672">=</span> tcp, host ip <span style="color:#f92672">=</span> , host port <span style="color:#f92672">=</span> 2224, guest ip <span style="color:#f92672">=</span> , guest port <span style="color:#f92672">=</span> <span style="color:#ae81ff">22</span>
+</code></pre></div><p>To connect via SSH:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -p <span style="color:#ae81ff">2224</span> localhost
+</code></pre></div>
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Why do arrays start at 0?</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/">
+          <span class="button__text">Using Strace with Tmux</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://huyhoang8398.github.io/blog/assets/main.js"></script>
+<script src="https://huyhoang8398.github.io/blog/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
