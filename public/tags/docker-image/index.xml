@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker-Image on Kn</title>
+    <link>http://localhost:1313/blog/tags/docker-image/</link>
+    <description>Recent content in Docker-Image on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Apr 2024 14:07:11 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/docker-image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Run Container Background Tasks With Cron By Using Supervisord</title>
+      <link>http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/</link>
+      <pubDate>Tue, 16 Apr 2024 14:07:11 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/</guid>
+      <description>Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?&#xA;Recently I worked on a PHP application that used cron for background processing. Since it took some time to get it right, I&amp;rsquo;m sharing the solution.&#xA;This solution runs Cron as a secondary process in a PHP webserver container. Supervisor controls these processes, and ensures that the container fails as soon as any process fails.</description>
+    </item>
+  </channel>
+</rss>

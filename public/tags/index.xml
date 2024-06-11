@@ -2,469 +2,403 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/</link>
+    <link>http://localhost:1313/blog/tags/</link>
     <description>Recent content in Tags on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 17 Dec 2023 11:45:50 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Jun 2024 21:34:50 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>lowcode</title>
-      <link>https://huyhoang8398.github.io/blog/tags/lowcode/</link>
-      <pubDate>Sun, 17 Dec 2023 11:45:50 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/lowcode/</guid>
+      <title>Iterm2</title>
+      <link>http://localhost:1313/blog/tags/iterm2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/iterm2/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>programming</title>
-      <link>https://huyhoang8398.github.io/blog/tags/programming/</link>
-      <pubDate>Sun, 17 Dec 2023 11:45:50 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/programming/</guid>
+      <title>Macos</title>
+      <link>http://localhost:1313/blog/tags/macos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/macos/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
-      <link>https://huyhoang8398.github.io/blog/tags/linux/</link>
-      <pubDate>Tue, 31 Oct 2023 20:58:36 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/linux/</guid>
+      <title>Terminal</title>
+      <link>http://localhost:1313/blog/tags/terminal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/terminal/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>virtualbox</title>
-      <link>https://huyhoang8398.github.io/blog/tags/virtualbox/</link>
-      <pubDate>Tue, 31 Oct 2023 20:58:36 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/virtualbox/</guid>
+      <title>Trick</title>
+      <link>http://localhost:1313/blog/tags/trick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/trick/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>system</title>
-      <link>https://huyhoang8398.github.io/blog/tags/system/</link>
-      <pubDate>Wed, 16 Aug 2023 22:39:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/system/</guid>
+      <title>Container</title>
+      <link>http://localhost:1313/blog/tags/container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/container/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tmux</title>
-      <link>https://huyhoang8398.github.io/blog/tags/tmux/</link>
-      <pubDate>Wed, 16 Aug 2023 22:39:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/tmux/</guid>
+      <title>Docker</title>
+      <link>http://localhost:1313/blog/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>lazy</title>
-      <link>https://huyhoang8398.github.io/blog/tags/lazy/</link>
-      <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/lazy/</guid>
+      <title>Docker-Image</title>
+      <link>http://localhost:1313/blog/tags/docker-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/docker-image/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>lsp</title>
-      <link>https://huyhoang8398.github.io/blog/tags/lsp/</link>
-      <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/lsp/</guid>
+      <title>Lowcode</title>
+      <link>http://localhost:1313/blog/tags/lowcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/lowcode/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mason</title>
-      <link>https://huyhoang8398.github.io/blog/tags/mason/</link>
-      <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/mason/</guid>
+      <title>Programming</title>
+      <link>http://localhost:1313/blog/tags/programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/programming/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>neovim</title>
-      <link>https://huyhoang8398.github.io/blog/tags/neovim/</link>
-      <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/neovim/</guid>
+      <title>Linux</title>
+      <link>http://localhost:1313/blog/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>texteditor</title>
-      <link>https://huyhoang8398.github.io/blog/tags/texteditor/</link>
-      <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/texteditor/</guid>
+      <title>Virtualbox</title>
+      <link>http://localhost:1313/blog/tags/virtualbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/virtualbox/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>network</title>
-      <link>https://huyhoang8398.github.io/blog/tags/network/</link>
-      <pubDate>Thu, 06 Jul 2023 14:18:55 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/network/</guid>
+      <title>System</title>
+      <link>http://localhost:1313/blog/tags/system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/system/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Tmux</title>
+      <link>http://localhost:1313/blog/tags/tmux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/tmux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lazy</title>
+      <link>http://localhost:1313/blog/tags/lazy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/lazy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lsp</title>
+      <link>http://localhost:1313/blog/tags/lsp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/lsp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mason</title>
+      <link>http://localhost:1313/blog/tags/mason/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/mason/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neovim</title>
+      <link>http://localhost:1313/blog/tags/neovim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/neovim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Texteditor</title>
+      <link>http://localhost:1313/blog/tags/texteditor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/texteditor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>http://localhost:1313/blog/tags/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/network/</guid>
+      <description></description>
+    </item>
     <item>
       <title>SysAd</title>
-      <link>https://huyhoang8398.github.io/blog/tags/sysad/</link>
-      <pubDate>Thu, 06 Jul 2023 14:18:55 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/sysad/</guid>
+      <link>http://localhost:1313/blog/tags/sysad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/sysad/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>aws</title>
-      <link>https://huyhoang8398.github.io/blog/tags/aws/</link>
-      <pubDate>Fri, 17 Feb 2023 13:15:05 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/aws/</guid>
+      <title>Aws</title>
+      <link>http://localhost:1313/blog/tags/aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/aws/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>centOS</title>
-      <link>https://huyhoang8398.github.io/blog/tags/centos/</link>
-      <pubDate>Fri, 17 Feb 2023 13:15:05 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/centos/</guid>
+      <title>CentOS</title>
+      <link>http://localhost:1313/blog/tags/centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/centos/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>php</title>
-      <link>https://huyhoang8398.github.io/blog/tags/php/</link>
-      <pubDate>Fri, 17 Feb 2023 13:15:05 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/php/</guid>
+      <title>Php</title>
+      <link>http://localhost:1313/blog/tags/php/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/php/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>certbot</title>
-      <link>https://huyhoang8398.github.io/blog/tags/certbot/</link>
-      <pubDate>Mon, 13 Feb 2023 09:57:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/certbot/</guid>
+      <title>Certbot</title>
+      <link>http://localhost:1313/blog/tags/certbot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/certbot/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>https</title>
-      <link>https://huyhoang8398.github.io/blog/tags/https/</link>
-      <pubDate>Mon, 13 Feb 2023 09:57:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/https/</guid>
+      <title>Https</title>
+      <link>http://localhost:1313/blog/tags/https/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/https/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Jenkins</title>
-      <link>https://huyhoang8398.github.io/blog/tags/jenkins/</link>
-      <pubDate>Mon, 13 Feb 2023 09:57:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/jenkins/</guid>
+      <link>http://localhost:1313/blog/tags/jenkins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/jenkins/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ssl</title>
-      <link>https://huyhoang8398.github.io/blog/tags/ssl/</link>
-      <pubDate>Mon, 13 Feb 2023 09:57:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/ssl/</guid>
+      <title>Ssl</title>
+      <link>http://localhost:1313/blog/tags/ssl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/ssl/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>database</title>
-      <link>https://huyhoang8398.github.io/blog/tags/database/</link>
-      <pubDate>Thu, 12 Jan 2023 19:15:59 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/database/</guid>
+      <title>Database</title>
+      <link>http://localhost:1313/blog/tags/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/database/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mysql</title>
-      <link>https://huyhoang8398.github.io/blog/tags/mysql/</link>
-      <pubDate>Thu, 12 Jan 2023 19:15:59 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/mysql/</guid>
+      <title>Mysql</title>
+      <link>http://localhost:1313/blog/tags/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/mysql/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>shell</title>
-      <link>https://huyhoang8398.github.io/blog/tags/shell/</link>
-      <pubDate>Thu, 12 Jan 2023 19:15:59 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/shell/</guid>
+      <title>Shell</title>
+      <link>http://localhost:1313/blog/tags/shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/shell/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>keychron</title>
-      <link>https://huyhoang8398.github.io/blog/tags/keychron/</link>
-      <pubDate>Tue, 03 May 2022 16:14:17 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/keychron/</guid>
+      <title>Keychron</title>
+      <link>http://localhost:1313/blog/tags/keychron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/keychron/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ubuntu</title>
-      <link>https://huyhoang8398.github.io/blog/tags/ubuntu/</link>
-      <pubDate>Tue, 03 May 2022 16:14:17 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/ubuntu/</guid>
+      <title>Ubuntu</title>
+      <link>http://localhost:1313/blog/tags/ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/ubuntu/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sed</title>
-      <link>https://huyhoang8398.github.io/blog/tags/sed/</link>
-      <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/sed/</guid>
+      <title>Sed</title>
+      <link>http://localhost:1313/blog/tags/sed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/sed/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Box</title>
-      <link>https://huyhoang8398.github.io/blog/tags/box/</link>
-      <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/box/</guid>
+      <link>http://localhost:1313/blog/tags/box/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/box/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CTF</title>
-      <link>https://huyhoang8398.github.io/blog/tags/ctf/</link>
-      <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/ctf/</guid>
+      <link>http://localhost:1313/blog/tags/ctf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/ctf/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ESAIP</title>
-      <link>https://huyhoang8398.github.io/blog/tags/esaip/</link>
-      <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/esaip/</guid>
+      <link>http://localhost:1313/blog/tags/esaip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/esaip/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>France</title>
-      <link>https://huyhoang8398.github.io/blog/tags/france/</link>
-      <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/france/</guid>
+      <link>http://localhost:1313/blog/tags/france/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/france/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>blog</title>
-      <link>https://huyhoang8398.github.io/blog/tags/blog/</link>
-      <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/blog/</guid>
+      <title>Blog</title>
+      <link>http://localhost:1313/blog/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/blog/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>graphic</title>
-      <link>https://huyhoang8398.github.io/blog/tags/graphic/</link>
-      <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/graphic/</guid>
+      <title>Graphic</title>
+      <link>http://localhost:1313/blog/tags/graphic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/graphic/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Intel</title>
-      <link>https://huyhoang8398.github.io/blog/tags/intel/</link>
-      <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/intel/</guid>
+      <link>http://localhost:1313/blog/tags/intel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/intel/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dns</title>
-      <link>https://huyhoang8398.github.io/blog/tags/dns/</link>
-      <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/dns/</guid>
+      <title>Dns</title>
+      <link>http://localhost:1313/blog/tags/dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/dns/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>privacy</title>
-      <link>https://huyhoang8398.github.io/blog/tags/privacy/</link>
-      <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/privacy/</guid>
+      <title>Privacy</title>
+      <link>http://localhost:1313/blog/tags/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/privacy/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>terminal</title>
-      <link>https://huyhoang8398.github.io/blog/tags/terminal/</link>
-      <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/terminal/</guid>
+      <title>Archlinux</title>
+      <link>http://localhost:1313/blog/tags/archlinux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/archlinux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>archlinux</title>
-      <link>https://huyhoang8398.github.io/blog/tags/archlinux/</link>
-      <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/archlinux/</guid>
+      <title>Dell</title>
+      <link>http://localhost:1313/blog/tags/dell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/dell/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dell</title>
-      <link>https://huyhoang8398.github.io/blog/tags/dell/</link>
-      <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/dell/</guid>
+      <title>Xps</title>
+      <link>http://localhost:1313/blog/tags/xps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/xps/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>xps</title>
-      <link>https://huyhoang8398.github.io/blog/tags/xps/</link>
-      <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/xps/</guid>
+      <title>Hugo</title>
+      <link>http://localhost:1313/blog/tags/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>hugo</title>
-      <link>https://huyhoang8398.github.io/blog/tags/hugo/</link>
-      <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/hugo/</guid>
+      <title>Markdown</title>
+      <link>http://localhost:1313/blog/tags/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/markdown/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>markdown</title>
-      <link>https://huyhoang8398.github.io/blog/tags/markdown/</link>
-      <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/markdown/</guid>
+      <title>Shortcode</title>
+      <link>http://localhost:1313/blog/tags/shortcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/shortcode/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>shortcode</title>
-      <link>https://huyhoang8398.github.io/blog/tags/shortcode/</link>
-      <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/shortcode/</guid>
+      <title>Tricks</title>
+      <link>http://localhost:1313/blog/tags/tricks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/tricks/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tricks</title>
-      <link>https://huyhoang8398.github.io/blog/tags/tricks/</link>
-      <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/tricks/</guid>
+      <title>Arduino</title>
+      <link>http://localhost:1313/blog/tags/arduino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/arduino/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>arduino</title>
-      <link>https://huyhoang8398.github.io/blog/tags/arduino/</link>
-      <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/arduino/</guid>
+      <title>Iot</title>
+      <link>http://localhost:1313/blog/tags/iot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/iot/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>iot</title>
-      <link>https://huyhoang8398.github.io/blog/tags/iot/</link>
-      <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/iot/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>PharoThings</title>
-      <link>https://huyhoang8398.github.io/blog/tags/pharothings/</link>
-      <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/pharothings/</guid>
+      <link>http://localhost:1313/blog/tags/pharothings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/pharothings/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>smalltalk</title>
-      <link>https://huyhoang8398.github.io/blog/tags/smalltalk/</link>
-      <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/smalltalk/</guid>
+      <title>Smalltalk</title>
+      <link>http://localhost:1313/blog/tags/smalltalk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/smalltalk/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
-      <link>https://huyhoang8398.github.io/blog/tags/git/</link>
-      <pubDate>Sun, 01 Dec 2019 14:28:16 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/git/</guid>
+      <title>Git</title>
+      <link>http://localhost:1313/blog/tags/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>trick</title>
-      <link>https://huyhoang8398.github.io/blog/tags/trick/</link>
-      <pubDate>Sun, 01 Dec 2019 14:28:16 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/trick/</guid>
+      <title>Pandoc</title>
+      <link>http://localhost:1313/blog/tags/pandoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/pandoc/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pandoc</title>
-      <link>https://huyhoang8398.github.io/blog/tags/pandoc/</link>
-      <pubDate>Wed, 09 Oct 2019 00:35:20 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/pandoc/</guid>
+      <title>Presentation</title>
+      <link>http://localhost:1313/blog/tags/presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/presentation/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>presentation</title>
-      <link>https://huyhoang8398.github.io/blog/tags/presentation/</link>
-      <pubDate>Wed, 09 Oct 2019 00:35:20 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/tags/presentation/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

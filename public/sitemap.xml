@@ -2,14 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>https://huyhoang8398.github.io/blog/en/sitemap.xml</loc>
+    <loc>http://localhost:1313/blog/en/sitemap.xml</loc>
     
-      <lastmod>2023-12-17T11:45:50+00:00</lastmod>
+      <lastmod>2024-06-11T21:34:50+00:00</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>https://huyhoang8398.github.io/blog/vi/sitemap.xml</loc>
+    <loc>http://localhost:1313/blog/vi/sitemap.xml</loc>
     
   </sitemap>
   

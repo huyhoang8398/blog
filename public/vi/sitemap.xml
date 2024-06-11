@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://huyhoang8398.github.io/blog/vi/authors/</loc>
+    <loc>http://localhost:1313/blog/vi/authors/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://huyhoang8398.github.io/blog/authors/"
+                href="http://localhost:1313/blog/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://huyhoang8398.github.io/blog/vi/authors/"
+                href="http://localhost:1313/blog/vi/authors/"
                 />
   </url><url>
-    <loc>https://huyhoang8398.github.io/blog/vi/</loc>
+    <loc>http://localhost:1313/blog/vi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://huyhoang8398.github.io/blog/"
+                href="http://localhost:1313/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://huyhoang8398.github.io/blog/vi/"
+                href="http://localhost:1313/blog/vi/"
                 />
   </url><url>
-    <loc>https://huyhoang8398.github.io/blog/vi/tags/</loc>
+    <loc>http://localhost:1313/blog/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://huyhoang8398.github.io/blog/tags/"
+                href="http://localhost:1313/blog/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://huyhoang8398.github.io/blog/vi/tags/"
+                href="http://localhost:1313/blog/vi/tags/"
                 />
   </url>
 </urlset>

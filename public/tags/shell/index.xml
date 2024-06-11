@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shell on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/shell/</link>
-    <description>Recent content in shell on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jan 2023 19:15:59 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <title>Shell on Kn</title>
+    <link>http://localhost:1313/blog/tags/shell/</link>
+    <description>Recent content in Shell on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jan 2023 19:15:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Restoring Large MySQL Dump</title>
-      <link>https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/</link>
+      <link>http://localhost:1313/blog/posts/restoring-large-mysql-dump/</link>
       <pubDate>Thu, 12 Jan 2023 19:15:59 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/</guid>
-      <description>Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact).
-Problem Our current backup system uses mysqldump. It dumps a 25 GB sql dump file, which compresses to about 2.5GB using gzip. The last time we needed to restore a backup it was only about 9GB, and it took several hours.
-This time, I created the database, and from the mysql prompt I issued the following command:</description>
+      <guid>http://localhost:1313/blog/posts/restoring-large-mysql-dump/</guid>
+      <description>Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact).&#xA;Problem Our current backup system uses mysqldump. It dumps a 25 GB sql dump file, which compresses to about 2.5GB using gzip. The last time we needed to restore a backup it was only about 9GB, and it took several hours.&#xA;This time, I created the database, and from the mysql prompt I issued the following command:</description>
     </item>
-    
   </channel>
 </rss>

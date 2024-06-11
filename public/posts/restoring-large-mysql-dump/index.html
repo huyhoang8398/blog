@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   
     <title>Restoring Large MySQL Dump :: Kn — Anything that&#39;s system and software</title>
   
@@ -9,39 +9,39 @@
 <meta name="description" content="Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact)"/>
 <meta name="keywords" content="mysqldump, database, mysql"/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/" />
+<link rel="canonical" href="http://localhost:1313/blog/posts/restoring-large-mysql-dump/" />
 
 
-<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/style.css">
+<link rel="stylesheet" href="http://localhost:1313/blog/assets/style.css">
 
-  <link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/green.css">
-
-
-
-<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/style.css">
+  <link rel="stylesheet" href="http://localhost:1313/blog/assets/green.css">
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://huyhoang8398.github.io/blog/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://huyhoang8398.github.io/blog/favicon.png">
+<link rel="stylesheet" href="http://localhost:1313/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://localhost:1313/blog/favicon.png">
 
 
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Restoring Large MySQL Dump :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact)" />
-<meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
+<meta name="twitter:site" content="http://localhost:1313/blog/" />
 <meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/mysql-logo2.png">
+<meta name="twitter:image" content="http://localhost:1313/blog/posts/restoring-large-mysql-dump/mysql-logo2.png">
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Restoring Large MySQL Dump :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact)" />
-<meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/restoring-large-mysql-dump/" />
 <meta property="og:site_name" content="Restoring Large MySQL Dump" />
-<meta property="og:image" content="https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/mysql-logo2.png">
+<meta property="og:image" content="http://localhost:1313/blog/posts/restoring-large-mysql-dump/mysql-logo2.png">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -94,9 +94,9 @@
       </ul>
       <ul class="language-selector__more hidden">
         
-        <li><a href="https://huyhoang8398.github.io/blog/">english</a></li>
+        <li><a href="http://localhost:1313/blog/">english</a></li>
         
-        <li><a href="https://huyhoang8398.github.io/blog/vi/">viet</a></li>
+        <li><a href="http://localhost:1313/blog/vi/">viet</a></li>
         
       </ul>
     </ul>
@@ -113,11 +113,11 @@
     <hr />
         
           <li>
-            <a href="https://huyhoang8398.github.io/blog/">english</a>
+            <a href="http://localhost:1313/blog/">english</a>
           </li>
         
           <li>
-            <a href="https://huyhoang8398.github.io/blog/vi/">viet</a>
+            <a href="http://localhost:1313/blog/vi/">viet</a>
           </li>
         
     
@@ -132,7 +132,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/">Restoring Large MySQL Dump</a></h1>
+    <a href="http://localhost:1313/blog/posts/restoring-large-mysql-dump/">Restoring Large MySQL Dump</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -146,7 +146,7 @@
         
     
     
-        <a href="https://huyhoang8398.github.io/blog/authors/kn/" />Do Hoang</a>
+        <a href="http://localhost:1313/blog/authors/kn/" />Do Hoang</a>
     
 
       
@@ -157,17 +157,17 @@
   
   <span class="post-tags">
     
-    <a href="https://huyhoang8398.github.io/blog/tags/mysql/">#mysql</a>&nbsp;
+    <a href="http://localhost:1313/blog/tags/mysql/">#mysql</a>&nbsp;
     
-    <a href="https://huyhoang8398.github.io/blog/tags/database/">#database</a>&nbsp;
+    <a href="http://localhost:1313/blog/tags/database/">#database</a>&nbsp;
     
-    <a href="https://huyhoang8398.github.io/blog/tags/shell/">#shell</a>&nbsp;
+    <a href="http://localhost:1313/blog/tags/shell/">#shell</a>&nbsp;
     
   </span>
   
 
   
-  <img src="https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/mysql-logo2.png" class="post-cover" />
+  <img src="http://localhost:1313/blog/posts/restoring-large-mysql-dump/mysql-logo2.png" class="post-cover" />
   
 
   <div class="post-content">
@@ -175,21 +175,21 @@
 <h3 id="problem">Problem</h3>
 <p>Our current backup system uses mysqldump. It dumps a 25 GB sql dump file, which compresses to about 2.5GB using gzip. The last time we needed to restore a backup it was only about 9GB, and it took several hours.</p>
 <p>This time, I created the database, and from the mysql prompt I issued the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">. /path/to/backup/database_dump.sql
-</code></pre></div><p>It would run great until it got to about 10% of the way through the scores table. However, it would start to slow down. Because the rows were so small in our scores table, each INSERT statement had about 45,000-50,000 records. So each line had roughly 1MB of data. Also I&rsquo;m now having this issue:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>. /path/to/backup/database_dump.sql
+</span></span></code></pre></div><p>It would run great until it got to about 10% of the way through the scores table. However, it would start to slow down. Because the rows were so small in our scores table, each INSERT statement had about 45,000-50,000 records. So each line had roughly 1MB of data. Also I&rsquo;m now having this issue:
 <code>ERROR 1153 (08S01) at line 96: Got a packet bigger than 'max_allowed_packet' bytes</code></p>
 <p>At first it would insert a set of 50,000 in half a second or so. However, after a few million records, it would slow down to three second, and got to about 10 seconds per INSERT statement. This was a huge problem, given that I had roughly 18,000 INSERT statements, and at 10 seconds per INSERT, it would take <strong>50 hours</strong> to restore. Our website was down during this restore, since it was our primary database. So being down for over two days was <strong>not</strong> an option.</p>
 <p>While trying to diagnose the problem I noticed something. While using the MySQL command <code>show processlist</code> the thread for the Database Restore would be in the sleep state for 9-10 seconds, and then the query would execute in under 0.2 seconds. So it wasn’t a problem with MySQL storing the data, but a problem with reading the data from such a large database dump file.</p>
 <p>So I tried from the server’s command line <code>mysql -u user_name -p database_name &lt; /path/to/backup/database_dump.sql</code> with the same result. The longer into the file I got, the longer it was taking for MySQL to read the query.</p>
 <h3 id="solution">Solution</h3>
 <p>So, after drinking lots of coffee, I came up with an idea. Why not split up the database sql dump into multiple files. So I used the linux <code>split</code> command like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /path/to/backup/
-mkdir splits
-split -n <span style="color:#ae81ff">200</span> database_backup.sql splits/sql_
-</code></pre></div><p>This produced several dozen files in order, and it took about 10 minutes. The -n option told split to split each file up into 200 lines each. So the files were then named sql_aa, sql_ab, sql_ac all the way to sql_fg. Then, I did the following command using cat to pipe the files to mysql:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd splits
-cat sql_* | mysql -u root -p database_name
-</code></pre></div><p>The only problem with this method is you don’t see a status report for each query executed, it just runs until you hit an error, displaying the error. If no errors occur, it will just return you to the prompt. So to monitor the progress I would execute a <code>show processlist;</code> command on mysql to see how far we were.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /path/to/backup/
+</span></span><span style="display:flex;"><span>mkdir splits
+</span></span><span style="display:flex;"><span>split -n <span style="color:#ae81ff">200</span> database_backup.sql splits/sql_
+</span></span></code></pre></div><p>This produced several dozen files in order, and it took about 10 minutes. The -n option told split to split each file up into 200 lines each. So the files were then named sql_aa, sql_ab, sql_ac all the way to sql_fg. Then, I did the following command using cat to pipe the files to mysql:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd splits
+</span></span><span style="display:flex;"><span>cat sql_* | mysql -u root -p database_name
+</span></span></code></pre></div><p>The only problem with this method is you don’t see a status report for each query executed, it just runs until you hit an error, displaying the error. If no errors occur, it will just return you to the prompt. So to monitor the progress I would execute a <code>show processlist;</code> command on mysql to see how far we were.</p>
 <p>the entire database was restored. A few things to note, I didn’t try just using cat on the original file to see if it would read the file differently than the was mysql was trying. But the important thing is I got the database restored in a relatively timely manner.</p>
 <p>Hopefully, in the very near future, we will have moved to a new score system that doesn’t have almost a billion rows in it.</p>
 <p>P.S. There is other way to do it like using <a href="https://github.com/mydumper/mydumper">mydumper</a> suggested by my friend and also in <a href="https://docs.aws.amazon.com/whitepapers/latest/amazon-aurora-mysql-migration-handbook/multi-threaded-migration-using-mydumper-and-myloader.html">AWS</a>.</p>
@@ -205,7 +205,7 @@ cat sql_* | mysql -u root -p database_name
     <div class="pagination__buttons">
       
       <span class="button previous">
-        <a href="https://huyhoang8398.github.io/blog/posts/ssl-letsencrypt-jenkins/">
+        <a href="http://localhost:1313/blog/posts/ssl-letsencrypt-jenkins/">
           <span class="button__icon">←</span>
           <span class="button__text">SSL and Let&#39;s Encrypt For Jenkins</span>
         </a>
@@ -213,7 +213,7 @@ cat sql_* | mysql -u root -p database_name
       
       
       <span class="button next">
-        <a href="https://huyhoang8398.github.io/blog/posts/keychron/">
+        <a href="http://localhost:1313/blog/posts/keychron/">
           <span class="button__text">Getting the Function keys of a Keychron working on Linux</span>
           <span class="button__icon">→</span>
         </a>
@@ -241,8 +241,8 @@ cat sql_* | mysql -u root -p database_name
   </div>
 </footer>
 
-<script src="https://huyhoang8398.github.io/blog/assets/main.js"></script>
-<script src="https://huyhoang8398.github.io/blog/assets/prism.js"></script>
+<script src="http://localhost:1313/blog/assets/main.js"></script>
+<script src="http://localhost:1313/blog/assets/prism.js"></script>
 
 
 

@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SysAd on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/sysad/</link>
+    <link>http://localhost:1313/blog/tags/sysad/</link>
     <description>Recent content in SysAd on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jul 2023 14:18:55 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/sysad/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Jul 2023 14:18:55 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/sysad/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting a Static IP and Permanent DNS nameserver in Ubuntu Server</title>
-      <link>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</link>
+      <link>http://localhost:1313/blog/posts/staticip-ubuntuserver/</link>
       <pubDate>Thu, 06 Jul 2023 14:18:55 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</guid>
-      <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).
-After rebooting, the file will be changed back to the content nameserver 127.0.0.53 (near the end line), even though you had previously changed it to 8.</description>
+      <guid>http://localhost:1313/blog/posts/staticip-ubuntuserver/</guid>
+      <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).&#xA;After rebooting, the file will be changed back to the content nameserver 127.0.0.53 (near the end line), even though you had previously changed it to 8.</description>
     </item>
-    
   </channel>
 </rss>

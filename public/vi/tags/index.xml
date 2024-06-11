@@ -2,9 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/vi/tags/</link>
+    <link>http://localhost:1313/blog/vi/tags/</link>
     <description>Recent content in Tags on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://huyhoang8398.github.io/blog/vi/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <atom:link href="http://localhost:1313/blog/vi/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

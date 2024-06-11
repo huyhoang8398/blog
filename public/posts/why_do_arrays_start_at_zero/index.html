@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   
     <title>Why do arrays start at 0? :: Kn — Anything that&#39;s system and software</title>
   
@@ -9,28 +9,28 @@
 <meta name="description" content="you will never ask about pointer arithmetic"/>
 <meta name="keywords" content="programming, lowcode"/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/" />
+<link rel="canonical" href="http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/" />
 
 
-<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/style.css">
+<link rel="stylesheet" href="http://localhost:1313/blog/assets/style.css">
 
-  <link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/green.css">
-
-
-
-<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/style.css">
+  <link rel="stylesheet" href="http://localhost:1313/blog/assets/green.css">
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://huyhoang8398.github.io/blog/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://huyhoang8398.github.io/blog/favicon.png">
+<link rel="stylesheet" href="http://localhost:1313/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://localhost:1313/blog/favicon.png">
 
 
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Why do arrays start at 0? :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="you will never ask about pointer arithmetic" />
-<meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
+<meta name="twitter:site" content="http://localhost:1313/blog/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
 
@@ -39,7 +39,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Why do arrays start at 0? :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="you will never ask about pointer arithmetic" />
-<meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/" />
 <meta property="og:site_name" content="Why do arrays start at 0?" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="2048">
@@ -94,9 +94,9 @@
       </ul>
       <ul class="language-selector__more hidden">
         
-        <li><a href="https://huyhoang8398.github.io/blog/">english</a></li>
+        <li><a href="http://localhost:1313/blog/">english</a></li>
         
-        <li><a href="https://huyhoang8398.github.io/blog/vi/">viet</a></li>
+        <li><a href="http://localhost:1313/blog/vi/">viet</a></li>
         
       </ul>
     </ul>
@@ -113,11 +113,11 @@
     <hr />
         
           <li>
-            <a href="https://huyhoang8398.github.io/blog/">english</a>
+            <a href="http://localhost:1313/blog/">english</a>
           </li>
         
           <li>
-            <a href="https://huyhoang8398.github.io/blog/vi/">viet</a>
+            <a href="http://localhost:1313/blog/vi/">viet</a>
           </li>
         
     
@@ -132,7 +132,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/">Why do arrays start at 0?</a></h1>
+    <a href="http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/">Why do arrays start at 0?</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -146,7 +146,7 @@
         
     
     
-        <a href="https://huyhoang8398.github.io/blog/authors/kn/" />Do Hoang</a>
+        <a href="http://localhost:1313/blog/authors/kn/" />Do Hoang</a>
     
 
       
@@ -157,9 +157,9 @@
   
   <span class="post-tags">
     
-    <a href="https://huyhoang8398.github.io/blog/tags/programming/">#programming</a>&nbsp;
+    <a href="http://localhost:1313/blog/tags/programming/">#programming</a>&nbsp;
     
-    <a href="https://huyhoang8398.github.io/blog/tags/lowcode/">#lowcode</a>&nbsp;
+    <a href="http://localhost:1313/blog/tags/lowcode/">#lowcode</a>&nbsp;
     
   </span>
   
@@ -169,18 +169,18 @@
   <div class="post-content">
     <p>Do you guy know why arrays are indexed at zero?
 So what&rsquo;s actually happening under the hood here, let takes this example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#66d9ef">int</span> test[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>};
-}
-</code></pre></div><p>so if I want to get a second element here of <code>test</code>, I should write  <code>test[2];</code> right?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> test[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>};
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>so if I want to get a second element here of <code>test</code>, I should write  <code>test[2];</code> right?</p>
 <p>What&rsquo;s actually happening here is this <code>test[2];</code> converts the the address of <code>test</code> plus size of an <code>int</code> times two</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">test[<span style="color:#ae81ff">2</span>]; <span style="color:#75715e">// &amp;test + sizeof(int)*2 
-</span></code></pre></div><p>And because the first element lives at the zeroth location (its the zeroth offset), that why you could do like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#ae81ff">2</span>[test] <span style="color:#75715e">// that is legal C hehe
-</span><span style="color:#75715e"></span>printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">2</span>[test]);
-</code></pre></div><p>that&rsquo;s taking the address two and then offseting by <code>test</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>test[<span style="color:#ae81ff">2</span>]; <span style="color:#75715e">// &amp;test + sizeof(int)*2 
+</span></span></span></code></pre></div><p>And because the first element lives at the zeroth location (its the zeroth offset), that why you could do like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ae81ff">2</span>[test] <span style="color:#75715e">// that is legal C hehe
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">2</span>[test]);
+</span></span></code></pre></div><p>that&rsquo;s taking the address two and then offseting by <code>test</code>.</p>
 <p>C is fun&hellip;</p>
 
   </div>
@@ -193,9 +193,16 @@ So what&rsquo;s actually happening under the hood here, let takes this example:<
     </div>
     <div class="pagination__buttons">
       
+      <span class="button previous">
+        <a href="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/">
+          <span class="button__icon">←</span>
+          <span class="button__text">How To Run Container Background Tasks With Cron By Using Supervisord</span>
+        </a>
+      </span>
+      
       
       <span class="button next">
-        <a href="https://huyhoang8398.github.io/blog/posts/virtualbox_headless/">
+        <a href="http://localhost:1313/blog/posts/virtualbox_headless/">
           <span class="button__text">Virtualbox, oui mais sans (prise de) tête !</span>
           <span class="button__icon">→</span>
         </a>
@@ -223,8 +230,8 @@ So what&rsquo;s actually happening under the hood here, let takes this example:<
   </div>
 </footer>
 
-<script src="https://huyhoang8398.github.io/blog/assets/main.js"></script>
-<script src="https://huyhoang8398.github.io/blog/assets/prism.js"></script>
+<script src="http://localhost:1313/blog/assets/main.js"></script>
+<script src="http://localhost:1313/blog/assets/prism.js"></script>
 
 
 

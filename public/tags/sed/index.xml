@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sed on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/sed/</link>
-    <description>Recent content in sed on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 20 Oct 2021 12:44:26 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/sed/index.xml" rel="self" type="application/rss+xml" />
+    <title>Sed on Kn</title>
+    <link>http://localhost:1313/blog/tags/sed/</link>
+    <description>Recent content in Sed on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Oct 2021 12:44:26 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/sed/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning Sed Is Beneficial For Linux Users</title>
-      <link>https://huyhoang8398.github.io/blog/posts/sed/</link>
+      <link>http://localhost:1313/blog/posts/sed/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/sed/</guid>
-      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
-Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
+      <guid>http://localhost:1313/blog/posts/sed/</guid>
+      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).&#xA;Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
     </item>
-    
   </channel>
 </rss>

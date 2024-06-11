@@ -2,198 +2,151 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/posts/</link>
+    <link>http://localhost:1313/blog/posts/</link>
     <description>Recent content in Posts on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 17 Dec 2023 11:45:50 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Jun 2024 21:34:50 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Global hotkey - Dropdown Terminal on MacOS</title>
+      <link>http://localhost:1313/blog/posts/global_dropdown_terminal_on_macos/</link>
+      <pubDate>Tue, 11 Jun 2024 21:34:50 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/global_dropdown_terminal_on_macos/</guid>
+      <description>You move from Linux? Miss Dropdown terminal? Looking for alternative on MacOS and can access it anytime and anywhere? Also since I&amp;rsquo;m moving to vscode now with vim extension&amp;hellip; so I dont really need to use terminal all the time ( just dropdown terminal + tmux is enough ) Read this post hehe&#xA;Requirement iterm2 - I think everyone is using iterm2 on MacOS hehe Setup iterm2 as dropdown terminal Open iterm2 Go to iterm2 setting -&amp;gt; keys -&amp;gt; Hotkey -&amp;gt; assign the global hotkey you want ( mine is control + ` ) Setting iterm2&amp;rsquo;s apperance as dropdown terminal Go back to iterm2 setting -&amp;gt; profile -&amp;gt; Window -&amp;gt; Style -&amp;gt; Full-width Top of Screen Exclude iterm2 from task switcher Restart iterm2 Try your hotkey Add iterm2 to login iterm ( starting at boot ) Extra: you can use combo tmux + dropdow :)</description>
+    </item>
+    <item>
+      <title>How To Run Container Background Tasks With Cron By Using Supervisord</title>
+      <link>http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/</link>
+      <pubDate>Tue, 16 Apr 2024 14:07:11 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/</guid>
+      <description>Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?&#xA;Recently I worked on a PHP application that used cron for background processing. Since it took some time to get it right, I&amp;rsquo;m sharing the solution.&#xA;This solution runs Cron as a secondary process in a PHP webserver container. Supervisor controls these processes, and ensures that the container fails as soon as any process fails.</description>
+    </item>
     <item>
       <title>Why do arrays start at 0?</title>
-      <link>https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/</link>
+      <link>http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/</link>
       <pubDate>Sun, 17 Dec 2023 11:45:50 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/</guid>
-      <description>Do you guy know why arrays are indexed at zero? So what&amp;rsquo;s actually happening under the hood here, let takes this example:
-#include &amp;lt;stdio.h&amp;gt; int main() { int test[3] = {1,2,3}; } so if I want to get a second element here of test, I should write test[2]; right?
-What&amp;rsquo;s actually happening here is this test[2]; converts the the address of test plus size of an int times two
-test[2]; // &amp;amp;test + sizeof(int)*2 And because the first element lives at the zeroth location (its the zeroth offset), that why you could do like this:</description>
+      <guid>http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/</guid>
+      <description>Do you guy know why arrays are indexed at zero? So what&amp;rsquo;s actually happening under the hood here, let takes this example:&#xA;#include &amp;lt;stdio.h&amp;gt; int main() { int test[3] = {1,2,3}; } so if I want to get a second element here of test, I should write test[2]; right?&#xA;What&amp;rsquo;s actually happening here is this test[2]; converts the the address of test plus size of an int times two&#xA;test[2]; // &amp;amp;test + sizeof(int)*2 And because the first element lives at the zeroth location (its the zeroth offset), that why you could do like this:</description>
     </item>
-    
     <item>
       <title>Virtualbox, oui mais sans (prise de) tête !</title>
-      <link>https://huyhoang8398.github.io/blog/posts/virtualbox_headless/</link>
+      <link>http://localhost:1313/blog/posts/virtualbox_headless/</link>
       <pubDate>Tue, 31 Oct 2023 20:58:36 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/virtualbox_headless/</guid>
-      <description>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .
-For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.
-The advantage is to run a VM in the background without using a lot of memory.
-There are two distinct parts to master:
- start and stop the VM in command line mode;</description>
+      <guid>http://localhost:1313/blog/posts/virtualbox_headless/</guid>
+      <description>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .&#xA;For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.&#xA;The advantage is to run a VM in the background without using a lot of memory.&#xA;There are two distinct parts to master:&#xA;start and stop the VM in command line mode;</description>
     </item>
-    
     <item>
       <title>Using Strace with Tmux</title>
-      <link>https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/</link>
+      <link>http://localhost:1313/blog/posts/strace-avec-tmux/</link>
       <pubDate>Wed, 16 Aug 2023 22:39:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/</guid>
-      <description>How to track the execution of a program using strace? By using tmux! We will have two panels:
- one for the execution of the command;
-the second dedicated to displaying strace.
- Don&amp;rsquo;t forget that you can search within everything displayed in a panel with tmux&amp;hellip;
-#!/bin/bash  TMPDIR=/tmp FIFODIR=$(mktemp -p &amp;#34;${TMPDIR:-.}&amp;#34; -d strace-XXXX) || exit 1 FIFOPATH=$FIFODIR/fifo mkfifo &amp;#34;$FIFOPATH&amp;#34; || { rmdir &amp;#34;$TMPDIR&amp;#34;; exit 1; } COMMAND=$1 shift ARGS=$@ PANE_ID=$(tmux if-shell &amp;#34;[ $(($(tmux display -p &amp;#39;8*#{pane_width}-20*#{pane_height}&amp;#39;)))-lt 0 ]&amp;#34; &amp;#34;splitw -v -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34; &amp;#34;splitw -h -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34;) tmux set-option -t $PANE_ID -p @mytitle &amp;#34;strace:$COMMAND&amp;#34; tmux set-option -t $PANE_ID -p remain-on-exit on strace $COMMAND $ARGS 2&amp;gt; $FIFOPATH Thus, the strace tool sends its output to the stderr channel, which is then redirected to a fifo that is subsequently displayed in a tmux panel&amp;hellip;</description>
+      <guid>http://localhost:1313/blog/posts/strace-avec-tmux/</guid>
+      <description>How to track the execution of a program using strace? By using tmux! We will have two panels:&#xA;one for the execution of the command;&#xA;the second dedicated to displaying strace.&#xA;Don&amp;rsquo;t forget that you can search within everything displayed in a panel with tmux&amp;hellip;&#xA;#!/bin/bash TMPDIR=/tmp FIFODIR=$(mktemp -p &amp;#34;${TMPDIR:-.}&amp;#34; -d strace-XXXX) || exit 1 FIFOPATH=$FIFODIR/fifo mkfifo &amp;#34;$FIFOPATH&amp;#34; || { rmdir &amp;#34;$TMPDIR&amp;#34;; exit 1; } COMMAND=$1 shift ARGS=$@ PANE_ID=$(tmux if-shell &amp;#34;[ $(($(tmux display -p &amp;#39;8*#{pane_width}-20*#{pane_height}&amp;#39;))) -lt 0 ]&amp;#34; &amp;#34;splitw -v -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34; &amp;#34;splitw -h -d -c &amp;#39;#{pane_current_path}&amp;#39; -P -F &amp;#39;#{pane_id}&amp;#39; cat $FIFOPATH&amp;#34;) tmux set-option -t $PANE_ID -p @mytitle &amp;#34;strace:$COMMAND&amp;#34; tmux set-option -t $PANE_ID -p remain-on-exit on strace $COMMAND $ARGS 2&amp;gt; $FIFOPATH Thus, the strace tool sends its output to the stderr channel, which is then redirected to a fifo that is subsequently displayed in a tmux panel&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Neovim: From simple texteditor to IDE like</title>
-      <link>https://huyhoang8398.github.io/blog/posts/neovim/</link>
+      <link>http://localhost:1313/blog/posts/neovim/</link>
       <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/neovim/</guid>
-      <description>Hi, it&amp;rsquo;s Kn.
-Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them! Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &amp;ldquo;hard&amp;rdquo; for him to handle.</description>
+      <guid>http://localhost:1313/blog/posts/neovim/</guid>
+      <description>Hi, it&amp;rsquo;s Kn.&#xA;Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them! Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &amp;ldquo;hard&amp;rdquo; for him to handle.</description>
     </item>
-    
     <item>
       <title>Setting a Static IP and Permanent DNS nameserver in Ubuntu Server</title>
-      <link>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</link>
+      <link>http://localhost:1313/blog/posts/staticip-ubuntuserver/</link>
       <pubDate>Thu, 06 Jul 2023 14:18:55 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</guid>
-      <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).
-After rebooting, the file will be changed back to the content nameserver 127.0.0.53 (near the end line), even though you had previously changed it to 8.</description>
+      <guid>http://localhost:1313/blog/posts/staticip-ubuntuserver/</guid>
+      <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).&#xA;After rebooting, the file will be changed back to the content nameserver 127.0.0.53 (near the end line), even though you had previously changed it to 8.</description>
     </item>
-    
     <item>
       <title>Install Older and Newer PHP version on AWS EC2</title>
-      <link>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</link>
+      <link>http://localhost:1313/blog/posts/ec2-aws-php-differversion-installation/</link>
       <pubDate>Fri, 17 Feb 2023 13:15:05 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</guid>
+      <guid>http://localhost:1313/blog/posts/ec2-aws-php-differversion-installation/</guid>
       <description>To install older or newer version of PHP with AWS utility amazon-linux-extras enable php7.1 amazon-linux-extras install php7.1 Install PHP extension yum update yum install php-cli php-pdo php-fpm php-json php-mysqlnd </description>
     </item>
-    
     <item>
       <title>SSL and Let&#39;s Encrypt For Jenkins</title>
-      <link>https://huyhoang8398.github.io/blog/posts/ssl-letsencrypt-jenkins/</link>
+      <link>http://localhost:1313/blog/posts/ssl-letsencrypt-jenkins/</link>
       <pubDate>Mon, 13 Feb 2023 09:57:31 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/ssl-letsencrypt-jenkins/</guid>
-      <description>Jenkins (standalone) SSL + Let&amp;rsquo;s Encrypt In this tutorial, I will show how to use Let&amp;rsquo;s Encrypt free SSL with a standalone Jenkins in CentOS 7 AWS
-Install Certbot on AWS EC2 CentOS amazon-linux-extras install epel yum install certbot python2-certbot-apache mod_ssl Generate Certificates Run the command to generate the certificate and key files.
-sudo certbot certonly --standalone --preferred-challenges http -d example.com Just in case you got this response:
-Saving debug log to /var/log/letsencrypt/letsencrypt.</description>
+      <guid>http://localhost:1313/blog/posts/ssl-letsencrypt-jenkins/</guid>
+      <description>Jenkins (standalone) SSL + Let&amp;rsquo;s Encrypt In this tutorial, I will show how to use Let&amp;rsquo;s Encrypt free SSL with a standalone Jenkins in CentOS 7 AWS&#xA;Install Certbot on AWS EC2 CentOS amazon-linux-extras install epel yum install certbot python2-certbot-apache mod_ssl Generate Certificates Run the command to generate the certificate and key files.&#xA;sudo certbot certonly --standalone --preferred-challenges http -d example.com Just in case you got this response:&#xA;Saving debug log to /var/log/letsencrypt/letsencrypt.</description>
     </item>
-    
     <item>
       <title>Restoring Large MySQL Dump</title>
-      <link>https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/</link>
+      <link>http://localhost:1313/blog/posts/restoring-large-mysql-dump/</link>
       <pubDate>Thu, 12 Jan 2023 19:15:59 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/restoring-large-mysql-dump/</guid>
-      <description>Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact).
-Problem Our current backup system uses mysqldump. It dumps a 25 GB sql dump file, which compresses to about 2.5GB using gzip. The last time we needed to restore a backup it was only about 9GB, and it took several hours.
-This time, I created the database, and from the mysql prompt I issued the following command:</description>
+      <guid>http://localhost:1313/blog/posts/restoring-large-mysql-dump/</guid>
+      <description>Yesterday I had a fun opportunity of restoring roughly 912 Million Rows to a database. 902 Million belonged to one single table (902,966,645 rows, to be exact).&#xA;Problem Our current backup system uses mysqldump. It dumps a 25 GB sql dump file, which compresses to about 2.5GB using gzip. The last time we needed to restore a backup it was only about 9GB, and it took several hours.&#xA;This time, I created the database, and from the mysql prompt I issued the following command:</description>
     </item>
-    
     <item>
       <title>Getting the Function keys of a Keychron working on Linux</title>
-      <link>https://huyhoang8398.github.io/blog/posts/keychron/</link>
+      <link>http://localhost:1313/blog/posts/keychron/</link>
       <pubDate>Tue, 03 May 2022 16:14:17 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/keychron/</guid>
-      <description>Having destroyed the Tada68 keyboard , I wanted to try a more substantial keyboard for a change. After some research I decided that I want a mechanical, wired (sometime bluetooth), tenkeyless keyboard without any fancy LEDs.
-At the end I settled for a Keychron K8 with brown switches. It meets all requirements, looks very nice and the price is reasonable ( I bought it for only 50 eur on Aliexpress :v ).</description>
+      <guid>http://localhost:1313/blog/posts/keychron/</guid>
+      <description>Having destroyed the Tada68 keyboard , I wanted to try a more substantial keyboard for a change. After some research I decided that I want a mechanical, wired (sometime bluetooth), tenkeyless keyboard without any fancy LEDs.&#xA;At the end I settled for a Keychron K8 with brown switches. It meets all requirements, looks very nice and the price is reasonable ( I bought it for only 50 eur on Aliexpress :v ).</description>
     </item>
-    
     <item>
       <title>Learning Sed Is Beneficial For Linux Users</title>
-      <link>https://huyhoang8398.github.io/blog/posts/sed/</link>
+      <link>http://localhost:1313/blog/posts/sed/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/sed/</guid>
-      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
-Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
+      <guid>http://localhost:1313/blog/posts/sed/</guid>
+      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).&#xA;Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
     </item>
-    
     <item>
       <title>CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid</title>
-      <link>https://huyhoang8398.github.io/blog/posts/esaip-29052021/</link>
+      <link>http://localhost:1313/blog/posts/esaip-29052021/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/esaip-29052021/</guid>
-      <description>Motivation Vào một buổi trưa nắng nóng khi dịch bệnh tràn lan, mình có nhận được tin nhắn thử &amp;ldquo;xoạc&amp;rdquo; 1 cuộc thi CTF do ESAIP École d&amp;rsquo;Ingénieurs tổ chức. Đây là kì thi CTF đầu tiên cũng như lần đầu tiên mình viết write up nên cũng chỉ hi vọng lót đường.
-Ở đây thì có một bài về Box pentest rất thú vị là Corovid (nó ngốn của mình 3 tiếng mới xong :( )</description>
+      <guid>http://localhost:1313/blog/posts/esaip-29052021/</guid>
+      <description>Motivation Vào một buổi trưa nắng nóng khi dịch bệnh tràn lan, mình có nhận được tin nhắn thử &amp;ldquo;xoạc&amp;rdquo; 1 cuộc thi CTF do ESAIP École d&amp;rsquo;Ingénieurs tổ chức. Đây là kì thi CTF đầu tiên cũng như lần đầu tiên mình viết write up nên cũng chỉ hi vọng lót đường.&#xA;Ở đây thì có một bài về Box pentest rất thú vị là Corovid (nó ngốn của mình 3 tiếng mới xong :( )</description>
     </item>
-    
     <item>
       <title>Xf86 Video Intel</title>
-      <link>https://huyhoang8398.github.io/blog/posts/xf86-video-intel/</link>
+      <link>http://localhost:1313/blog/posts/xf86-video-intel/</link>
       <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/xf86-video-intel/</guid>
-      <description>Why not XF86-Video-Intel ? It is a DDX driver (which provides 2D acceleration in Xorg) but It is not recommended to install nowaday. Because this package is no longer needed and also causes screen tearing. And also the generic xf86-video-modesetting DDX driver included in xorg-server seems to be better than most vendor specific xf86-video- drivers.
-Some (Debian &amp;amp; Ubuntu, Fedora, KDE) recommend not installing the xf86-video-intel driver, and instead falling back on the modesetting driver for Gen4 and newer GPUs (GMA 3000 from 2006 and newer).</description>
+      <guid>http://localhost:1313/blog/posts/xf86-video-intel/</guid>
+      <description>Why not XF86-Video-Intel ? It is a DDX driver (which provides 2D acceleration in Xorg) but It is not recommended to install nowaday. Because this package is no longer needed and also causes screen tearing. And also the generic xf86-video-modesetting DDX driver included in xorg-server seems to be better than most vendor specific xf86-video- drivers.&#xA;Some (Debian &amp;amp; Ubuntu, Fedora, KDE) recommend not installing the xf86-video-intel driver, and instead falling back on the modesetting driver for Gen4 and newer GPUs (GMA 3000 from 2006 and newer).</description>
     </item>
-    
     <item>
       <title>Quick terminal-based DNS switching</title>
-      <link>https://huyhoang8398.github.io/blog/posts/dns-command/</link>
+      <link>http://localhost:1313/blog/posts/dns-command/</link>
       <pubDate>Tue, 21 Jan 2020 21:39:45 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/dns-command/</guid>
-      <description>This post was originally published on thecodecousins by StanleyNguyen. I add the Linux section for more details.
-Motivation Most of us, at some point of our lives, have used at least a custom DNS servers configurations for our computers. Be it for avoiding censorship, faster browsing, security, or bypassing content restriction, we&amp;rsquo;ve all tried setting our DNS servers to some public DNS servers like one from Google (remember 8.8.8.8 and 8.</description>
+      <guid>http://localhost:1313/blog/posts/dns-command/</guid>
+      <description>This post was originally published on thecodecousins by StanleyNguyen. I add the Linux section for more details.&#xA;Motivation Most of us, at some point of our lives, have used at least a custom DNS servers configurations for our computers. Be it for avoiding censorship, faster browsing, security, or bypassing content restriction, we&amp;rsquo;ve all tried setting our DNS servers to some public DNS servers like one from Google (remember 8.8.8.8 and 8.</description>
     </item>
-    
     <item>
       <title>Why I made the switch from Mac to Linux</title>
-      <link>https://huyhoang8398.github.io/blog/posts/dellxps-arch/</link>
+      <link>http://localhost:1313/blog/posts/dellxps-arch/</link>
       <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/dellxps-arch/</guid>
-      <description>Introduction I have been a huge Mac fan and power user since I started in IT in 2015. But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver. This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever. Here is what inspired me to switch.
-Why Im falling in love with macOS First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.</description>
+      <guid>http://localhost:1313/blog/posts/dellxps-arch/</guid>
+      <description>Introduction I have been a huge Mac fan and power user since I started in IT in 2015. But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver. This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever. Here is what inspired me to switch.&#xA;Why Im falling in love with macOS First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.</description>
     </item>
-    
     <item>
       <title>Shortcode to Insert Raw HTML in Hugo</title>
-      <link>https://huyhoang8398.github.io/blog/posts/shortcode-to-insert-raw-html-in-hugo/</link>
+      <link>http://localhost:1313/blog/posts/shortcode-to-insert-raw-html-in-hugo/</link>
       <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/shortcode-to-insert-raw-html-in-hugo/</guid>
-      <description>Hugo is very good framework of creating a website by using markdown. But there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &amp;lt;iframes&amp;gt;) to Markdown content.
-But Hugo does not seem to have a good way to let you do this in a markdown file. They created shortcodes to circumvent these limitations.
-A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template.</description>
+      <guid>http://localhost:1313/blog/posts/shortcode-to-insert-raw-html-in-hugo/</guid>
+      <description>Hugo is very good framework of creating a website by using markdown. But there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &amp;lt;iframes&amp;gt;) to Markdown content.&#xA;But Hugo does not seem to have a good way to let you do this in a markdown file. They created shortcodes to circumvent these limitations.&#xA;A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template.</description>
     </item>
-    
     <item>
       <title>Using Arduino With PharoThings/Smalltalk</title>
-      <link>https://huyhoang8398.github.io/blog/posts/using-arduino-with-pharo/</link>
+      <link>http://localhost:1313/blog/posts/using-arduino-with-pharo/</link>
       <pubDate>Mon, 02 Dec 2019 19:57:14 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/using-arduino-with-pharo/</guid>
+      <guid>http://localhost:1313/blog/posts/using-arduino-with-pharo/</guid>
       <description>Firmata Firmata is a generic protocol for communicating with microcontrollers from software on a host computer. It is intended to work with any host computer software package. Right now there is a matching object in a number of languages. It is easy to add objects for other software to use this protocol. Basically, this firmware establishes a protocol for talking to the Arduino from the host software. The aim is to allow people to completely control the Arduino from software on the host computer.</description>
     </item>
-    
     <item>
       <title>Git Revert to a Good Commit</title>
-      <link>https://huyhoang8398.github.io/blog/posts/git-revert-to-a-good-commit/</link>
+      <link>http://localhost:1313/blog/posts/git-revert-to-a-good-commit/</link>
       <pubDate>Sun, 01 Dec 2019 14:28:16 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/git-revert-to-a-good-commit/</guid>
+      <guid>http://localhost:1313/blog/posts/git-revert-to-a-good-commit/</guid>
       <description>Today my co-worker asked me how to revert to an old and good commit on master ( after you accidentally merged dev branch to master ). There are many ways to do that, for example we can use reset to discard all wrong commit to revert back, like undo when writing text. You can find others way onthis topic on Stack Overflow But the problem is too many options, we dont know which one is good, or even dont need to understand - it just works.</description>
     </item>
-    
     <item>
       <title>How I escaped from Microsoft Office tools as a Computer Science student</title>
-      <link>https://huyhoang8398.github.io/blog/posts/pandoc/</link>
+      <link>http://localhost:1313/blog/posts/pandoc/</link>
       <pubDate>Wed, 09 Oct 2019 00:35:20 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/pandoc/</guid>
+      <guid>http://localhost:1313/blog/posts/pandoc/</guid>
       <description>Motivation I have used beamer quite a lot to prepare slides for both research and class presentations. I have started to use LaTeX to content in beamer presentation for two years. Sometimes I was concerned about the high ratio of markup to content in beamer presentations. I used to type thousands lines of code just to create a presentation slide which was tiring and time consuming. Thus, I did some research and found a combination of pandoc, markdown, and LaTeX to simplify my process.</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ESAIP on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/esaip/</link>
+    <link>http://localhost:1313/blog/tags/esaip/</link>
     <description>Recent content in ESAIP on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/esaip/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/esaip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CTF ESAIP HACK CHALLENGE 4th edition - 29 Mai 2021 Final Writeup Box Pentest Corovid</title>
-      <link>https://huyhoang8398.github.io/blog/posts/esaip-29052021/</link>
+      <link>http://localhost:1313/blog/posts/esaip-29052021/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/esaip-29052021/</guid>
-      <description>Motivation Vào một buổi trưa nắng nóng khi dịch bệnh tràn lan, mình có nhận được tin nhắn thử &amp;ldquo;xoạc&amp;rdquo; 1 cuộc thi CTF do ESAIP École d&amp;rsquo;Ingénieurs tổ chức. Đây là kì thi CTF đầu tiên cũng như lần đầu tiên mình viết write up nên cũng chỉ hi vọng lót đường.
-Ở đây thì có một bài về Box pentest rất thú vị là Corovid (nó ngốn của mình 3 tiếng mới xong :( )</description>
+      <guid>http://localhost:1313/blog/posts/esaip-29052021/</guid>
+      <description>Motivation Vào một buổi trưa nắng nóng khi dịch bệnh tràn lan, mình có nhận được tin nhắn thử &amp;ldquo;xoạc&amp;rdquo; 1 cuộc thi CTF do ESAIP École d&amp;rsquo;Ingénieurs tổ chức. Đây là kì thi CTF đầu tiên cũng như lần đầu tiên mình viết write up nên cũng chỉ hi vọng lót đường.&#xA;Ở đây thì có một bài về Box pentest rất thú vị là Corovid (nó ngốn của mình 3 tiếng mới xong :( )</description>
     </item>
-    
   </channel>
 </rss>

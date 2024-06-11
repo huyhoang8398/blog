@@ -1,74 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/linux/</link>
-    <description>Recent content in linux on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 31 Oct 2023 20:58:36 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <title>Linux on Kn</title>
+    <link>http://localhost:1313/blog/tags/linux/</link>
+    <description>Recent content in Linux on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Oct 2023 20:58:36 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Virtualbox, oui mais sans (prise de) tête !</title>
-      <link>https://huyhoang8398.github.io/blog/posts/virtualbox_headless/</link>
+      <link>http://localhost:1313/blog/posts/virtualbox_headless/</link>
       <pubDate>Tue, 31 Oct 2023 20:58:36 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/virtualbox_headless/</guid>
-      <description>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .
-For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.
-The advantage is to run a VM in the background without using a lot of memory.
-There are two distinct parts to master:
- start and stop the VM in command line mode;</description>
+      <guid>http://localhost:1313/blog/posts/virtualbox_headless/</guid>
+      <description>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .&#xA;For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.&#xA;The advantage is to run a VM in the background without using a lot of memory.&#xA;There are two distinct parts to master:&#xA;start and stop the VM in command line mode;</description>
     </item>
-    
     <item>
       <title>Setting a Static IP and Permanent DNS nameserver in Ubuntu Server</title>
-      <link>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</link>
+      <link>http://localhost:1313/blog/posts/staticip-ubuntuserver/</link>
       <pubDate>Thu, 06 Jul 2023 14:18:55 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/staticip-ubuntuserver/</guid>
-      <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).
-After rebooting, the file will be changed back to the content nameserver 127.0.0.53 (near the end line), even though you had previously changed it to 8.</description>
+      <guid>http://localhost:1313/blog/posts/staticip-ubuntuserver/</guid>
+      <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).&#xA;After rebooting, the file will be changed back to the content nameserver 127.0.0.53 (near the end line), even though you had previously changed it to 8.</description>
     </item>
-    
     <item>
       <title>Getting the Function keys of a Keychron working on Linux</title>
-      <link>https://huyhoang8398.github.io/blog/posts/keychron/</link>
+      <link>http://localhost:1313/blog/posts/keychron/</link>
       <pubDate>Tue, 03 May 2022 16:14:17 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/keychron/</guid>
-      <description>Having destroyed the Tada68 keyboard , I wanted to try a more substantial keyboard for a change. After some research I decided that I want a mechanical, wired (sometime bluetooth), tenkeyless keyboard without any fancy LEDs.
-At the end I settled for a Keychron K8 with brown switches. It meets all requirements, looks very nice and the price is reasonable ( I bought it for only 50 eur on Aliexpress :v ).</description>
+      <guid>http://localhost:1313/blog/posts/keychron/</guid>
+      <description>Having destroyed the Tada68 keyboard , I wanted to try a more substantial keyboard for a change. After some research I decided that I want a mechanical, wired (sometime bluetooth), tenkeyless keyboard without any fancy LEDs.&#xA;At the end I settled for a Keychron K8 with brown switches. It meets all requirements, looks very nice and the price is reasonable ( I bought it for only 50 eur on Aliexpress :v ).</description>
     </item>
-    
     <item>
       <title>Learning Sed Is Beneficial For Linux Users</title>
-      <link>https://huyhoang8398.github.io/blog/posts/sed/</link>
+      <link>http://localhost:1313/blog/posts/sed/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/sed/</guid>
-      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
-Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
+      <guid>http://localhost:1313/blog/posts/sed/</guid>
+      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).&#xA;Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
     </item>
-    
     <item>
       <title>Xf86 Video Intel</title>
-      <link>https://huyhoang8398.github.io/blog/posts/xf86-video-intel/</link>
+      <link>http://localhost:1313/blog/posts/xf86-video-intel/</link>
       <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/xf86-video-intel/</guid>
-      <description>Why not XF86-Video-Intel ? It is a DDX driver (which provides 2D acceleration in Xorg) but It is not recommended to install nowaday. Because this package is no longer needed and also causes screen tearing. And also the generic xf86-video-modesetting DDX driver included in xorg-server seems to be better than most vendor specific xf86-video- drivers.
-Some (Debian &amp;amp; Ubuntu, Fedora, KDE) recommend not installing the xf86-video-intel driver, and instead falling back on the modesetting driver for Gen4 and newer GPUs (GMA 3000 from 2006 and newer).</description>
+      <guid>http://localhost:1313/blog/posts/xf86-video-intel/</guid>
+      <description>Why not XF86-Video-Intel ? It is a DDX driver (which provides 2D acceleration in Xorg) but It is not recommended to install nowaday. Because this package is no longer needed and also causes screen tearing. And also the generic xf86-video-modesetting DDX driver included in xorg-server seems to be better than most vendor specific xf86-video- drivers.&#xA;Some (Debian &amp;amp; Ubuntu, Fedora, KDE) recommend not installing the xf86-video-intel driver, and instead falling back on the modesetting driver for Gen4 and newer GPUs (GMA 3000 from 2006 and newer).</description>
     </item>
-    
     <item>
       <title>Why I made the switch from Mac to Linux</title>
-      <link>https://huyhoang8398.github.io/blog/posts/dellxps-arch/</link>
+      <link>http://localhost:1313/blog/posts/dellxps-arch/</link>
       <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/dellxps-arch/</guid>
-      <description>Introduction I have been a huge Mac fan and power user since I started in IT in 2015. But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver. This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever. Here is what inspired me to switch.
-Why Im falling in love with macOS First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.</description>
+      <guid>http://localhost:1313/blog/posts/dellxps-arch/</guid>
+      <description>Introduction I have been a huge Mac fan and power user since I started in IT in 2015. But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver. This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever. Here is what inspired me to switch.&#xA;Why Im falling in love with macOS First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.</description>
     </item>
-    
   </channel>
 </rss>

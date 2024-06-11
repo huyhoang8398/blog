@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+  
+    <title>How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — Anything that&#39;s system and software</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?"/>
+<meta name="keywords" content="devops, Linux"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/" />
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/assets/style.css">
+
+  <link rel="stylesheet" href="http://localhost:1313/blog/assets/green.css">
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://localhost:1313/blog/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — Anything that&#39;s system and software" />
+<meta name="twitter:description" content="Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?" />
+<meta name="twitter:site" content="http://localhost:1313/blog/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/cover.png">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — Anything that&#39;s system and software">
+<meta property="og:description" content="Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/" />
+<meta property="og:site_name" content="How To Run Container Background Tasks With Cron By Using Supervisord" />
+<meta property="og:image" content="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/cover.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2024-04-16 14:07:11 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+<link href="/blog/prism-onedark.css" rel="stylesheet" />
+
+</head>
+<body class="en">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://huyhoang8398.github.io/blog">
+  <div class="logo">
+    Kn
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://huyhoang8398.github.io">about</a></li>
+        
+      
+      
+    
+
+    
+    <div class="spacer"></div>
+    <ul class="language-selector">
+      <ul class="language-selector-current">
+          <li>english ▾</li>
+      </ul>
+      <ul class="language-selector__more hidden">
+        
+        <li><a href="http://localhost:1313/blog/">english</a></li>
+        
+        <li><a href="http://localhost:1313/blog/vi/">viet</a></li>
+        
+      </ul>
+    </ul>
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://huyhoang8398.github.io">about</a></li>
+      
+    
+    
+    <hr />
+        
+          <li>
+            <a href="http://localhost:1313/blog/">english</a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/blog/vi/">viet</a>
+          </li>
+        
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/">How To Run Container Background Tasks With Cron By Using Supervisord</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2024-04-16
+    </span>
+    
+    
+    <span class="post-author">:: 
+      
+        
+        
+    
+    
+        <a href="http://localhost:1313/blog/authors/kn/" />Do Hoang</a>
+    
+
+      
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    <a href="http://localhost:1313/blog/tags/docker/">#docker</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/container/">#container</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/docker-image/">#docker-image</a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/cover.png" class="post-cover" />
+  
+
+  <div class="post-content">
+    <p>Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?</p>
+<p>Recently I worked on a PHP application that used <code>cron</code> for background processing. Since it took some time to get it right, I&rsquo;m sharing the solution.</p>
+<p>This solution runs <code>Cron</code> as a secondary process in a PHP webserver container. <code>Supervisor</code> controls these processes, and ensures that the container fails as soon as any process fails. Although SupervisorD adds another layer of complexity ,it is indeed a very simple and useful way to manage multiple services .</p>
+<p>The Dockerfile sets the required crontab file permissions and starts Supervisor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">FROM ubuntu:22.04</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">ENV DEBIAN_FRONTEND=noninteractive</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">RUN apt-get update -y &amp;&amp; </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">apt-get install -y --no-install-recommends cron supervisor</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">COPY supervisord.conf /etc/supervisor/</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">CMD [&#34;/usr/bin/supervisord&#34;, &#34;-c&#34;, &#34;/etc/supervisor/supervisord.conf&#34;]</span>
+</span></span></code></pre></div><p>Supervisor starts Cron with the following configuration.</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">[program:cron]
+command = /bin/bash -c &#34;declare -p | grep -Ev &#39;^declare -[[:alpha:]]*r&#39; &gt; /run/supervisord.env &amp;&amp; /usr/sbin/cron -f -L 15&#34;
+stdout_logfile = /dev/stdout
+stdout_logfile_maxbytes=0
+stderr_logfile = /dev/stderr
+stderr_logfile_maxbytes=0
+user = root
+autostart = true
+autorestart = true
+
+[program:php-apache]
+command = apache2-foreground
+stdout_logfile = /dev/stdout
+stdout_logfile_maxbytes=0
+stderr_logfile = /dev/stderr
+stderr_logfile_maxbytes=0
+user = root
+autostart = true
+autorestart = true
+priority = 5
+</code></pre><p>Cron runs in foreground mode (<code>cron -f</code>) to allow supervisor to control it.</p>
+<p>Supervisors process environment is exported to <code>/run/supervisord.env</code>. This allows Cron jobs to import the Docker/Kubernetes environment variables. The environment is imported by the following Cron job as an example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* * * * * www-data exec /bin/bash -c <span style="color:#e6db74">&#34;. /run/supervisord.env; /app/script.sh &gt;&gt; /app/cron.log&#34;</span>
+</span></span></code></pre></div><h1 id="extras-dynamic-add-cron-task---command-not-found">Extras, Dynamic add cron task - Command not found?</h1>
+<p>Our PHP application is dynamically add crontask and sometime it does not provide full <code>PATH</code> of the command and sometime we might want to use <code>ENV</code> variable. Cron runs commands on a time-based schedule with a minimal environment.</p>
+<p>Cron passes a minimal set of environment variables to your jobs. To see the difference, add a dummy job like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* * * * * env &gt; /tmp/env.output
+</span></span></code></pre></div><p>Wait for /tmp/env.output to be created, then remove the job again. Now compare the contents of /tmp/env.output with the output of env run in your regular terminal.</p>
+<p>A common &ldquo;gotcha&rdquo; here is the PATH environment variable being different. Maybe your cron script uses the command somecommand found in <code>/opt/someApp/bin</code>, which you&rsquo;ve added to PATH in <code>/etc/environment</code>? cron ignores PATH from that file, so runnning somecommand from your script will fail when run with cron, but work when run in a terminal. It&rsquo;s worth noting that variables from <code>/etc/environment</code> will be passed on to cron jobs, just not the variables cron specifically sets itself, such as PATH.</p>
+<p>To get around that, just set your own PATH variable at the top of the script. E.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>PATH<span style="color:#f92672">=</span>/opt/someApp/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rest of script follows</span>
+</span></span></code></pre></div><p>Some prefer to just use absolute paths to all the commands instead. I recommend against that. Consider what happens if you want to run your script on a different system, and on that system, the command is in <code>/opt/someAppv2.2/bin</code> instead. You&rsquo;d have to go through the whole script replacing <code>/opt/someApp/bin</code> with <code>/opt/someAppv2.2/bin</code> instead of just doing a small edit on the first line of the script.</p>
+<p>You can also set the PATH variable in the crontab file, which will apply to all cron jobs. E.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PATH<span style="color:#f92672">=</span>/opt/someApp/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">15</span> <span style="color:#ae81ff">1</span> * * * backupscript --incremental /home /root
+</span></span></code></pre></div><p>So we might want to use the last option and put in our <code>dockerfile</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>. . .
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> add_shell_path_to_crontab <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#print info about what&#39;s being added</span>
+</span></span><span style="display:flex;"><span>	print_notification <span style="color:#e6db74">&#34;Current SHELL: </span><span style="color:#e6db74">${</span>SHELL<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>	print_notification <span style="color:#e6db74">&#34;Current PATH: </span><span style="color:#e6db74">${</span>PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#Add current shell and path to crontab</span>
+</span></span><span style="display:flex;"><span>	print_status <span style="color:#e6db74">&#34;Adding current SHELL and PATH to crontab \nold crontab:&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	printline; crontab -u www-data -l; printline
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#keep old comments but start new crontab file</span>
+</span></span><span style="display:flex;"><span>	crontab -l | grep <span style="color:#e6db74">&#34;^#&#34;</span> &gt; tmp.cron
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#Add our current shell and path to the new crontab file</span>
+</span></span><span style="display:flex;"><span>	echo -e <span style="color:#e6db74">&#34;SHELL=</span><span style="color:#e6db74">${</span>SHELL<span style="color:#e6db74">}</span><span style="color:#e6db74">\nPATH=</span><span style="color:#e6db74">${</span>PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">\n&#34;</span> &gt;&gt; tmp.cron 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#Add old crontab entries but ignore comments or any shell or path statements</span>
+</span></span><span style="display:flex;"><span>	crontab -u www-data -l | grep -v <span style="color:#e6db74">&#34;^#&#34;</span> | grep -v <span style="color:#e6db74">&#34;SHELL&#34;</span> | grep -v <span style="color:#e6db74">&#34;PATH&#34;</span> &gt;&gt; tmp.cron
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#load up the new crontab we just created</span>
+</span></span><span style="display:flex;"><span>	crontab -u www-data tmp.cron
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#Display new crontab</span>
+</span></span><span style="display:flex;"><span>	print_good <span style="color:#e6db74">&#34;New crontab:&#34;</span>
+</span></span><span style="display:flex;"><span>	printline; crontab -u www-data -l; printline
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>. . .
+</span></span></code></pre></div><p>Run this function script when building your docker image and you will pre-append the PATH to your cron file.</p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="http://localhost:1313/blog/posts/global_dropdown_terminal_on_macos/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Global hotkey - Dropdown Terminal on MacOS</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/">
+          <span class="button__text">Why do arrays start at 0?</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="http://localhost:1313/blog/assets/main.js"></script>
+<script src="http://localhost:1313/blog/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

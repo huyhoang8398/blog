@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   
     <title>Virtualbox, oui mais sans (prise de) tête ! :: Kn — Anything that&#39;s system and software</title>
   
@@ -9,28 +9,28 @@
 <meta name="description" content="headless virtual machine"/>
 <meta name="keywords" content="virtualbox, headless"/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://huyhoang8398.github.io/blog/posts/virtualbox_headless/" />
+<link rel="canonical" href="http://localhost:1313/blog/posts/virtualbox_headless/" />
 
 
-<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/style.css">
+<link rel="stylesheet" href="http://localhost:1313/blog/assets/style.css">
 
-  <link rel="stylesheet" href="https://huyhoang8398.github.io/blog/assets/green.css">
-
-
-
-<link rel="stylesheet" href="https://huyhoang8398.github.io/blog/style.css">
+  <link rel="stylesheet" href="http://localhost:1313/blog/assets/green.css">
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://huyhoang8398.github.io/blog/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://huyhoang8398.github.io/blog/favicon.png">
+<link rel="stylesheet" href="http://localhost:1313/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://localhost:1313/blog/favicon.png">
 
 
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Virtualbox, oui mais sans (prise de) tête ! :: Kn — Anything that&#39;s system and software" />
 <meta name="twitter:description" content="headless virtual machine" />
-<meta name="twitter:site" content="https://huyhoang8398.github.io/blog" />
+<meta name="twitter:site" content="http://localhost:1313/blog/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
 
@@ -39,7 +39,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Virtualbox, oui mais sans (prise de) tête ! :: Kn — Anything that&#39;s system and software">
 <meta property="og:description" content="headless virtual machine" />
-<meta property="og:url" content="https://huyhoang8398.github.io/blog/posts/virtualbox_headless/" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/virtualbox_headless/" />
 <meta property="og:site_name" content="Virtualbox, oui mais sans (prise de) tête !" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="2048">
@@ -94,9 +94,9 @@
       </ul>
       <ul class="language-selector__more hidden">
         
-        <li><a href="https://huyhoang8398.github.io/blog/">english</a></li>
+        <li><a href="http://localhost:1313/blog/">english</a></li>
         
-        <li><a href="https://huyhoang8398.github.io/blog/vi/">viet</a></li>
+        <li><a href="http://localhost:1313/blog/vi/">viet</a></li>
         
       </ul>
     </ul>
@@ -113,11 +113,11 @@
     <hr />
         
           <li>
-            <a href="https://huyhoang8398.github.io/blog/">english</a>
+            <a href="http://localhost:1313/blog/">english</a>
           </li>
         
           <li>
-            <a href="https://huyhoang8398.github.io/blog/vi/">viet</a>
+            <a href="http://localhost:1313/blog/vi/">viet</a>
           </li>
         
     
@@ -132,7 +132,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://huyhoang8398.github.io/blog/posts/virtualbox_headless/">Virtualbox, oui mais sans (prise de) tête !</a></h1>
+    <a href="http://localhost:1313/blog/posts/virtualbox_headless/">Virtualbox, oui mais sans (prise de) tête !</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -146,7 +146,7 @@
         
     
     
-        <a href="https://huyhoang8398.github.io/blog/authors/kn/" />Do Hoang</a>
+        <a href="http://localhost:1313/blog/authors/kn/" />Do Hoang</a>
     
 
       
@@ -157,9 +157,9 @@
   
   <span class="post-tags">
     
-    <a href="https://huyhoang8398.github.io/blog/tags/linux/">#linux</a>&nbsp;
+    <a href="http://localhost:1313/blog/tags/linux/">#linux</a>&nbsp;
     
-    <a href="https://huyhoang8398.github.io/blog/tags/virtualbox/">#virtualbox</a>&nbsp;
+    <a href="http://localhost:1313/blog/tags/virtualbox/">#virtualbox</a>&nbsp;
     
   </span>
   
@@ -176,19 +176,19 @@
 <p>allow connection by SSH from the host to this VM.
 To know the name of the VM:</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage list vms
-</code></pre></div><p>To launch the vm, here called <em>myvm</em>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxHeadless --startvm <span style="color:#e6db74">&#34;myvm&#34;</span>
-</code></pre></div><p>Then, we can do <em>Port Forwarding</em> to reach the VM from the host:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage controlvm myvm natpf1 vers_ssh,tcp,,2224,,22
-</code></pre></div><p>Finally, if you want to properly shut down the VM:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage controlvm <span style="color:#e6db74">&#34;myvm&#34;</span> acpipowerbutton
-</code></pre></div><p>If we want to ensure access to the VM is possible:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">VBoxManage showvminfo <span style="color:#e6db74">&#34;myvm&#34;</span>
-NIC <span style="color:#ae81ff">1</span> Rule<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>:   name <span style="color:#f92672">=</span> vers_ssh, protocol <span style="color:#f92672">=</span> tcp, host ip <span style="color:#f92672">=</span> , host port <span style="color:#f92672">=</span> 2224, guest ip <span style="color:#f92672">=</span> , guest port <span style="color:#f92672">=</span> <span style="color:#ae81ff">22</span>
-</code></pre></div><p>To connect via SSH:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -p <span style="color:#ae81ff">2224</span> localhost
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>VBoxManage list vms
+</span></span></code></pre></div><p>To launch the vm, here called <em>myvm</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>VBoxHeadless --startvm <span style="color:#e6db74">&#34;myvm&#34;</span>
+</span></span></code></pre></div><p>Then, we can do <em>Port Forwarding</em> to reach the VM from the host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>VBoxManage controlvm myvm natpf1 vers_ssh,tcp,,2224,,22
+</span></span></code></pre></div><p>Finally, if you want to properly shut down the VM:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>VBoxManage controlvm <span style="color:#e6db74">&#34;myvm&#34;</span> acpipowerbutton
+</span></span></code></pre></div><p>If we want to ensure access to the VM is possible:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>VBoxManage showvminfo <span style="color:#e6db74">&#34;myvm&#34;</span>
+</span></span><span style="display:flex;"><span>NIC <span style="color:#ae81ff">1</span> Rule<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>:   name <span style="color:#f92672">=</span> vers_ssh, protocol <span style="color:#f92672">=</span> tcp, host ip <span style="color:#f92672">=</span> , host port <span style="color:#f92672">=</span> 2224, guest ip <span style="color:#f92672">=</span> , guest port <span style="color:#f92672">=</span> <span style="color:#ae81ff">22</span>
+</span></span></code></pre></div><p>To connect via SSH:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -p <span style="color:#ae81ff">2224</span> localhost
+</span></span></code></pre></div>
   </div>
   
   <div class="pagination">
@@ -200,7 +200,7 @@ NIC <span style="color:#ae81ff">1</span> Rule<span style="color:#f92672">(</span
     <div class="pagination__buttons">
       
       <span class="button previous">
-        <a href="https://huyhoang8398.github.io/blog/posts/why_do_arrays_start_at_zero/">
+        <a href="http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/">
           <span class="button__icon">←</span>
           <span class="button__text">Why do arrays start at 0?</span>
         </a>
@@ -208,7 +208,7 @@ NIC <span style="color:#ae81ff">1</span> Rule<span style="color:#f92672">(</span
       
       
       <span class="button next">
-        <a href="https://huyhoang8398.github.io/blog/posts/strace-avec-tmux/">
+        <a href="http://localhost:1313/blog/posts/strace-avec-tmux/">
           <span class="button__text">Using Strace with Tmux</span>
           <span class="button__icon">→</span>
         </a>
@@ -236,8 +236,8 @@ NIC <span style="color:#ae81ff">1</span> Rule<span style="color:#f92672">(</span
   </div>
 </footer>
 
-<script src="https://huyhoang8398.github.io/blog/assets/main.js"></script>
-<script src="https://huyhoang8398.github.io/blog/assets/prism.js"></script>
+<script src="http://localhost:1313/blog/assets/main.js"></script>
+<script src="http://localhost:1313/blog/assets/prism.js"></script>
 
 
 

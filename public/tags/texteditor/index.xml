@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>texteditor on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/texteditor/</link>
-    <description>Recent content in texteditor on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 23:28:43 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/texteditor/index.xml" rel="self" type="application/rss+xml" />
+    <title>Texteditor on Kn</title>
+    <link>http://localhost:1313/blog/tags/texteditor/</link>
+    <description>Recent content in Texteditor on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jul 2023 23:28:43 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/texteditor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Neovim: From simple texteditor to IDE like</title>
-      <link>https://huyhoang8398.github.io/blog/posts/neovim/</link>
+      <link>http://localhost:1313/blog/posts/neovim/</link>
       <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/neovim/</guid>
-      <description>Hi, it&amp;rsquo;s Kn.
-Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them! Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &amp;ldquo;hard&amp;rdquo; for him to handle.</description>
+      <guid>http://localhost:1313/blog/posts/neovim/</guid>
+      <description>Hi, it&amp;rsquo;s Kn.&#xA;Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them! Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &amp;ldquo;hard&amp;rdquo; for him to handle.</description>
     </item>
-    
   </channel>
 </rss>

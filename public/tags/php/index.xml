@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>php on Kn</title>
-    <link>https://huyhoang8398.github.io/blog/tags/php/</link>
-    <description>Recent content in php on Kn</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 13:15:05 +0000</lastBuildDate><atom:link href="https://huyhoang8398.github.io/blog/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <title>Php on Kn</title>
+    <link>http://localhost:1313/blog/tags/php/</link>
+    <description>Recent content in Php on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Feb 2023 13:15:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Older and Newer PHP version on AWS EC2</title>
-      <link>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</link>
+      <link>http://localhost:1313/blog/posts/ec2-aws-php-differversion-installation/</link>
       <pubDate>Fri, 17 Feb 2023 13:15:05 +0000</pubDate>
-      
-      <guid>https://huyhoang8398.github.io/blog/posts/ec2-aws-php-differversion-installation/</guid>
+      <guid>http://localhost:1313/blog/posts/ec2-aws-php-differversion-installation/</guid>
       <description>To install older or newer version of PHP with AWS utility amazon-linux-extras enable php7.1 amazon-linux-extras install php7.1 Install PHP extension yum update yum install php-cli php-pdo php-fpm php-json php-mysqlnd </description>
     </item>
-    
   </channel>
 </rss>
