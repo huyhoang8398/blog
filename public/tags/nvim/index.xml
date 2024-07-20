@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nvim on Kn</title>
+    <link>http://localhost:1313/blog/tags/nvim/</link>
+    <description>Recent content in Nvim on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 20 Jul 2024 22:16:07 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting you where you want with the fewest keystrokes in nvim</title>
+      <link>http://localhost:1313/blog/posts/harpoon_nvim/</link>
+      <pubDate>Sat, 20 Jul 2024 22:16:07 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/harpoon_nvim/</guid>
+      <description>The Problems You&amp;rsquo;re working on a codebase. medium, large, tiny, whatever. You find yourself frequenting a small set of files and you are tired of using a fuzzy finder, :bnext &amp;amp; :bprev are getting too repetitive, alternate file doesn&amp;rsquo;t quite cut it, etc etc. You want to execute some project specific commands, have any number of persistent terminals that can be easily navigated to, send commands to other tmux windows, or dream up your own custom action and execute with a single key </description>
+    </item>
+  </channel>
+</rss>

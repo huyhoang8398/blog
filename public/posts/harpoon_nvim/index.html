@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+  
+    <title>Getting you where you want with the fewest keystrokes in nvim :: Kn — Anything that&#39;s system and software</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Navigate Buffer in Nvim"/>
+<meta name="keywords" content="nvim, harpoon"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://localhost:1313/blog/posts/harpoon_nvim/" />
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/assets/style.css">
+
+  <link rel="stylesheet" href="http://localhost:1313/blog/assets/green.css">
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://localhost:1313/blog/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Getting you where you want with the fewest keystrokes in nvim :: Kn — Anything that&#39;s system and software" />
+<meta name="twitter:description" content="Navigate Buffer in Nvim" />
+<meta name="twitter:site" content="http://localhost:1313/blog/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="http://localhost:1313/blog/posts/harpoon_nvim/cover.png">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Getting you where you want with the fewest keystrokes in nvim :: Kn — Anything that&#39;s system and software">
+<meta property="og:description" content="Navigate Buffer in Nvim" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/harpoon_nvim/" />
+<meta property="og:site_name" content="Getting you where you want with the fewest keystrokes in nvim" />
+<meta property="og:image" content="http://localhost:1313/blog/posts/harpoon_nvim/cover.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2024-07-20 22:16:07 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+<link href="/blog/prism-onedark.css" rel="stylesheet" />
+
+</head>
+<body class="en">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://huyhoang8398.github.io/blog">
+  <div class="logo">
+    Kn
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://huyhoang8398.github.io">about</a></li>
+        
+      
+      
+    
+
+    
+    <div class="spacer"></div>
+    <ul class="language-selector">
+      <ul class="language-selector-current">
+          <li>english ▾</li>
+      </ul>
+      <ul class="language-selector__more hidden">
+        
+        <li><a href="http://localhost:1313/blog/">english</a></li>
+        
+        <li><a href="http://localhost:1313/blog/vi/">viet</a></li>
+        
+      </ul>
+    </ul>
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://huyhoang8398.github.io">about</a></li>
+      
+    
+    
+    <hr />
+        
+          <li>
+            <a href="http://localhost:1313/blog/">english</a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/blog/vi/">viet</a>
+          </li>
+        
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/blog/posts/harpoon_nvim/">Getting you where you want with the fewest keystrokes in nvim</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2024-07-20
+    </span>
+    
+    
+    <span class="post-author">:: 
+      
+        
+        
+    
+    
+        <a href="http://localhost:1313/blog/authors/kn/" />Do Hoang</a>
+    
+
+      
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    <a href="http://localhost:1313/blog/tags/nvim/">#nvim</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/harpoon/">#harpoon</a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="http://localhost:1313/blog/posts/harpoon_nvim/cover.png" class="post-cover" />
+  
+
+  <div class="post-content">
+    <h1 id="the-problems">The Problems</h1>
+<ol>
+<li>You&rsquo;re working on a codebase. medium, large, tiny, whatever. You find yourself frequenting a small set of files and you are tired of using a fuzzy finder, <code>:bnext</code> &amp; <code>:bprev</code> are getting too repetitive, alternate file doesn&rsquo;t quite cut it, etc etc.</li>
+<li>You want to execute some project specific commands, have any number of persistent terminals that can be easily navigated to, send commands to other tmux windows, or dream up your own custom action and execute with a single key</li>
+<li>Easy manage</li>
+</ol>
+<h1 id="the-solutions---harpoon">The Solutions - HARPOON</h1>
+<ul>
+<li>Specify either by altering a ui or by adding via hot key files</li>
+<li>Unlimited lists and items within the lists</li>
+</ul>
+<h1 id="why">Why?</h1>
+<p>It very easy with a hotkey (ie: <code>&lt;leader&gt;ha</code> to add file to the list, <code>&lt;leader&gt;hm</code> to togger list, and you can use vim keybind like <code>hjkl</code>, <code>dd</code> to delete that file)</p>
+<h1 id="installation">Installation</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ThePrimeagen/harpoon&#34;</span>,
+</span></span><span style="display:flex;"><span>        branch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;harpoon2&#34;</span>,
+</span></span><span style="display:flex;"><span>        dependencies <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;nvim-lua/plenary.nvim&#34;</span> },
+</span></span><span style="display:flex;"><span>        config <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>            require(<span style="color:#e6db74">&#34;config.harpoon&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span></code></pre></div><p>Install with your favorite plugin manager ( here is lazy )
+To config your keybind:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> harpoon <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#39;harpoon&#39;</span>)
+</span></span><span style="display:flex;"><span>harpoon:setup({})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;ha&#34;</span>, <span style="color:#66d9ef">function</span>() harpoon:list():add() <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;hm&#34;</span>, <span style="color:#66d9ef">function</span>() harpoon.ui:toggle_quick_menu(harpoon:list()) <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Toggle previous &amp; next buffers stored within Harpoon list</span>
+</span></span><span style="display:flex;"><span>vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;hp&#34;</span>, <span style="color:#66d9ef">function</span>() harpoon:list():prev() <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;hn&#34;</span>, <span style="color:#66d9ef">function</span>() harpoon:list():next() <span style="color:#66d9ef">end</span>)
+</span></span></code></pre></div><p>You can also integrate with <code>Telescope</code></p>
+<h1 id="demo">Demo</h1>
+<p><img alt="Hapoon menu" src="/blog/posts/harpoon_nvim/cover.png"></p>
+<p>Enjoyyy</p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="http://localhost:1313/blog/posts/global_dropdown_terminal_on_macos/">
+          <span class="button__text">Global hotkey - Dropdown Terminal on MacOS</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="http://localhost:1313/blog/assets/main.js"></script>
+<script src="http://localhost:1313/blog/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/authors/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -15,14 +15,14 @@
                 href="http://localhost:1313/blog/authors/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/posts/global_dropdown_terminal_on_macos/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <loc>http://localhost:1313/blog/posts/harpoon_nvim/</loc>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/iterm2/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <loc>http://localhost:1313/blog/tags/harpoon/</loc>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -35,16 +35,16 @@
                 />
   </url><url>
     <loc>http://localhost:1313/blog/authors/kn/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/macos/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <loc>http://localhost:1313/blog/tags/nvim/</loc>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/posts/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/</loc>
-    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -55,6 +55,15 @@
                 hreflang="en"
                 href="http://localhost:1313/blog/tags/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/global_dropdown_terminal_on_macos/</loc>
+    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/iterm2/</loc>
+    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/macos/</loc>
+    <lastmod>2024-06-11T21:34:50+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/terminal/</loc>
     <lastmod>2024-06-11T21:34:50+00:00</lastmod>
