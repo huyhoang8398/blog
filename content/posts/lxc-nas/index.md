@@ -6,7 +6,7 @@ cover = "posts/lxc-nas/images.png"
 tags = ["lxc", "nas", "proxmox", "sysad", "network"]
 keywords = ["lxc", "nas", "proxmox", "sysad", "network"]
 description = "how to mount a NAS share in an unprivileged LXC. This is useful for many applications, particularly things like Jellyfin and Plex that often require larger NAS storage connectivty"
-showFullConten
+showFullContent = false
 +++
 
 # On LXC Create User Group
