@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lxc on Kn</title>
+    <link>http://localhost:1313/blog/tags/lxc/</link>
+    <description>Recent content in Lxc on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 30 Apr 2025 12:31:18 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/lxc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NAS Shares On LXC - Unprivileged</title>
+      <link>http://localhost:1313/blog/posts/lxc-nas/</link>
+      <pubDate>Wed, 30 Apr 2025 12:31:18 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/lxc-nas/</guid>
+      <description>&lt;h1 id=&#34;on-lxc-create-user-group&#34;&gt;On LXC Create User Group&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;groupadd -g 10000 lxc_shares&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;optional-add-other-users-to-group-eg-jellyfin-plex&#34;&gt;Optional: Add Other Users to Group (e.g., Jellyfin, Plex)&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG lxc_shares USERNAME&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;on-proxmox-host&#34;&gt;On Proxmox Host&lt;/h1&gt;&#xA;&lt;p&gt;Create a folder to mount the NAS&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir -p /mnt/lxc_shares/nas_rwx&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;add-nas-cifs-share-to-etcfstab&#34;&gt;Add NAS CIFS share to /etc/fstab&lt;/h1&gt;&#xA;&lt;p&gt;Replace //NAS-IP-ADDRESS with your NAS IP&#xA;Replace Username and Passwords&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{ echo &amp;#39;&amp;#39; ; echo &amp;#39;# Mount CIFS share on demand with rwx permissions for use in LXCs &amp;#39; ; echo &amp;#39;//NAS-IP-ADDRESS/nas/ /mnt/lxc_shares/nas_rwx cifs _netdev,x-systemd.automount,noatime,uid=100000,gid=110000,dir_mode=0770,file_mode=0770,username=smb_username,password=smb_password 0 0&amp;#39; ; } | tee -a /etc/fstab&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;reload-daemon&#34;&gt;Reload daemon&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl daemon-reload&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mount-the-nas-to-the-proxmox-host&#34;&gt;Mount the NAS to the Proxmox Host&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mount /mnt/lxc_shares/nas_rwx&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;add-bind-mount-of-the-share-to-the-lxc-config&#34;&gt;Add Bind Mount of the Share to the LXC Config&lt;/h1&gt;&#xA;&lt;p&gt;Be sure to change the LXC_ID&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

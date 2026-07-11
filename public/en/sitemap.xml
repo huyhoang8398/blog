@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/authors/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -15,14 +15,14 @@
                 href="http://localhost:1313/blog/authors/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/posts/harpoon_nvim/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+    <loc>http://localhost:1313/blog/tags/hhkb/</loc>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/harpoon/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+    <loc>http://localhost:1313/blog/tags/keyboard/</loc>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -35,16 +35,13 @@
                 />
   </url><url>
     <loc>http://localhost:1313/blog/authors/kn/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/nvim/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/posts/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/</loc>
-    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -55,6 +52,78 @@
                 hreflang="en"
                 href="http://localhost:1313/blog/tags/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/hhbk/</loc>
+    <lastmod>2026-07-11T00:58:28+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/archlinux/</loc>
+    <lastmod>2025-05-02T23:29:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/dell/</loc>
+    <lastmod>2025-05-02T23:29:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/</loc>
+    <lastmod>2025-05-02T23:29:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/kernel/</loc>
+    <lastmod>2025-05-02T23:29:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/kernel-module/</loc>
+    <lastmod>2025-05-02T23:29:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/linux/</loc>
+    <lastmod>2025-05-02T23:29:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/xps/</loc>
+    <lastmod>2025-05-02T23:29:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/lxc/</loc>
+    <lastmod>2025-04-30T12:31:18+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/nas/</loc>
+    <lastmod>2025-04-30T12:31:18+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/lxc-nas/</loc>
+    <lastmod>2025-04-30T12:31:18+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/network/</loc>
+    <lastmod>2025-04-30T12:31:18+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/proxmox/</loc>
+    <lastmod>2025-04-30T12:31:18+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/sysad/</loc>
+    <lastmod>2025-04-30T12:31:18+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/ci-cd/</loc>
+    <lastmod>2025-03-11T12:59:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/gitlab/</loc>
+    <lastmod>2025-03-11T12:59:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/safenet/</loc>
+    <lastmod>2025-03-11T12:59:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/signature/</loc>
+    <lastmod>2025-03-11T12:59:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/usb-token/</loc>
+    <lastmod>2025-03-11T12:59:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/windows/</loc>
+    <lastmod>2025-03-11T12:59:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/</loc>
+    <lastmod>2025-03-11T12:59:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/harpoon_nvim/</loc>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/harpoon/</loc>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/nvim/</loc>
+    <lastmod>2024-07-20T22:16:07+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/posts/global_dropdown_terminal_on_macos/</loc>
     <lastmod>2024-06-11T21:34:50+00:00</lastmod>
@@ -92,9 +161,6 @@
     <loc>http://localhost:1313/blog/posts/why_do_arrays_start_at_zero/</loc>
     <lastmod>2023-12-17T11:45:50+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/linux/</loc>
-    <lastmod>2023-10-31T20:58:36+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/tags/virtualbox/</loc>
     <lastmod>2023-10-31T20:58:36+00:00</lastmod>
   </url><url>
@@ -128,13 +194,7 @@
     <loc>http://localhost:1313/blog/tags/texteditor/</loc>
     <lastmod>2023-07-15T23:28:43+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/network/</loc>
-    <lastmod>2023-07-06T14:18:55+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/posts/staticip-ubuntuserver/</loc>
-    <lastmod>2023-07-06T14:18:55+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/sysad/</loc>
     <lastmod>2023-07-06T14:18:55+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/aws/</loc>
@@ -227,16 +287,7 @@
     <loc>http://localhost:1313/blog/posts/dns-command/</loc>
     <lastmod>2020-01-21T21:39:45+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/archlinux/</loc>
-    <lastmod>2020-01-13T19:45:40+07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/dell/</loc>
-    <lastmod>2020-01-13T19:45:40+07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/posts/dellxps-arch/</loc>
-    <lastmod>2020-01-13T19:45:40+07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/xps/</loc>
     <lastmod>2020-01-13T19:45:40+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/hugo/</loc>

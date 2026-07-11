@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/posts/sed/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/sed/</guid>
-      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).&#xA;Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
+      <description>&lt;p&gt;One of the most important command line utility in Linux is &lt;code&gt;sed&lt;/code&gt; which is a stream editor.&#xA;A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).&lt;/p&gt;&#xA;&lt;p&gt;Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

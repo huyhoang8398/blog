@@ -1,7 +1,8 @@
 baseUrl: https://huyhoang8398.github.io/blog
 languageCode: en-us
 theme: terminal
-paginate: 5
+pagination:
+  pagerSize: 5
 DefaultContentLanguage: en
 
 params:
@@ -46,7 +47,6 @@ languages:
     subtitle: Miễn là phần mềm
     tagline: Blog về phần mềm hoạt động trên tinh thần open-source
     keywords: 'blog, software, phần-mềm, công-nghệ, code, devops'
-    keywords: ''
     menuMore: xem thêm
     readMore: đọc thêm
     readOtherPosts: đọc bài khác

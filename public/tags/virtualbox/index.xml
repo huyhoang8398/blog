@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/posts/virtualbox_headless/</link>
       <pubDate>Tue, 31 Oct 2023 20:58:36 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/virtualbox_headless/</guid>
-      <description>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .&#xA;For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.&#xA;The advantage is to run a VM in the background without using a lot of memory.&#xA;There are two distinct parts to master:&#xA;start and stop the VM in command line mode;</description>
+      <description>&lt;p&gt;It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .&lt;/p&gt;&#xA;&lt;p&gt;For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.&lt;/p&gt;&#xA;&lt;p&gt;The advantage is to run a VM in the background without using a lot of memory.&lt;/p&gt;&#xA;&lt;p&gt;There are two distinct parts to master:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;start and stop the VM in command line mode;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/posts/git-revert-to-a-good-commit/</link>
       <pubDate>Sun, 01 Dec 2019 14:28:16 +0700</pubDate>
       <guid>http://localhost:1313/blog/posts/git-revert-to-a-good-commit/</guid>
-      <description>Today my co-worker asked me how to revert to an old and good commit on master ( after you accidentally merged dev branch to master ). There are many ways to do that, for example we can use reset to discard all wrong commit to revert back, like undo when writing text. You can find others way onthis topic on Stack Overflow But the problem is too many options, we dont know which one is good, or even dont need to understand - it just works.</description>
+      <description>&lt;p&gt;Today my co-worker asked me how to revert to an old and good commit on master ( after you accidentally merged &lt;code&gt;dev branch&lt;/code&gt; to &lt;code&gt;master&lt;/code&gt; ).&#xA;There are many ways to do that, for example we can use &lt;code&gt;reset&lt;/code&gt; to discard all wrong commit to revert back, like &lt;code&gt;undo&lt;/code&gt; when writing text.&#xA;You can find others way on&lt;a href=&#34;https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit&#34;&gt;&lt;code&gt;this topic on Stack Overflow&lt;/code&gt;&lt;/a&gt;&#xA;But the problem is too many options, we dont know which one is good, or even dont need to understand - it just works.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

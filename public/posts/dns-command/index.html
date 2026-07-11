@@ -2,11 +2,11 @@
 <html lang="en">
 <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   
-    <title>Quick terminal-based DNS switching :: Kn — Anything that&#39;s system and software</title>
+    <title>Quick terminal-based DNS switching :: Kn</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking &amp; corporate proxy"/>
+<meta name="description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking & corporate proxy"/>
 <meta name="keywords" content="dns, privacy, terminal, bash, network, nameserver"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="http://localhost:1313/blog/posts/dns-command/" />
@@ -28,8 +28,8 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Quick terminal-based DNS switching :: Kn — Anything that&#39;s system and software" />
-<meta name="twitter:description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking &amp; corporate proxy" />
+<meta name="twitter:title" content="Quick terminal-based DNS switching :: Kn — " />
+<meta name="twitter:description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking & corporate proxy" />
 <meta name="twitter:site" content="http://localhost:1313/blog/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="http://localhost:1313/blog/posts/dns-command/cover.png">
@@ -37,8 +37,8 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Quick terminal-based DNS switching :: Kn — Anything that&#39;s system and software">
-<meta property="og:description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking &amp; corporate proxy" />
+<meta property="og:title" content="Quick terminal-based DNS switching :: Kn — ">
+<meta property="og:description" content="A quick guide to switching DNS servers settings to tackle nameserver blocking & corporate proxy" />
 <meta property="og:url" content="http://localhost:1313/blog/posts/dns-command/" />
 <meta property="og:site_name" content="Quick terminal-based DNS switching" />
 <meta property="og:image" content="http://localhost:1313/blog/posts/dns-command/cover.png">
@@ -181,7 +181,7 @@ Be it for avoiding censorship, faster browsing, security, or bypassing content r
 I myself is also no exception as I have been using <a href="https://1.1.1.1/dns/">1.1.1.1</a> for privacy and speed.
 Unfortunately, having custom DNS nameservers also comes with some setbacks for someone who uses their computer all the time in all the different places.
 With custom DNS servers, this is what you get on a network that tries to block them (together with VPN services etc.)</p>
-<p><img alt="blocked by network" src="/blog/posts/dns-command/blocked.png"></p>
+<p><img src="/blog/posts/dns-command/blocked.png" alt="blocked by network"></p>
 <p>Another problem that we would have with custom DNS servers is that networks&rsquo; login pages just don&rsquo;t show up as the default DNS is not being used to redirect us to local network login page.
 Of course it would be easy to just remove the configurations as you (most likely) was the one who set them up, how hard would it be to remove?
 But what if we need these alternate DNS servers again?
@@ -241,10 +241,10 @@ If you have a better approach, don&rsquo;t hesitate to reach out to me at <a hre
 </span></span><span style="display:flex;"><span>    sudo mv /etc/dnsmasq.conf.bak /etc/dnsmasq.conf <span style="color:#f92672">&amp;&amp;</span> echo 🚦 🚦 🚦
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
 </span></span><span style="display:flex;"><span>    sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.bak <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    sudo echo -e <span style="color:#e6db74">&#34;server=1.1.1.1\nserver=1.0.0.1\nserver=2606:4700:4700::1111\nserver=2606:4700:4700::1001&#34;</span> &gt;&gt; /etc/dnsmasq.conf <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    sudo systemctl restart dnsmasq  <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    sudo systemctl restart NetworkManager  <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    echo 🚀 🚀 🚀
+</span></span></span><span style="display:flex;"><span>    sudo echo -e <span style="color:#e6db74">&#34;server=1.1.1.1\nserver=1.0.0.1\nserver=2606:4700:4700::1111\nserver=2606:4700:4700::1001&#34;</span> &gt;&gt; /etc/dnsmasq.conf <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    sudo systemctl restart dnsmasq  <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    sudo systemctl restart NetworkManager  <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    echo 🚀 🚀 🚀
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p><strong>Test</strong>
@@ -264,7 +264,7 @@ To do a lookup speed test choose a website that has not been visited since dnsma
   <div class="pagination">
     <div class="pagination__title">
       <span
-        class="pagination__title-h">read other posts</span>
+        class="pagination__title-h"></span>
       <hr />
     </div>
     <div class="pagination__buttons">
@@ -299,7 +299,7 @@ To do a lookup speed test choose a website that has not been visited since dnsma
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

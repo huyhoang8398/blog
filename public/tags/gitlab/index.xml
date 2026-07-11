@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlab on Kn</title>
+    <link>http://localhost:1313/blog/tags/gitlab/</link>
+    <description>Recent content in Gitlab on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2025 12:59:04 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM</title>
+      <link>http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/</link>
+      <pubDate>Tue, 11 Mar 2025 12:59:04 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/</guid>
+      <description>&lt;p&gt;At work we’ve recently needed to sign our software, so that our customers will not get ugly and scary warnings when installing it via the provided MSI packages. And after working in France, I found that they mainly using USB Token ( from Thales ) for code signing.&lt;/p&gt;&#xA;&lt;p&gt;Apparently, since February 2017, &lt;a href=&#34;https://pkic.org/2016/12/08/leading-certificate-authorities-and-microsoft-introduce-new-standards-to-protect-consumers-online/&#34;&gt;Microsoft requires the private key to be stored securely&lt;/a&gt; on a USB token, from which it is not exportable. This requires the user to use the software provided by their chosen CA (GlobalSign in our case) to verify ownership during the actual signing process.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

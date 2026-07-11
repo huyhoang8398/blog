@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+  
+    <title>Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM :: Kn</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/" />
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/assets/style.css">
+
+  <link rel="stylesheet" href="http://localhost:1313/blog/assets/green.css">
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://localhost:1313/blog/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM :: Kn — " />
+<meta name="twitter:description" content="Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM" />
+<meta name="twitter:site" content="http://localhost:1313/blog/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/safenet.png">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM :: Kn — ">
+<meta property="og:description" content="Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/" />
+<meta property="og:site_name" content="Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM" />
+<meta property="og:image" content="http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/safenet.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-03-11 12:59:04 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+<link href="/blog/prism-onedark.css" rel="stylesheet" />
+
+</head>
+<body class="en">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://huyhoang8398.github.io/blog">
+  <div class="logo">
+    Kn
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://huyhoang8398.github.io">about</a></li>
+        
+      
+      
+    
+
+    
+    <div class="spacer"></div>
+    <ul class="language-selector">
+      <ul class="language-selector-current">
+          <li>english ▾</li>
+      </ul>
+      <ul class="language-selector__more hidden">
+        
+        <li><a href="http://localhost:1313/blog/">english</a></li>
+        
+        <li><a href="http://localhost:1313/blog/vi/">viet</a></li>
+        
+      </ul>
+    </ul>
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://huyhoang8398.github.io">about</a></li>
+      
+    
+    
+    <hr />
+        
+          <li>
+            <a href="http://localhost:1313/blog/">english</a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/blog/vi/">viet</a>
+          </li>
+        
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/">Working with SafeNet Tokens to sign code in Gitlab CI avec Proxmox/VM</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2025-03-11
+    </span>
+    
+    
+    <span class="post-author">:: 
+      
+        
+        
+    
+    
+        <a href="http://localhost:1313/blog/authors/kn/" />Do Hoang</a>
+    
+
+      
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    <a href="http://localhost:1313/blog/tags/gitlab/">#gitlab</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/ci-cd/">#ci-cd</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/windows/">#windows</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/usb-token/">#usb-token</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/signature/">#signature</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/safenet/">#safenet</a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="http://localhost:1313/blog/posts/safenet-token-code-signing-gitlab-ci/safenet.png" class="post-cover" />
+  
+
+  <div class="post-content">
+    <p>At work we’ve recently needed to sign our software, so that our customers will not get ugly and scary warnings when installing it via the provided MSI packages. And after working in France, I found that they mainly using USB Token ( from Thales ) for code signing.</p>
+<p>Apparently, since February 2017, <a href="https://pkic.org/2016/12/08/leading-certificate-authorities-and-microsoft-introduce-new-standards-to-protect-consumers-online/">Microsoft requires the private key to be stored securely</a> on a USB token, from which it is not exportable. This requires the user to use the software provided by their chosen CA (GlobalSign in our case) to verify ownership during the actual signing process.</p>
+<h2 id="proxmox-passthrough-usb-token">Proxmox passthrough USB Token</h2>
+<p><strong>Simple Way: pass the USB device ID to the guest</strong></p>
+<p>Assigning an Aladdin memory stick connected to the host to VM 804.</p>
+<p>Figure out in the host the Device Type by</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsusb | grep Aladdin
+</span></span></code></pre></div><p>The result is</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Bus <span style="color:#ae81ff">002</span> Device 013: ID 058f:6387 Alcor Micro Corp. Flash Drive
+</span></span></code></pre></div><p>Assign it to the VM by</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm set <span style="color:#ae81ff">804</span> -usb0 host<span style="color:#f92672">=</span>058f:6387
+</span></span></code></pre></div><p>Shutdown the VM (if running) and start it again.</p>
+<h2 id="signtool-basics">signtool Basics</h2>
+<p>Once you have your token (and its password), you can run signtool as normal to sign a file:</p>
+<p><code>signtool.exe sign /a /v /t http://timestamp.verisign.com/scripts/timestamp.dll MY_MSI_FILE.msi</code></p>
+<ul>
+<li><code>/a</code> selects the best certificate automatically</li>
+<li><code>/v</code> makes the process verbose</li>
+<li><code>/t</code> defines the timestamping URL, which is also required since at least 2017
+Now the only question is: how does this integrate in your Gitlab CI workflow?</li>
+</ul>
+<h2 id="the-build-server">The Build Server</h2>
+<p>We’re using a virtual machine in our office as a Gitlab CI runner, which has exclusive hardware access to the USB port and the USB token. What we’ve learned is that when using RDP to connect to the server, Windows would disconnect the token, rendering it useless. Sometimes this required us to reboot the VM, sometimes it would reconnect automatically once the RDP connection was closed.</p>
+<p>Therefore, when working with the virtual machine, <strong>use VNC</strong>.</p>
+<h2 id="gitlab-ci-runner">Gitlab CI Runner</h2>
+<p>Originally, we’ve had the runner setup according to <a href="https://docs.gitlab.com/runner/install/windows/">documentation</a>, with it running as Windows service. This had a couple of issues though:</p>
+<p>Running as the SYSTEM user, the runner process (and the signtool it would spawn) could not see the certificate, which we’ve imported into the local user’s cert store. If you’re getting</p>
+<pre tabindex="0"><code>SignTool Error: No certificates were found that met all the given criteria.
+</code></pre><p>make sure the runner is using the correct user account.</p>
+<p>After changing the service’s user account, signtool would find the certificate, but still fail to actually sign the binary:</p>
+<pre tabindex="0"><code>Error information: &#34;Error: SignerSign() failed.&#34; (-2147023673/0x800704c7)
+SignTool Error: An unexpected internal error has occurred.
+</code></pre><p>As it turns out, <a href="https://stackoverflow.com/questions/24672843/node-js-windows-service-cannot-spawn-gui-app-from-service/24710666#24710666">Windows services are not allowed to spawn GUI elements</a>. We found no way to both run the service under a local user account and disable the session isolation, so in the end we opted to simply run the runner process manually (with a primitive shortcut to gitlab-runner.exe run). From there on, the runner could spawn the signtool, which would in turn find the correct certificate and pop up the SafeNet software, asking for the token password.</p>
+<p>This password prompt is the only part of our build pipeline that we cannot automate. There are probably ways around this, but it seems that this is against the spirit of USB tokens and we’re not Windows developery by heart. We build installers rarely, so it works fine to just have a VNC window open and supply the password when our CI pipeline is running.</p>
+<h2 id="single-token-logon">Single Token Logon</h2>
+<p>Apparently, the SafeNet client has an option to require only a single logon per session. It’s hidden in the advanced section of the Client Settings and is disabled by default:</p>
+<p><img src="/blog/posts/safenet-token-code-signing-gitlab-ci/safenet.png" alt="Safenet Single Logon"></p>
+<p>After enabling the option and saving, you have to enter your token password only on the next signtool invocation and then only after rebooting the machine. Hooray!</p>
+<p><strong>So whenever you reboot the machine, the first token need to be filled manually -&gt; then after that it will not ask again until you reboot the machine</strong></p>
+<p>This could mean that running the Gitlab CI runner as a (non-SYSTEM) Windows service is an option now, as long as you manually logon to the token before running your first build job, but we’ve opted to stay with the desktop shortcut variant.</p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h"></span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="http://localhost:1313/blog/posts/lxc-nas/">
+          <span class="button__icon">←</span>
+          <span class="button__text">NAS Shares On LXC - Unprivileged</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="http://localhost:1313/blog/posts/harpoon_nvim/">
+          <span class="button__text">Getting you where you want with the fewest keystrokes in nvim</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="http://localhost:1313/blog/assets/main.js"></script>
+<script src="http://localhost:1313/blog/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

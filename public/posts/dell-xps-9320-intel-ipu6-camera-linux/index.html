@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+  
+    <title>Dell XPS-9320 Intel IPU6 Camera Driver on Linux :: Kn</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="How to make intel ipu6 camera work with linux on dell xps 9320"/>
+<meta name="keywords" content="linux, dell, xps, archlinux"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/" />
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/assets/style.css">
+
+  <link rel="stylesheet" href="http://localhost:1313/blog/assets/green.css">
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://localhost:1313/blog/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dell XPS-9320 Intel IPU6 Camera Driver on Linux :: Kn — " />
+<meta name="twitter:description" content="How to make intel ipu6 camera work with linux on dell xps 9320" />
+<meta name="twitter:site" content="http://localhost:1313/blog/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/cover.png">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Dell XPS-9320 Intel IPU6 Camera Driver on Linux :: Kn — ">
+<meta property="og:description" content="How to make intel ipu6 camera work with linux on dell xps 9320" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/" />
+<meta property="og:site_name" content="Dell XPS-9320 Intel IPU6 Camera Driver on Linux" />
+<meta property="og:image" content="http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/cover.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-05-02 23:29:44 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+<link href="/blog/prism-onedark.css" rel="stylesheet" />
+
+</head>
+<body class="en">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://huyhoang8398.github.io/blog">
+  <div class="logo">
+    Kn
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://huyhoang8398.github.io">about</a></li>
+        
+      
+      
+    
+
+    
+    <div class="spacer"></div>
+    <ul class="language-selector">
+      <ul class="language-selector-current">
+          <li>english ▾</li>
+      </ul>
+      <ul class="language-selector__more hidden">
+        
+        <li><a href="http://localhost:1313/blog/">english</a></li>
+        
+        <li><a href="http://localhost:1313/blog/vi/">viet</a></li>
+        
+      </ul>
+    </ul>
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://huyhoang8398.github.io">about</a></li>
+      
+    
+    
+    <hr />
+        
+          <li>
+            <a href="http://localhost:1313/blog/">english</a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/blog/vi/">viet</a>
+          </li>
+        
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/">Dell XPS-9320 Intel IPU6 Camera Driver on Linux</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2025-05-02
+    </span>
+    
+    
+    <span class="post-author">:: 
+      
+        
+        
+    
+    
+        <a href="http://localhost:1313/blog/authors/kn/" />Do Hoang</a>
+    
+
+      
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    <a href="http://localhost:1313/blog/tags/linux/">#linux</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/dell/">#dell</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/xps/">#xps</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/archlinux/">#archlinux</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/kernel/">#kernel</a>&nbsp;
+    
+    <a href="http://localhost:1313/blog/tags/kernel-module/">#kernel module</a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/cover.png" class="post-cover" />
+  
+
+  <div class="post-content">
+    <p>After 5 days of seeking solution for making Intel IPU6 camera on Dell xps 9320 to work on recent kernel module (without using OEM Ubuntu driver - ofc not running on Ubuntu), I finally found a way to make it works (though the image quality is not very good), here is how I debug and the instruction</p>
+<h2 id="getting-ipu6-camera-working-on-linux-ovti01a0-sensor">Getting IPU6 Camera Working on Linux (OVTI01A0 sensor)</h2>
+<h3 id="check-if-you-have-the-right-camera-sensor">Check if you have the right camera sensor:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dmesg | grep -i ipu6
+</span></span></code></pre></div><p>Example output:</p>
+<pre tabindex="0"><code>[    4.254150] intel-ipu6 0000:00:05.0: enabling device (0000 -&gt; 0002)
+[   15.476130] pci 0000:00:05.0: deferred probe pending: intel-ipu6: IPU6 bridge init failed
+[   17.186083] intel-ipu6 0000:00:05.0: Sending BOOT_LOAD to CSE
+[   17.204162] intel-ipu6 0000:00:05.0: Sending AUTHENTICATE_RUN to CSE
+[   17.274647] intel-ipu6 0000:00:05.0: CSE authenticate_run done
+[   17.274671] intel-ipu6 0000:00:05.0: IPU6-v3[a75d] hardware version 5
+[   17.347317] intel_ipu6_psys.psys intel_ipu6.psys.40: pkg_dir entry count:8
+[   17.347676] intel_ipu6_psys.psys intel_ipu6.psys.40: psys probe minor: 0
+</code></pre><p>So the ID for the camera is:
+<code>0000:00:05.0</code></p>
+<h3 id="check-the-sensor-type">Check the sensor type:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dmesg | grep <span style="color:#e6db74">&#34;pci 0000:00:05.0&#34;</span>
+</span></span></code></pre></div><p>Look for this line:</p>
+<pre tabindex="0"><code>[   15.915105] intel-ipu6 0000:00:05.0: Found supported sensor OVTI01A0:00
+</code></pre><p>The sensor is <code>OVTI01A0</code>.</p>
+<h3 id="driver-status-check">Driver Status Check:</h3>
+<p>This sensor is not included in the standard kernel yet.</p>
+<p>Check installed drivers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yay -Ql linux-zen | grep <span style="color:#e6db74">&#34;/drivers/media/i2c/ov&#34;</span>
+</span></span></code></pre></div><p>Intel repo has the driver:
+<code>ov2c10.c</code><br>
+<a href="https://github.com/intel/ipu6-drivers/tree/master/drivers/media/i2c">https://github.com/intel/ipu6-drivers/tree/master/drivers/media/i2c</a></p>
+<h3 id="install-the-aur-driver">Install the AUR driver:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yay -S intel-ipu6-dkms-git
+</span></span></code></pre></div><p>Flush old cache to ensure latest version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rf ~/.cache/yay/intel-ipu6-dkms-git/
+</span></span></code></pre></div><p>Then check the module:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l /var/lib/dkms/ipu6-drivers/r2*/6.*/x86_64/module/
+</span></span></code></pre></div><h3 id="load-the-driver">Load the driver:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo modprobe -v ov02c1
+</span></span></code></pre></div><h3 id="test-the-camera">Test the camera:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cam -l
+</span></span></code></pre></div><p>Example output:</p>
+<pre tabindex="0"><code>Available cameras:
+[0:13:03.010443621] [4961] ERROR IPAModule ipa_module.cpp:171 Symbol ipaModuleInfo not found
+[0:13:03.010461160] [4961] ERROR IPAModule ipa_module.cpp:291 v4l2-compat.so: IPA module has no valid info
+[0:13:03.010477659] [4961]  INFO Camera camera_manager.cpp:326 libcamera v0.5.0
+[0:13:03.018153510] [4962]  WARN CameraSensorProperties camera_sensor_properties.cpp:463 No static properties available for &#39;ov01a10&#39;
+[0:13:03.018171368] [4962]  WARN CameraSensorProperties camera_sensor_properties.cpp:465 Please consider updating the camera sensor properties database
+[0:13:03.018179990] [4962]  WARN CameraSensor camera_sensor_legacy.cpp:501 &#39;ov01a10 15-0036&#39;: No sensor delays found in static properties. Assuming unverified defaults.
+[0:13:03.019108094] [4962]  WARN IPAProxy ipa_proxy.cpp:177 Configuration file &#39;ov01a10.yaml&#39; not found for IPA module &#39;simple&#39;, falling back to &#39;uncalibrated.yaml&#39;
+[0:13:03.019128813] [4962]  WARN IPASoft soft_simple.cpp:103 IPASoft: Failed to create camera sensor helper for ov01a10
+Available cameras:
+1: Internal front camera (\_SB_.PC00.LNK1)
+</code></pre><p>Some IPA-related errors may appear — they are usually safe to ignore if the camera shows up.</p>
+<h3 id="firefox-fix">Firefox Fix:</h3>
+<p>In <code>about:config</code> set:</p>
+<pre tabindex="0"><code>media.webrtc.camera.allow-pipewire = true
+</code></pre><p>Restart Firefox.</p>
+<h3 id="chrome-fix">Chrome Fix:</h3>
+<p>In <code>chrome://flags</code>, enable:</p>
+<pre tabindex="0"><code>#enable-webrtc-pipewire-camera
+</code></pre><p>Then test webcam — should show an image.</p>
+<h3 id="note-for-electron-app-like-discord-slack">Note for electron app like discord, slack:</h3>
+<p>enable the flag
+<code>--enable-features=WebRTCPipeWireCapturer</code></p>
+<h3 id="performance">Performance:</h3>
+<ul>
+<li>Firefox: 19 FPS</li>
+<li>Chrome: 27 FPS</li>
+</ul>
+<p>Camera is working successfully!</p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h"></span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="http://localhost:1313/blog/posts/hhbk/">
+          <span class="button__icon">←</span>
+          <span class="button__text">The Story of How a 300 Euro Keyboard Got Me Hooked on Keyboard Sound</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="http://localhost:1313/blog/posts/lxc-nas/">
+          <span class="button__text">NAS Shares On LXC - Unprivileged</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="http://localhost:1313/blog/assets/main.js"></script>
+<script src="http://localhost:1313/blog/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

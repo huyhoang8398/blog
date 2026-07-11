@@ -2,7 +2,7 @@
 <html lang="en">
 <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   
-    <title>How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — Anything that&#39;s system and software</title>
+    <title>How To Run Container Background Tasks With Cron By Using Supervisord :: Kn</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — Anything that&#39;s system and software" />
+<meta name="twitter:title" content="How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — " />
 <meta name="twitter:description" content="Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?" />
 <meta name="twitter:site" content="http://localhost:1313/blog/" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — Anything that&#39;s system and software">
+<meta property="og:title" content="How To Run Container Background Tasks With Cron By Using Supervisord :: Kn — ">
 <meta property="og:description" content="Have you ever faced this scenario where you want to run two or more lightweight services or multiple executables within the same container when the image starts running?" />
 <meta property="og:url" content="http://localhost:1313/blog/posts/how-to-run-container-background-tasks-with-cron-by-using-supervisord/" />
 <meta property="og:site_name" content="How To Run Container Background Tasks With Cron By Using Supervisord" />
@@ -215,7 +215,7 @@ priority = 5
 <p>A common &ldquo;gotcha&rdquo; here is the PATH environment variable being different. Maybe your cron script uses the command somecommand found in <code>/opt/someApp/bin</code>, which you&rsquo;ve added to PATH in <code>/etc/environment</code>? cron ignores PATH from that file, so runnning somecommand from your script will fail when run with cron, but work when run in a terminal. It&rsquo;s worth noting that variables from <code>/etc/environment</code> will be passed on to cron jobs, just not the variables cron specifically sets itself, such as PATH.</p>
 <p>To get around that, just set your own PATH variable at the top of the script. E.g.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>PATH<span style="color:#f92672">=</span>/opt/someApp/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</span></span></span><span style="display:flex;"><span>PATH<span style="color:#f92672">=</span>/opt/someApp/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># rest of script follows</span>
 </span></span></code></pre></div><p>Some prefer to just use absolute paths to all the commands instead. I recommend against that. Consider what happens if you want to run your script on a different system, and on that system, the command is in <code>/opt/someAppv2.2/bin</code> instead. You&rsquo;d have to go through the whole script replacing <code>/opt/someApp/bin</code> with <code>/opt/someAppv2.2/bin</code> instead of just doing a small edit on the first line of the script.</p>
@@ -259,7 +259,7 @@ priority = 5
   <div class="pagination">
     <div class="pagination__title">
       <span
-        class="pagination__title-h">read other posts</span>
+        class="pagination__title-h"></span>
       <hr />
     </div>
     <div class="pagination__buttons">
@@ -294,7 +294,7 @@ priority = 5
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

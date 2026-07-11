@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/posts/shortcode-to-insert-raw-html-in-hugo/</link>
       <pubDate>Thu, 05 Dec 2019 23:31:46 +0700</pubDate>
       <guid>http://localhost:1313/blog/posts/shortcode-to-insert-raw-html-in-hugo/</guid>
-      <description>Hugo is very good framework of creating a website by using markdown. But there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &amp;lt;iframes&amp;gt;) to Markdown content.&#xA;But Hugo does not seem to have a good way to let you do this in a markdown file. They created shortcodes to circumvent these limitations.&#xA;A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template.</description>
+      <description>&lt;p&gt;Hugo is very good framework of creating a website by using markdown.&#xA;But there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &lt;code&gt;&amp;lt;iframes&amp;gt;&lt;/code&gt;) to Markdown content.&lt;/p&gt;&#xA;&lt;p&gt;But Hugo does not seem to have a good way to let you do this in a markdown file.&#xA;They created shortcodes to circumvent these limitations.&lt;/p&gt;&#xA;&lt;p&gt;A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a partial template instead.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

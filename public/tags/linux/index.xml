@@ -6,49 +6,56 @@
     <description>Recent content in Linux on Kn</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Oct 2023 20:58:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 May 2025 23:29:44 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dell XPS-9320 Intel IPU6 Camera Driver on Linux</title>
+      <link>http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/</link>
+      <pubDate>Fri, 02 May 2025 23:29:44 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/</guid>
+      <description>&lt;p&gt;After 5 days of seeking solution for making Intel IPU6 camera on Dell xps 9320 to work on recent kernel module (without using OEM Ubuntu driver - ofc not running on Ubuntu), I finally found a way to make it works (though the image quality is not very good), here is how I debug and the instruction&lt;/p&gt;&#xA;&lt;h2 id=&#34;getting-ipu6-camera-working-on-linux-ovti01a0-sensor&#34;&gt;Getting IPU6 Camera Working on Linux (OVTI01A0 sensor)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-you-have-the-right-camera-sensor&#34;&gt;Check if you have the right camera sensor:&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dmesg | grep -i ipu6&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example output:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Virtualbox, oui mais sans (prise de) tête !</title>
       <link>http://localhost:1313/blog/posts/virtualbox_headless/</link>
       <pubDate>Tue, 31 Oct 2023 20:58:36 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/virtualbox_headless/</guid>
-      <description>It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .&#xA;For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.&#xA;The advantage is to run a VM in the background without using a lot of memory.&#xA;There are two distinct parts to master:&#xA;start and stop the VM in command line mode;</description>
+      <description>&lt;p&gt;It may be interesting to have a Linux machine within range of SSH that is always available and that is windowless, i.e. running in headless mode .&lt;/p&gt;&#xA;&lt;p&gt;For example, under MacOS, you can have Linux tools without being cluttered with a window associated with this Linux.&lt;/p&gt;&#xA;&lt;p&gt;The advantage is to run a VM in the background without using a lot of memory.&lt;/p&gt;&#xA;&lt;p&gt;There are two distinct parts to master:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;start and stop the VM in command line mode;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setting a Static IP and Permanent DNS nameserver in Ubuntu Server</title>
       <link>http://localhost:1313/blog/posts/staticip-ubuntuserver/</link>
       <pubDate>Thu, 06 Jul 2023 14:18:55 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/staticip-ubuntuserver/</guid>
-      <description>DNS Problem? For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address 127.0.0.53 when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).&#xA;After rebooting, the file will be changed back to the content nameserver 127.0.0.53 (near the end line), even though you had previously changed it to 8.</description>
+      <description>&lt;h2 id=&#34;dns-problem&#34;&gt;DNS Problem?&lt;/h2&gt;&#xA;&lt;p&gt;For DNS nameserver, You may encounter an issue where the dns-nameserver configuration is changed to the address &lt;code&gt;127.0.0.53&lt;/code&gt; when rebooting Ubuntu Server. This will result in the inability to resolve domain names (although you can still ping or connect to IP addresses on the Internet).&lt;/p&gt;&#xA;&lt;p&gt;After rebooting, the file will be changed back to the content &lt;code&gt;nameserver 127.0.0.53&lt;/code&gt; (near the end line), even though you had previously changed it to 8.8.8.8&lt;/p&gt;</description>
     </item>
     <item>
       <title>Getting the Function keys of a Keychron working on Linux</title>
       <link>http://localhost:1313/blog/posts/keychron/</link>
       <pubDate>Tue, 03 May 2022 16:14:17 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/keychron/</guid>
-      <description>Having destroyed the Tada68 keyboard , I wanted to try a more substantial keyboard for a change. After some research I decided that I want a mechanical, wired (sometime bluetooth), tenkeyless keyboard without any fancy LEDs.&#xA;At the end I settled for a Keychron K8 with brown switches. It meets all requirements, looks very nice and the price is reasonable ( I bought it for only 50 eur on Aliexpress :v ).</description>
+      <description>&lt;p&gt;Having destroyed the Tada68 keyboard , I wanted to try a more substantial keyboard for a change. After some research I decided that I want a mechanical, wired (sometime bluetooth), tenkeyless keyboard without any fancy LEDs.&lt;/p&gt;&#xA;&lt;p&gt;At the end I settled for a Keychron K8 with brown switches. It meets all requirements, looks very nice and the price is reasonable ( I bought it for only 50 eur on Aliexpress :v ).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Learning Sed Is Beneficial For Linux Users</title>
       <link>http://localhost:1313/blog/posts/sed/</link>
       <pubDate>Wed, 20 Oct 2021 12:44:26 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/sed/</guid>
-      <description>One of the most important command line utility in Linux is sed which is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).&#xA;Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.</description>
+      <description>&lt;p&gt;One of the most important command line utility in Linux is &lt;code&gt;sed&lt;/code&gt; which is a stream editor.&#xA;A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).&lt;/p&gt;&#xA;&lt;p&gt;Essentially what it can do is it allows you to search for String of text or specific pattern and then replace it pattern with whatever you tell sed to replace with, so it is really kind of search and replace function.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Xf86 Video Intel</title>
       <link>http://localhost:1313/blog/posts/xf86-video-intel/</link>
       <pubDate>Sat, 21 Mar 2020 17:59:52 +0700</pubDate>
       <guid>http://localhost:1313/blog/posts/xf86-video-intel/</guid>
-      <description>Why not XF86-Video-Intel ? It is a DDX driver (which provides 2D acceleration in Xorg) but It is not recommended to install nowaday. Because this package is no longer needed and also causes screen tearing. And also the generic xf86-video-modesetting DDX driver included in xorg-server seems to be better than most vendor specific xf86-video- drivers.&#xA;Some (Debian &amp;amp; Ubuntu, Fedora, KDE) recommend not installing the xf86-video-intel driver, and instead falling back on the modesetting driver for Gen4 and newer GPUs (GMA 3000 from 2006 and newer).</description>
+      <description>&lt;h2 id=&#34;why-not-xf86-video-intel-&#34;&gt;Why not XF86-Video-Intel ?&lt;/h2&gt;&#xA;&lt;p&gt;It is a DDX driver (which provides 2D acceleration in Xorg) but It is not recommended to install nowaday.&#xA;Because this package is no longer needed and also causes screen tearing.&#xA;And also the generic &lt;code&gt;xf86-video-modesetting&lt;/code&gt; DDX driver included in xorg-server seems to be better than most vendor specific xf86-video- drivers.&lt;/p&gt;&#xA;&lt;p&gt;Some (&lt;a href=&#34;https://www.phoronix.com/scan.php?page=news_item&amp;amp;px=Ubuntu-Debian-Abandon-Intel-DDX&#34;&gt;Debian &amp;amp; Ubuntu&lt;/a&gt;, &lt;a href=&#34;https://www.phoronix.com/scan.php?page=news_item&amp;amp;px=Fedora-Xorg-Intel-DDX-Switch&#34;&gt;Fedora&lt;/a&gt;, &lt;a href=&#34;https://community.kde.org/Plasma/5.9_Errata#Intel_GPUs&#34;&gt;KDE&lt;/a&gt;) recommend not installing the xf86-video-intel driver, and instead falling back on the modesetting driver for Gen4 and newer GPUs (GMA 3000 from 2006 and newer).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why I made the switch from Mac to Linux</title>
       <link>http://localhost:1313/blog/posts/dellxps-arch/</link>
       <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
       <guid>http://localhost:1313/blog/posts/dellxps-arch/</guid>
-      <description>Introduction I have been a huge Mac fan and power user since I started in IT in 2015. But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver. This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever. Here is what inspired me to switch.&#xA;Why Im falling in love with macOS First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I have been a huge Mac fan and power user since I started in IT in 2015.&#xA;But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver.&#xA;This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever.&#xA;Here is what inspired me to switch.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-im-falling-in-love-with-macos&#34;&gt;Why Im falling in love with macOS&lt;/h2&gt;&#xA;&lt;p&gt;First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.&#xA;Before that, I use Linux as my daily driver.&#xA;The macbook air is light, fast, the battery life is awesome.&#xA;It came with macOS El Capitan at that moment - which is ultrafast comparing to window and linux.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

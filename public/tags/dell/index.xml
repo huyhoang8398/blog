@@ -6,14 +6,21 @@
     <description>Recent content in Dell on Kn</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jan 2020 19:45:40 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 02 May 2025 23:29:44 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/dell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dell XPS-9320 Intel IPU6 Camera Driver on Linux</title>
+      <link>http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/</link>
+      <pubDate>Fri, 02 May 2025 23:29:44 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/</guid>
+      <description>&lt;p&gt;After 5 days of seeking solution for making Intel IPU6 camera on Dell xps 9320 to work on recent kernel module (without using OEM Ubuntu driver - ofc not running on Ubuntu), I finally found a way to make it works (though the image quality is not very good), here is how I debug and the instruction&lt;/p&gt;&#xA;&lt;h2 id=&#34;getting-ipu6-camera-working-on-linux-ovti01a0-sensor&#34;&gt;Getting IPU6 Camera Working on Linux (OVTI01A0 sensor)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-you-have-the-right-camera-sensor&#34;&gt;Check if you have the right camera sensor:&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dmesg | grep -i ipu6&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example output:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Why I made the switch from Mac to Linux</title>
       <link>http://localhost:1313/blog/posts/dellxps-arch/</link>
       <pubDate>Mon, 13 Jan 2020 19:45:40 +0700</pubDate>
       <guid>http://localhost:1313/blog/posts/dellxps-arch/</guid>
-      <description>Introduction I have been a huge Mac fan and power user since I started in IT in 2015. But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver. This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever. Here is what inspired me to switch.&#xA;Why Im falling in love with macOS First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I have been a huge Mac fan and power user since I started in IT in 2015.&#xA;But a few months ago—for several reasons — I made the commitment to shift to Linux as my daily driver.&#xA;This isn&amp;rsquo;t my first attempt at fully adopting Linux, but I&amp;rsquo;m finding it easier than ever.&#xA;Here is what inspired me to switch.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-im-falling-in-love-with-macos&#34;&gt;Why Im falling in love with macOS&lt;/h2&gt;&#xA;&lt;p&gt;First of all, in 2015 I had my very first macOS laptop which is an Macbook air 13 inch model.&#xA;Before that, I use Linux as my daily driver.&#xA;The macbook air is light, fast, the battery life is awesome.&#xA;It came with macOS El Capitan at that moment - which is ultrafast comparing to window and linux.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

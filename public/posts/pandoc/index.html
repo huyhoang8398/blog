@@ -2,7 +2,7 @@
 <html lang="en">
 <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   
-    <title>How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s system and software</title>
+    <title>How I escaped from Microsoft Office tools as a Computer Science student :: Kn</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -28,7 +28,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s system and software" />
+<meta name="twitter:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — " />
 <meta name="twitter:description" content="The Easiest Way to Make Presentations! (Pandoc &#43; Markdown)" />
 <meta name="twitter:site" content="http://localhost:1313/blog/" />
 <meta name="twitter:creator" content="" />
@@ -37,7 +37,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — Anything that&#39;s system and software">
+<meta property="og:title" content="How I escaped from Microsoft Office tools as a Computer Science student :: Kn — ">
 <meta property="og:description" content="The Easiest Way to Make Presentations! (Pandoc &#43; Markdown)" />
 <meta property="og:url" content="http://localhost:1313/blog/posts/pandoc/" />
 <meta property="og:site_name" content="How I escaped from Microsoft Office tools as a Computer Science student" />
@@ -172,7 +172,7 @@
 
   <div class="post-content">
     <h2 id="motivation">Motivation</h2>
-<p><img alt="Pandoc Markdow presentation VS Microsoft Powerpoint" src="/blog/posts/pandoc/mdVSw.png"></p>
+<p><img src="/blog/posts/pandoc/mdVSw.png" alt="Pandoc Markdow presentation VS Microsoft Powerpoint"></p>
 <p>I have used beamer quite a lot to prepare slides for both research and class presentations.
 I have started to use LaTeX to content in beamer presentation for two years.
 Sometimes I was concerned about the high ratio of markup to content in beamer presentations.
@@ -248,7 +248,7 @@ Pandoc provides us a way to convert between numerous markups and word processing
 <p>Create a <code>main.md</code> file that contains:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Section heading 1 slide
 </span></span><span style="display:flex;"><span><span style="color:#75715e">## Slide 1 of Section 1 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">-</span> This is a list 
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> This is a list 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Another list item
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> etc,...
 </span></span><span style="display:flex;"><span>
@@ -258,7 +258,7 @@ Pandoc provides us a way to convert between numerous markups and word processing
 </span></span><span style="display:flex;"><span>...
 </span></span></code></pre></div><p>Once you have pandoc and latex (with packages to run beamer) installed, you just have to use the following command to compile the presentation:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pandoc main.md -t beamer -o output.pdf
-</span></span></code></pre></div><p><img alt="Compile Flow" src="/blog/posts/pandoc/compileFlow.png"></p>
+</span></span></code></pre></div><p><img src="/blog/posts/pandoc/compileFlow.png" alt="Compile Flow"></p>
 <p>Pandoc converted <em>main.md</em> into a beamer latex file main.tex and after that they use the default way (<code>pdflatex</code>) to transfer beamer <code>*.tex</code> to a Presentation file.
 By default, pandoc will use <code>slide-level=2</code>, it means that level 1 markdown headings represents section headings - as the picture below ( line preceded with a single hash <code># Section heading 2</code>).
 And Level 2 headings represented a new slide with the title name. ( line preceded with double hash <code>## Slide 1 of Section 1</code>). So that the headings above the defined number in the hierarchy are used to divide the slide show into sections; the headings below the defined number create subheads within a slide. You might want to read more about <a href="https://pandoc.org/MANUAL.html#structuring-the-slide-show">Structuring the slide show.</a></p>
@@ -270,7 +270,7 @@ And Level 2 headings represented a new slide with the title name. ( line precede
 <li>Also we can use the same method in markdow to create a figure, table inside a slide.</li>
 </ul>
 <p><strong>Result</strong></p>
-<p><img alt="Result Example" src="/blog/posts/pandoc/result1.png"></p>
+<p><img src="/blog/posts/pandoc/result1.png" alt="Result Example"></p>
 <p><strong>Code comparation with LaTeX</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[t]</span>{beamer}  
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\setbeamertemplate</span>{navigation symbols}{}
@@ -329,7 +329,7 @@ Fill in all the necessary fields:</p>
 </span></span></code></pre></div><p><strong>Result</strong></p>
 <pre><code>🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
 </code></pre>
-<p><img alt="Result with YAML header 1" src="/blog/posts/pandoc/yamlResult1.png"> <img alt="Result with YAML header 2" src="/blog/posts/pandoc/yamlResult2.png"></p>
+<p><img src="/blog/posts/pandoc/yamlResult1.png" alt="Result with YAML header 1"> <img src="/blog/posts/pandoc/yamlResult2.png" alt="Result with YAML header 2"></p>
 <h4 id="tips-and-tricks">Tips and Tricks</h4>
 <p><strong>Image Scalling</strong></p>
 <p>The width and height attributes on images are treated specially.
@@ -380,7 +380,7 @@ To create a slide that has columns, I recommend to use raw LaTeX code as the fol
 </span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><p><strong>Magical things</strong> is that you can also use Markdown inside a Raw LaTeX code \m/</p>
 <p>And this is the result:</p>
-<p><img alt="caption" src="/blog/posts/pandoc/column.png"></p>
+<p><img src="/blog/posts/pandoc/column.png" alt="caption"></p>
 <h4 id="preamble">Preamble</h4>
 <p>Pandoc lets user include a custom preamble in the generated output.</p>
 <p>If you have to use some packages in LaTeX ( not so much ), you can include it in the YAML header inside the <code>header-includes:</code> tag. <br>
@@ -400,28 +400,28 @@ I need to redefine the <code>footline</code> template used by the Ilmenau, and a
 At this point, you do need to know a little bit about LaTeX, but you will have your own Beamer Template.
 You can also change the color, subsection, section,&hellip;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">%%%% Create framenumber in footer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\frameofframes</span>}{/}
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\frameofframes</span>}{/}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\setframeofframes</span>}[1]{<span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\frameofframes</span>}{#1}}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\setframeofframes</span>{of}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\makeatletter</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\setbeamertemplate</span>{footline}
 </span></span><span style="display:flex;"><span>  {<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\begin</span>{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{beamercolorbox}
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{beamercolorbox}[ht=2.5ex,dp=1.125ex,<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">\leavevmode</span>{<span style="color:#66d9ef">\usebeamerfont</span>{author in head/foot}<span style="color:#66d9ef">\insertshortauthor</span>}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">\hfill</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      {<span style="color:#66d9ef">\usebeamerfont</span>{institute in head/foot}<span style="color:#66d9ef">\usebeamercolor</span><span style="color:#a6e22e">[fg]</span>{institute in head/foot}<span style="color:#66d9ef">\insertshortinstitute</span>}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\end</span>{beamercolorbox}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\begin</span>{beamercolorbox}[ht=2.5ex,dp=1.125ex,<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      {<span style="color:#66d9ef">\usebeamerfont</span>{title in head/foot}<span style="color:#66d9ef">\insertshorttitle</span>}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">\hfill</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      {<span style="color:#66d9ef">\usebeamerfont</span>{frame number}<span style="color:#66d9ef">\usebeamercolor</span><span style="color:#a6e22e">[fg]</span>{frame number}<span style="color:#66d9ef">\insertframenumber</span>~<span style="color:#66d9ef">\frameofframes</span>~<span style="color:#66d9ef">\inserttotalframenumber</span>}
+</span></span></span><span style="display:flex;"><span>      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\leavevmode</span>{<span style="color:#66d9ef">\usebeamerfont</span>{author in head/foot}<span style="color:#66d9ef">\insertshortauthor</span>}<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\hfill</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>      {<span style="color:#66d9ef">\usebeamerfont</span>{institute in head/foot}<span style="color:#66d9ef">\usebeamercolor</span><span style="color:#a6e22e">[fg]</span>{institute in head/foot}<span style="color:#66d9ef">\insertshortinstitute</span>}<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{beamercolorbox}<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{beamercolorbox}[ht=2.5ex,dp=1.125ex,<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>      {<span style="color:#66d9ef">\usebeamerfont</span>{title in head/foot}<span style="color:#66d9ef">\insertshorttitle</span>}<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\hfill</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>      {<span style="color:#66d9ef">\usebeamerfont</span>{frame number}<span style="color:#66d9ef">\usebeamercolor</span><span style="color:#a6e22e">[fg]</span>{frame number}<span style="color:#66d9ef">\insertframenumber</span>~<span style="color:#66d9ef">\frameofframes</span>~<span style="color:#66d9ef">\inserttotalframenumber</span>}
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{beamercolorbox}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\begin</span>{beamercolorbox}[colsep=1.5pt]{lower separation line foot}  
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{beamercolorbox}[colsep=1.5pt]{lower separation line foot}  
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{beamercolorbox}
 </span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><p><strong>Usage</strong></p>
@@ -429,7 +429,7 @@ You can also change the color, subsection, section,&hellip;</p>
 </span></span></code></pre></div><p><strong>Result</strong><br>
 Ilmenau theme with frame number and a new look.
 You can download my preamble example <a href="https://github.com/huyhoang8398/pandoc-tutorial/blob/master/preamble.tex">here</a></p>
-<p><img alt="Custom Ilmenau theme" src="/blog/posts/pandoc/preambleExample.png"></p>
+<p><img src="/blog/posts/pandoc/preambleExample.png" alt="Custom Ilmenau theme"></p>
 <h2 id="source-code">Source code</h2>
 <p>You can download all the source code in this blog in this <a href="https://github.com/huyhoang8398/pandoc-tutorial/">site</a></p>
 
@@ -438,7 +438,7 @@ You can download my preamble example <a href="https://github.com/huyhoang8398/pa
   <div class="pagination">
     <div class="pagination__title">
       <span
-        class="pagination__title-h">read other posts</span>
+        class="pagination__title-h"></span>
       <hr />
     </div>
     <div class="pagination__buttons">
@@ -466,7 +466,7 @@ You can download my preamble example <a href="https://github.com/huyhoang8398/pa
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kernel Module on Kn</title>
+    <link>http://localhost:1313/blog/tags/kernel-module/</link>
+    <description>Recent content in Kernel Module on Kn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 May 2025 23:29:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/kernel-module/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dell XPS-9320 Intel IPU6 Camera Driver on Linux</title>
+      <link>http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/</link>
+      <pubDate>Fri, 02 May 2025 23:29:44 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/dell-xps-9320-intel-ipu6-camera-linux/</guid>
+      <description>&lt;p&gt;After 5 days of seeking solution for making Intel IPU6 camera on Dell xps 9320 to work on recent kernel module (without using OEM Ubuntu driver - ofc not running on Ubuntu), I finally found a way to make it works (though the image quality is not very good), here is how I debug and the instruction&lt;/p&gt;&#xA;&lt;h2 id=&#34;getting-ipu6-camera-working-on-linux-ovti01a0-sensor&#34;&gt;Getting IPU6 Camera Working on Linux (OVTI01A0 sensor)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-you-have-the-right-camera-sensor&#34;&gt;Check if you have the right camera sensor:&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dmesg | grep -i ipu6&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example output:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/posts/neovim/</link>
       <pubDate>Sat, 15 Jul 2023 23:28:43 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/neovim/</guid>
-      <description>Hi, it&amp;rsquo;s Kn.&#xA;Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them! Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &amp;ldquo;hard&amp;rdquo; for him to handle.</description>
+      <description>&lt;p&gt;Hi, it&amp;rsquo;s Kn.&lt;/p&gt;&#xA;&lt;p&gt;Neovim comes with cool new improvements like Lua remote plugin host, built-in LSP client (yes!), and Treesitter syntax engine&#xA;I found there are already a bunch of great plugins that leverage those features. I tried them, and already love them!&#xA;Also Since my current laptop is quite old ( a Macbook with core i5 gen 7th processor and 8gb ram ), Sublime Text or Vscode is too &amp;ldquo;hard&amp;rdquo; for him to handle.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
