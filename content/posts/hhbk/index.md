@@ -2,12 +2,14 @@
 title = "The Story of How a 300 Euro Keyboard Got Me Hooked on Keyboard Sound"
 date = "2026-07-11T00:58:28+02:00"
 authors = ["kn"]
-cover = "posts/hhkb/cover.png"
+cover = "posts/keychron/cover.png"
 tags = ["hhkb", "keyboard"]
 keywords = ["hhkb", "keyboard"]
 description = "The Story of How a Developer Found the Perfect Keyboard and Fell Into the Typing Sound Rabbit Hole"
 showFullContent = false
 +++
+
+# HHKB
 
 I wasn't looking for a new hobby.
 

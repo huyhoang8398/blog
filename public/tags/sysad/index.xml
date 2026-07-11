@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SysAd on Kn</title>
+    <title>Sysad on Kn</title>
     <link>http://localhost:1313/blog/tags/sysad/</link>
-    <description>Recent content in SysAd on Kn</description>
+    <description>Recent content in Sysad on Kn</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 30 Apr 2025 12:31:18 +0000</lastBuildDate>
